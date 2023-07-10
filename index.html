@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>e-Commerce</title>
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/general.css">
+    <!-- Owl Carousel Start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Owl -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Owl end -->
+    <!-- Owl carousel end -->
+</head>
+
+<body>
+    <!-- Header Section Part -->
+    <!-- <div class="header container"> -->
+    <div class="header">
+        <div class="top_nav1 container">
+            <div class="left_nav">
+                <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#"><i class="fa-regular fa-address-card"></i> About Us</a>
+                <a href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
+                <a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+            </div>
+
+            <div class="center_nav">
+                <a href="#"><i class="fa-solid fa-flag"></i> English</a>
+                <a href="#">$US Doller</a>
+            </div>
+
+            <div class="right_nav">
+                <a href="#">More</a>
+                <a href="#">Menus<i class="fa-solid fa-caret-down"></i></a>
+                <a href="#"><i class="fa-solid fa-truck"></i> Delivery</a>
+            </div>
+        </div>
+
+        <div class="top_nav2" id="top_nav_2">
+            <div class="top_nav2_sub1">
+                <a href="#"> <i class="fa-solid fa-circle-user"></i>
+                    <p>Login</p>
+                </a>
+
+                <a href="#"> <i class="fa-regular fa-pen-to-square"></i>
+                    <p>Register</p>
+                </a>
+            </div>
+            <div class="top_nav2_sub2">
+                <a href="#">
+                    <p>$US Doller</p><i class="fa-solid fa-caret-down"></i>
+                </a>
+                <a href="#"><i class="fa-solid fa-flag"></i>
+                    <p>English</p>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="mid_nav1">
+            <div class="container mid_nav_sub">
+                <div class="mid_nav_sub1">
+                    <h1>JOURNEL</h1>
+                </div>
+                <div class="mid_nav_sub2">
+                    <button>ALL<i class="fa-solid fa-caret-down"></i></button>
+                    <input type="text" placeholder="Search here...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="mid_nav_sub3">
+                    <div>
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p>Login</p>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <p>Register</p>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <p>Wishlist</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code-compare"></i>
+                        <p>Compare</p>
+                    </div>
+                </div>
+                <div class="mid_nav_sub4">
+                    <span id="amount">0 items(s)-$0.00</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="mid_nav2 container">
+            <div class="mid_nav2_sub1">
+                <h1>JOURNAL</h1>
+            </div>
+            <div class="mid_nav2_sub2">
+                <button><i class="fa-solid fa-bars"></i></button>
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button> <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+        <!-- </div> -->
+
+        <div class="bottom_nav">
+            <div class="container bottom_nav-sub">
+                <div class="bottom_nav-sub1">
+                    <i class="fa-solid fa-bars"></i>
+                    &nbsp;&nbsp;&nbsp;
+                    <p>ALL DEPARTMENTS</p>
+                </div>
+                <div class="bottom_nav-sub2">
+                    <div>
+                        <p>MULTILEVEL</p>
+                    </div>
+                    <div>
+                        <p>MEGAMENU</p>
+                    </div>
+                    <div>
+                        <p>FULLWIDTH</p>
+                    </div>
+                </div>
+                <div class="bottom_nav-sub3">3</div>
+                <div class="bottom_nav-sub4">
+                    <div class="bottom_nav_sub4_sub1">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>1.800.555.6789</p>
+                    </div>
+
+                    <div class="bottom_nav_sub4_sub2">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <p>BLOG</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section  -->
+
+    <!-- <div class="hero"> -->
+    <div class="container hero">
+
+        <div class="hero_sub1">
+            <img src="./assets/images/image5.jpeg" alt="">
+
+        </div>
+
+
+        <div class="hero_sub2">
+            <div class="hero_sub2_sub">
+                <img src="./assets/images/img51.avif" alt="">
+            </div>
+            <div class="hero_sub2_sub">
+                <img src="./assets/images/img53.avif" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- Hero Section  End-->
+
+    <!-- ///////Bar Section Start/////// -->
+
+    <div class="Bar">
+        <div class=" bar">
+            <div class="bar_sub1">
+                <div class="bar_sub">
+                    <div class="bar_sub_icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div class="bar_description">
+                        <h4>Free Sheeping</h4>
+                        <p>Free delivery over $100</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bar_sub2">
+                <div class="bar_sub">
+                    <div class="bar_sub_icon">
+                        <i class="fa-solid fa-share"></i>
+                    </div>
+                    <div class="bar_description">
+                        <h4>Free Return</h4>
+                        <p>Hassle free returns</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bar_sub3">
+                <div class="bar_sub">
+                    <div class="bar_sub_icon">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <div class="bar_description">
+                        <h4>Secure Shopping</h4>
+                        <p>Best Security features</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bar_sub4">
+                <div class="bar_sub">
+                    <div class="bar_sub_icon">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+
+                    <div class="bar_description">
+                        <h4>Unlimited Blocks</h4>
+                        <p>Any content, any page</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ///////Bar Section End/////// -->
+
+
+    <div class="about1 container">
+        <div class="about1_sub1">
+            <h1>Why buy from us?</h1>
+            <hr class="hr">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum modi id atque repudiandae possimus
+                nobis
+                corrupti magnam. <br>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur
+                Iusto porro magnam amet impedit rerum! Eius, magni deleniti.
+                <a id="about1_learn" href="#">Learn More</a>
+            </p>
+        </div>
+        <div class="about1_sub2">
+            <div class="about1_sub2_sub1">
+                <button>TOP CREATION</button>
+                <button>ELECTRONICS</button>
+                <button>BEAUTY</button>
+                <button>FASHION</button>
+            </div>
+            <div class="about1_sub2_sub2">
+                <div class="about1_card">
+                    <img src="./assets/images/fashion.avif" alt="">
+                </div>
+                <div class="about1_card">
+                    <img src="./assets/images/bags.avif" alt="">
+                </div>
+                <div class="about1_card">
+                    <img src="./assets/images/health&beuty.avif" alt="">
+                </div>
+                <div class="about1_card">
+                    <img src="./assets/images/footwear.avif" alt="">
+                </div>
+                <div class="about1_card">
+                    <img src="./assets/images/homedecor.jpg" alt="">
+                </div>
+
+            </div>
+
+
+            <div class="about2_sub2_sub3">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section id="about_2">
+        <div class="about2 container">
+            <div class="about2_sub1">
+                <h1>Fratured Products</h1>
+                <hr class="hr">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum modi id atque repudiandae possimus
+                    nobis
+                    corrupti magnam. <br>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur
+                    Iusto porro magnam amet impedit rerum! Eius, magni deleniti.
+                </p>
+            </div>
+            <div class="about2_sub2">
+                <div class="about2_sub2_sub1">
+                    <button>FEATURED</button>
+                    <button>LATEST</button>
+                    <button>BEAUTY</button>
+                    <button>FASHION</button>
+                </div>
+                <div class="about2_sub2_sub2">
+                    <div class="about2_card about2_img">
+                        <img src="./assets/images/headphone2.avif" alt="">
+                    </div>
+                    <div class="about2_card about2_img">
+                        <img src="./assets/images/shoe2.avif" alt="">
+                    </div>
+                    <div class="about2_card about2_img">
+                        <img src="./assets/images/tv.avif" alt="">
+                    </div>
+                    <div class="about2_card about2_img">
+                        <img src="./assets/images/camera2.avif" alt="">
+                    </div>
+                </div>
+
+                <div class="about2_sub2_sub3">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about2_sub3">
+                <button>
+                    SEE ALL PRODUCTS <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about_3">
+        <div class="about3 container">
+            <div class="about2_sub1">
+                <h1>Fratured Category</h1>
+                <hr class="hr">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum modi id atque repudiandae possimus
+                    nobis
+                    corrupti magnam. <br>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur
+                    Iusto porro magnam amet impedit rerum! Eius, magni deleniti.
+                </p>
+            </div>
+
+            <div class="about2_sub2_sub2">
+                <div class="about2_card about3_img">
+                    <img src="./assets/images/fashion.avif" alt="">
+                </div>
+                <div class="about2_card about3_img">
+                    <img src="./assets/images/fashion32.avif" alt="">
+                </div>
+                <div class="about2_card about3_img">
+                    <img src="./assets/images/fashion33.avif" alt="">
+                </div>
+                <div class="about2_card about3_img">
+                    <img src="./assets/images/fashion34.avif" alt="">
+                </div>
+                <div class="about2_card about3_img">
+                    <img src="./assets/images/fashion35.avif" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about4 container">
+        <div class="about4_sub1">
+            <h1>Shop by Brand</h1>
+            <hr class="hr">
+        </div>
+
+        <div class="about4_sub2">
+            <div class="about4_card">
+                <img src="./assets/images/img41.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img42.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img41.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img43.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img42.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img41.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img42.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img43.avif" alt="">
+            </div>
+            <div class="about4_card">
+                <img src="./assets/images/img41.avif" alt="">
+            </div>
+        </div>
+
+
+        <div class="about2_sub2_sub3">
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="about_5">
+        <div class="about5 container">
+            <div class="about2_sub1">
+                <h1>Improved Gallery Module</h1>
+                <hr class="hr">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum modi id atque repudiandae possimus
+                    nobis
+                    corrupti magnam. <br>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur
+                    Iusto porro magnam amet impedit rerum! Eius, magni deleniti.
+                </p>
+            </div>
+
+            <div class="about4_sub2">
+                <div class="about4_card">
+                    <img src="./assets/images/img54.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img57.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img53.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img51.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img55.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img56.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img52.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img51.avif" alt="">
+                </div>
+                <div class="about4_card">
+                    <img src="./assets/images/img56.avif" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="about_6">
+        <section class="about6 container">
+            <div class="about2_sub1">
+                <h1>From our Blog</h1>
+                <hr class="hr">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum modi id atque repudiandae possimus
+                    nobis
+                    corrupti magnam.
+                </p>
+            </div>
+
+            <div class="about2_sub2">
+                <div class="about2_sub2_sub1" id="about_6_btn">
+                    <button>LATEST POST</button>
+                    <button>MOST READ</button>
+                </div>
+                <div class="about6_sub2_sub2">
+                    <div class="about6_card">
+                        <div class="date">
+                            <p>02</p>
+                            <p>Aug</p>
+                        </div>
+                        <div class="about6_card_img">
+                            <img src="./assets/images/img61.avif" alt="">
+                        </div>
+                        <div class="about6_description">
+                            <div class="user">
+                                <p><i class="fa-solid fa-circle-user"></i> admin</p>
+                                <p><i class="fa-regular fa-comment-dots"></i> 38</p>
+                                <p><i class="fa-regular fa-eye"></i> 399</p>
+                            </div>
+                            <div class="about6_text">
+                                <h2>Journal Blog is Here</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit harum eveniet rem nemo,
+                                    aperiam dicta quas consequuntur inventore dolore laudantium error porro
+                                    necessitatibus
+                                    exercitationem! Aspernatur temporibus voluptates dolore non numquam.</p>
+                                <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about6_card">
+                        <div class="date">
+                            <p>02</p>
+                            <p>Aug</p>
+                        </div>
+                        <div class="about6_card_img">
+                            <img src="./assets/images/img62.avif" alt="">
+                        </div>
+                        <div class="about6_description">
+                            <div class="user">
+                                <p><i class="fa-solid fa-circle-user"></i> admin</p>
+                                <p><i class="fa-regular fa-comment-dots"></i> 38</p>
+                                <p><i class="fa-regular fa-eye"></i> 399</p>
+                            </div>
+                            <div class="about6_text">
+                                <h2>Best Leather Bags</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit harum eveniet rem nemo,
+                                    aperiam dicta quas consequuntur inventore dolore laudantium error porro
+                                    necessitatibus
+                                    exercitationem! Aspernatur temporibus voluptates dolore non numquam.</p>
+                                <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about6_card">
+                        <div class="date">
+                            <p>02</p>
+                            <p>Aug</p>
+                        </div>
+                        <div class="about6_card_img">
+                            <img src="./assets/images/img63.avif" alt="">
+                        </div>
+                        <div class="about6_description">
+                            <div class="user">
+                                <p><i class="fa-solid fa-circle-user"></i> admin</p>
+                                <p><i class="fa-regular fa-comment-dots"></i> 38</p>
+                                <p><i class="fa-regular fa-eye"></i> 399</p>
+                            </div>
+                            <div class="about6_text">
+                                <h2>Another blog post</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit harum eveniet rem nemo,
+                                    aperiam dicta quas consequuntur inventore dolore laudantium error porro
+                                    necessitatibus
+                                    exercitationem! Aspernatur temporibus voluptates dolore non numquam.</p>
+                                <a href="#">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="about2_sub2_sub3">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="about7 container">
+        <div class="about2_sub1">
+            <h1>What are people saying about us</h1>
+            <hr class="hr">
+            <div class="about6_sub2_sub2">
+                <div class="about6_card">
+                    <div class="about6_description">
+                        <div class="about6_text">
+                            <i class="fa-solid fa-quote-left about7_icon"></i>
+                            <h2>Journal Blog is Here</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit harum eveniet rem nemo,
+                                aperiam dicta quas consequuntur inventore dolore laudantium error porro
+                                necessitatibus
+                                exercitationem! Aspernatur temporibus voluptates dolore non numquam.</p>
+                            <a href="#">-charlibaltimore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about6_card">
+
+                    <div class="about6_description">
+
+                        <div class="about6_text">
+                            <i class="fa-solid fa-quote-left about7_icon"></i>
+                            <h2>Best Leather Bags</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit harum eveniet rem nemo,
+                                aperiam dicta quas consequuntur inventore dolore laudantium error porro
+                                necessitatibus
+                                exercitationem! Aspernatur temporibus voluptates dolore non numquam.</p>
+                            <a href="#">-chromebandit</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about6_card">
+                    <div class="about6_description">
+                        <div class="about6_text">
+                            <i class="fa-solid fa-quote-left about7_icon"></i>
+                            <h2>Another blog post</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit harum eveniet rem nemo,
+                                aperiam dicta quas consequuntur inventore dolore laudantium error porro
+                                necessitatibus
+                                exercitationem! Aspernatur temporibus voluptates dolore non numquam.</p>
+                            <a href="#">-kellyhorne</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about_8">
+        <section class="about8 container">
+            <div class="about8_sub1">
+                <span>MOST VIEWED</span>
+                <hr id="hr">
+            </div>
+            <div class="about8_sub2">
+                <div class="about8_card">
+                    <div class="about8_card_sub1">
+                        <img src="./assets/images/glass.jpg" alt="">
+                    </div>
+                    <div class="about8_card_sub2">
+                        <p>Oversized Sunglass for Lon...</p>
+                        <p>$397.00</p>
+                        <p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="about8_card">
+                    <div class="about8_card_sub1">
+                        <img src="./assets/images/headfone.jpeg" alt="">
+                    </div>
+                    <div class="about8_card_sub2">
+                        <p>Oversized Sunglass for Lon...</p>
+                        <p>$397.00</p>
+                        <p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="about8_card">
+                    <div class="about8_card_sub1">
+                        <img src="./assets/images/shoe.jpg" alt="">
+                    </div>
+                    <div class="about8_card_sub2">
+                        <p>Oversized Sunglass for Lon...</p>
+                        <p>$397.00</p>
+                        <p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="about8_card">
+                    <div class="about8_card_sub1">
+                        <img src="./assets/images/watch.png" alt="">
+                    </div>
+                    <div class="about8_card_sub2">
+                        <p>Oversized Sunglass for Lon...</p>
+                        <p>$397.00</p>
+                        <p>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-code-compare"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="foot1">
+            <section class="container foot-row1">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="foot2">
+            <section class=" container foot-row2">
+                <div class="foot-col">
+                    <h4>About Us</h4>
+                    <hr>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Delivery</li>
+                        <li>Privacy Plicy</li>
+                        <li>Terms and Conditions</li>
+                        <li>Custom Kinks</li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>Customer Service</h4>
+                    <hr>
+                    <ul>
+                        <li>Contact</li>
+                        <li>Returns</li>
+                        <li>Site map</li>
+                        <li>Brands</li>
+                        <li>Unlinited Links</li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h4>My Account</h4>
+                    <hr>
+                    <ul>
+                        <li>My Account</li>
+                        <li>Order History</li>
+                        <li>Affiliates</li>
+                        <li>Newsletter</li>
+                        <li>Gift Certificates</li>
+                    </ul>
+                </div>
+                <div class="foot-col ">
+                    <h4>Newsletter</h4>
+                    <hr>
+                    <div class="newsletter">
+                        <span>Stay up to date with news and promotions by signing up for our newsletter</span>
+                        <div class="news_input">
+                            <input type="text" placeholder="Your email">
+                            <button class="news_btn">send</button>
+                        </div>
+                        <div class="policy">
+                            <input type="checkbox" name="" id="">
+                            <p>I have read and agree to the <a href="#">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
