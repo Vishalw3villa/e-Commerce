@@ -13,7 +13,8 @@ img {
     --blue: rgb(66, 66, 237);
     --white: #ffffff;
     --gray: rgb(241, 239, 239);
-    --yellow: #ffc75f;
+    --yellow: hsl(45, 100%, 64%);
+    --blackgray: hsl(205.71deg 20% 27.45%);
 }
 
 .container {
@@ -108,6 +109,9 @@ a {
 .mid_nav_sub3 i {
     color: gray;
     font-size: 23px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 20px;
 }
 
 .mid_nav_sub3 p {
@@ -200,10 +204,12 @@ a {
 
 .hero {
     display: flex;
+
 }
 
 .hero_sub1 {
-    flex: 2.5;
+    position: relative;
+    width: 65%;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 10px;
@@ -211,12 +217,52 @@ a {
 
 }
 
+/* owl-dots */
+
+.hero_sub1 .owl-dots{
+   position: absolute;
+   bottom: 40px;
+   left: 20px;
+}
+
+.hero_sub1 .owl-dot span{
+    padding-right: 20px;
+    height: 5px !important;
+}
+
+.hero_sub1 .owl-dot.active span{
+    background-color: orangered !important;
+}
+
+.hero .owl-carousel{
+    width: 65% !important;
+    z-index: 1;
+}
+
+.carousel_hero {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+.carousel_hero {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.carousel_hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 120px;
+}
+
 .hero_sub1 img {
     border-radius: 15px;
 }
 
 .hero_sub2 {
-    flex: 1;
+    width: 45%;
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -235,7 +281,7 @@ a {
 }
 
 .Bar {
-    background-color: rgb(57, 56, 56);
+    background-color: var(--blackgray);
 }
 
 .bar {
@@ -270,7 +316,7 @@ a {
 }
 
 .bar_sub_icon {
-    color: orangered;
+    color: orangered !important;
     padding: 20px;
     border: 2px solid var(--blue);
     border-radius: 40px;
