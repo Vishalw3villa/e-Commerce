@@ -14,7 +14,7 @@ $(".hero_sub1").owlCarousel({
             items: 1,
            
         },
-        1000: {
+        992: {
             items: 1,
         }
     }
@@ -37,7 +37,7 @@ $(".about1_sub2_sub2").owlCarousel({
             items: 2,
            
         },
-        1000: {
+        992: {
             items: 3,
         },
         1200:{
@@ -60,13 +60,13 @@ $(".about2_sub2_sub2").owlCarousel({
             
         },
         600: {
-            items: 1,
+            items: 2,
            
         },
-        1000: {
+        992: {
             items: 3,
         },
-        1200: {
+        1272: {
             items: 4,
         }
     }
@@ -74,7 +74,7 @@ $(".about2_sub2_sub2").owlCarousel({
 
 $(".about3_sub2_sub2").owlCarousel({
     loop: true,
-    margin:30, 
+    margin:20, 
     nav: false,
     autoplay: true,
     autoplayTimeout: 2000,
@@ -88,10 +88,10 @@ $(".about3_sub2_sub2").owlCarousel({
             items: 1,
            
         },
-        1000: {
-            items: 3,
+        992: {
+            items: 2,
         },
-        1200: {
+        1272: {
             items: 4,
         }
     }
@@ -107,17 +107,17 @@ $("#shop").owlCarousel({
     autoplayHoverPause: true,
     responsive: {
         0: {
-            items: 1,
+            items: 2,
             
         },
         600: {
-            items: 3,
+            items: 4,
            
         },
-        1000: {
+        992: {
             items: 6,
         },
-        1200: {
+        1272: {
             items: 9,
         }
     }
@@ -140,10 +140,10 @@ $("#about_6_card").owlCarousel({
             items: 2,
            
         },
-        1000: {
+        992: {
             items: 2,
         },
-        1200: {
+        1272: {
             items: 3,
         },
     }
@@ -166,10 +166,10 @@ $("#about_7_carousel").owlCarousel({
             items: 2,
            
         },
-        1000: {
+        992: {
             items: 2,
         },
-        1200: {
+        1272: {
             items: 3,
         }
     }
@@ -191,10 +191,10 @@ $(".about8_sub2").owlCarousel({
             items: 2,
            
         },
-        1000: {
+        992: {
             items: 3,
         },
-        1200: {
+        1272: {
             items: 4,
         },
     }
