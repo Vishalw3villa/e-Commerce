@@ -1,9 +1,9 @@
-$(".hero_sub1").owlCarousel({
+$(".hero_sub1_carousel").owlCarousel({
     loop: true,
     margin:10, 
     nav: false,
     autoplay: true,
-    autoplayTimeout: 2000,
+    autoplayTimeout: 4000,
     autoplayHoverPause: true,
     responsive: {
         0: {

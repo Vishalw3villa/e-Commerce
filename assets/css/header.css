@@ -1,7 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -19,7 +19,7 @@ img {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 85%;
     margin: auto;
 }
 
@@ -41,8 +41,14 @@ img {
 
 }
 
-h1 {
+h1{
     font-size: 40px;
+}
+
+.mid_nav_sub1 h1{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 a {
@@ -73,7 +79,12 @@ a {
 
 .mid_nav_sub1 {
     flex: 1;
+    flex: 1 1 0%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
+
 
 .mid_nav2_sub2 {
     display: flex;
@@ -83,8 +94,8 @@ a {
 .mid_nav_sub2 {
     display: flex;
     justify-content: left;
+    align-items: center;
     flex: 2.2;
-    padding-top: 10px;
 }
 
 
@@ -110,7 +121,7 @@ a {
     justify-content: right;
     align-items: center;
     text-align: center;
-    padding-top: 10px;
+    gap: 10px;
 }
 
 .mid_nav_sub3 i {
@@ -123,7 +134,8 @@ a {
 
 .mid_nav_sub3 p {
     color: gray;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 13px;
 }
 
@@ -134,7 +146,6 @@ a {
     align-items: center;
     text-align: right;
     color: gray;
-    margin-bottom: 16px;
 }
 
 .mid_nav_sub4 i {
@@ -199,6 +210,10 @@ a {
     padding-right: 20px;
 }
 
+.bottom_nav_sub4_sub1 i{
+    padding-right: 10px;
+}
+
 .bottom_nav_sub4_sub2 {
     display: flex;
     padding: 10px;
@@ -215,12 +230,13 @@ a {
     position: relative;
 }
 
+/* It is absolute to hero section */
+
 .hero_sub1_text {
     position: absolute;
     z-index: 5;
-    top: 60%;
-    left: 10%;
-    transform: translate(-30%, -50%);
+    top: 36%;
+    left: 3%;
 }
 
 .hero_sub1_text h1 {
@@ -241,22 +257,19 @@ a {
     padding: 10px;
 }
 
+
+
 .hero_sub1 {
     position: relative;
     width: 70%;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 10px;
-    height: 500px;
-
 }
 
-/* owl-dots */
 
-.hero_sub1 .owl-dots {
-    position: absolute;
-    bottom: 40px;
-    left: 45px;
+.hero_sub1_carousel{
+    width: 100%;
 }
 
 .hero_sub1 .owl-dot span {
@@ -269,31 +282,31 @@ a {
 }
 
 .hero .owl-carousel {
-    width: 70% !important;
+    width: 100% !important;
     z-index: 1;
 }
 
 .carousel_hero {
     width: 100%;
-    height: 500px;
     border-radius: 20px;
 }
 
-.carousel_hero {
-    width: 100%;
-    height: 500px;
-    border-radius: 20px;
-}
 
 .carousel_hero img {
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
     border-radius: 120px;
 }
 
 .hero_sub1 img {
     border-radius: 15px;
+}
+
+.hero_sub1 .owl-dots {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
 }
 
 .hero_sub2 {
@@ -323,6 +336,7 @@ a {
 
 #wear {
     text-transform: uppercase;
+    padding-bottom: 8px;
     color: var(--blue);
 }
 
@@ -391,6 +405,20 @@ a {
     color: gray;
 }
 
+
+.fixed_arr{
+    position: fixed;
+    z-index: 7;
+    bottom: 7px;
+    right: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 5px 12px 5px 12px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: none;
+}
+
 /* Media Query --1272 */
 
 @media screen and (max-width:1272px) {
@@ -433,9 +461,16 @@ a {
     }
 
     .hero_sub1_text {
-        top: 53%;
-        left: 13%;
-        transform: translate(-30%, -50%);
+        top: 40%;
+        left: 4%;
+    }
+
+    .bar_sub h4 {
+        font-size: 12px;
+    }
+    
+    .bar_sub p {
+        font-size: 10px;
     }
 }
 
@@ -525,9 +560,8 @@ a {
     }
 
     .hero_sub1_text {
-        top: 40%;
-        left: 17%;
-        transform: translate(-30%, -50%);
+        top: 25%;
+        left: 6%;
     }
 
     .hero .owl-carousel {
@@ -592,9 +626,8 @@ a {
 @media screen and (max-width: 768px) {
 
     .hero_sub1_text {
-        top: 40%;
-        left: 20%;
-        transform: translate(-30%, -50%);
+        top: 24%;
+        left: 7%;
     }
 
     .mid_nav2 h1 {
@@ -653,19 +686,14 @@ a {
         padding-top: 3px;
     }
 
-    .hero_sub1_text {
-        left: 23%;
-    }
-
     .hero_sub1 .owl-dots {
         left: 26px;
     }
 
 
     .hero_sub1_text {
-        top: 40%;
-        left: 24%;
-        transform: translate(-30%, -50%);
+        top: 27%;
+        left: 6%;
     }
 
     .bar_sub h4 {
@@ -684,9 +712,8 @@ a {
 
 @media screen and (max-width: 500px) {
     .hero_sub1_text {
-        top: 30%;
-        left: 30%;
-        transform: translate(-30%, -50%);
+        top: 22%;
+        left: 7%;
     }
 
     .hero_sub1_text h1 {
