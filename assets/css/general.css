@@ -6,7 +6,7 @@
 }
 
 .owl-dot.active span {
-    background-color: orangered !important;
+    background-color: var(--orangered) !important;
 }
 
 
@@ -18,12 +18,13 @@ img {
 }
 
 :root {
-    --blue: rgb(66, 66, 237);
+    --blue: #15429d;
     --white: #ffffff;
     --gray: rgb(241, 239, 239);
     --yellow: hsl(45, 100%, 64%);
     --textgray: gray;
     --blackgray: hsl(205.71deg 20% 27.45%);
+    --orangered: orangered;
 }
 
 
@@ -421,7 +422,8 @@ img {
 }
 
 .about2_sub1 h1 {
-    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 10px;
 }
 
 .about2_sub2_sub1 button {
@@ -535,7 +537,7 @@ li {
     position: absolute;
     top: 5px;
     left: 5px;
-    background-color: darkblue;
+    background-color: var(--blue);
     color: var(--white);
     padding-top: 1px;
     padding-bottom: 1px;

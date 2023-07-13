@@ -11,11 +11,13 @@ img {
 }
 
 :root {
-    --blue: rgb(66, 66, 237);
+    --blue: #15429d;
     --white: #ffffff;
     --gray: rgb(241, 239, 239);
     --yellow: hsl(45, 100%, 64%);
     --blackgray: hsl(205.71deg 20% 27.45%);
+    --orangered: orangered;
+    --textgray: gray;
 }
 
 .container {
@@ -111,9 +113,9 @@ a {
     width: 50px;
     height: 34px;
     margin: 0px;
-    background-color: rgb(66, 66, 237);
+    background-color: var(--blue);
     color: white;
-    border: 1px solid rgb(66, 66, 237);
+    border: 1px solid var(--blue);
 }
 
 .mid_nav_sub3 {
@@ -129,7 +131,8 @@ a {
     color: gray;
     font-size: 16px;
     padding: 8px;
-    border: 1px solid gray;
+    border: 1px solid rgb(226, 226, 226);
+    background-color: rgb(231, 229, 229);
     border-radius: 20px;
 }
 
@@ -152,7 +155,7 @@ a {
 .mid_nav_sub4 i {
     color: white;
     font-size: 21px;
-    background-color: blue;
+    background-color: var(--blue);
     padding: 8px;
 }
 
@@ -290,7 +293,7 @@ a {
 }
 
 .hero_sub1 .owl-dot.active span {
-    background-color: orangered !important;
+    background-color: var(--orangered) !important;
 }
 
 .hero .owl-carousel {
