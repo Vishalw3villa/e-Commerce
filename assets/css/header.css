@@ -100,10 +100,11 @@ a {
 
 
 .mid_nav_sub2 input {
-    width: 80%;
+    width: 75%;
     height: 30px;
     margin-left: -5px;
     margin-right: -5px;
+    padding-left: 10px;
 }
 
 .mid_nav_sub2 button {
@@ -181,6 +182,10 @@ a {
     padding-left: 10px;
 }
 
+.bottom_nav-sub1 i{
+    padding-top: 4px;
+}
+
 .bottom_nav-sub2 {
     display: flex;
     flex: 1.2;
@@ -211,6 +216,7 @@ a {
 }
 
 .bottom_nav_sub4_sub1 i{
+    padding-top: 5px;
     padding-right: 10px;
 }
 
@@ -221,6 +227,12 @@ a {
     padding-top: 15px;
     padding-bottom: 20px;
     padding-left: 20px;
+}
+
+.bottom_nav_sub4_sub2 i{
+    padding-top: 5px;
+    padding-right: 5px;
+    font-size: 18px;
 }
 
 /* //Hero section// */
@@ -261,10 +273,10 @@ a {
 
 .hero_sub1 {
     position: relative;
-    width: 70%;
+    width: 69%;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 10px;
+    /* padding-right: 10px; */
 }
 
 
@@ -434,7 +446,7 @@ a {
 
 
     #amount {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .mid_nav_sub2 {
@@ -455,10 +467,11 @@ a {
     }
 
     .bottom_nav-sub1 {
-
         padding-top: 17px;
         padding-bottom: 16px;
     }
+
+    
 
     .hero_sub1_text {
         top: 40%;
@@ -521,6 +534,7 @@ a {
     .top_nav2 p {
         font-size: 18px;
         color: var(--white);
+        padding-right: 10px;
     }
 
     .top_nav2_sub2 {
@@ -697,7 +711,7 @@ a {
     }
 
     .bar_sub h4 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .bar_sub p {
@@ -734,12 +748,17 @@ a {
     }
 
     .bar_sub h4 {
-        font-size: 13px;
+        font-size: 11px;
+    }
+
+    .bar_sub p {
+        font-size: 10px;
     }
 
     .top_nav2 p {
         font-size: 12px;
         padding-top: 3px;
+        padding-right: 5px;
     }
 
 }
@@ -751,8 +770,15 @@ a {
         margin: auto;
     }
 
+    .top_nav2 {
+        gap: 5px !important;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     .top_nav2 p {
-        font-size: 13px;
+        font-size: 10px;
     }
 
     .top_nav2 i {
@@ -766,11 +792,11 @@ a {
     }
 
     .bar_sub h4 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .bar_sub p {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .bar_sub_icon {
