@@ -50,7 +50,7 @@ $(".about1_sub2_sub2").owlCarousel({
 $(".about2_sub2_sub2").owlCarousel({
     loop: true,
     nav: false,
-    margin:15,
+    margin:25,
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
@@ -67,7 +67,10 @@ $(".about2_sub2_sub2").owlCarousel({
             items: 3,
         },
         1272: {
-            items: 4,
+            items: 3,
+        },
+        1500:{
+            items: 4
         }
     }
 })

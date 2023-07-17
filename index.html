@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <title>e-Commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <!-- Font Faimly Link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +53,8 @@
             </div>
 
             <div class="center_nav">
-                <a href="#"><i class="fa-solid fa-flag"></i> English</a>
+                <a class="flag" href="#"><img src="./assets/images/flag.png" alt=""> English</a>
+
                 <a href="#">$US Doller</a>
             </div>
 
@@ -121,7 +122,10 @@
                     </div>
                 </div>
                 <div class="mid_nav_sub4">
-                    <span id="amount">0 items(s)-$0.00</span>
+                    <span id="amount">
+                        <span>0 items(s)</span>
+                        <span>-$0.00</span>
+                    </span>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
@@ -143,20 +147,20 @@
         <div class="bottom_nav">
             <div class="container bottom_nav-sub">
                 <div class="bottom_nav-sub1">
+                    <div class="bottom_tag">Sale</div>
                     <i class="fa-solid fa-bars"></i>
                     &nbsp;&nbsp;&nbsp;
                     <p>ALL DEPARTMENTS</p>
                 </div>
                 <div class="bottom_nav-sub2">
-                    <div>
-                        <p>MULTILEVEL</p>
+                    <p>MULTILEVEL</p>
+                    <div class="meganew_icon">
+                        <div class="bottom_tag_new">New</div>
+                        <p>
+                            MEGAMENU
+                        </p>
                     </div>
-                    <div>
-                        <p>MEGAMENU</p>
-                    </div>
-                    <div>
-                        <p>FULLWIDTH</p>
-                    </div>
+                    <p>FULLWIDTH</p>
                 </div>
                 <div class="bottom_nav-sub3"></div>
                 <div class="bottom_nav-sub4">
@@ -169,7 +173,6 @@
                         <i class="fa-regular fa-comment-dots"></i> &nbsp;
                         <p>BLOG</p>
                     </div>
-
 
                 </div>
             </div>
@@ -371,13 +374,13 @@
                         </div>
                         <div class="about2_description">
                             <div class="about2_bar">
-                                <p>Ericksson</p>
+                                <p class="underline">Ericksson</p>
                                 <p>Model 519</p>
                             </div>
 
                             <div class="about2_text">
                                 <h3>Headphone</h3>
-                                <p>$999.00 <small>$3,299.00</small></p>
+                                <p>$999.00 <del>$3,299.00</del></p>
                                 <div class="about2_cart">
                                     <div class="about2_cart1">
                                         <span>
@@ -395,11 +398,11 @@
                             <div class="about2_cart2">
 
                                 <p>
-                                    <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                                    <i class="fa-regular fa-dollar-sign doller_icon"></i>
                                     Buy Now
                                 </p>
                                 <p>
-                                    <i class="fa-regular fa-circle-question"></i>
+                                    <i class="fa-regular fa-circle-question question_icon"></i>
                                     Question
                                 </p>
                             </div>
@@ -412,13 +415,13 @@
                         </div>
                         <div class="about2_description">
                             <div class="about2_bar">
-                                <p>Ericksson</p>
+                                <p class="underline">Ericksson</p>
                                 <p>Model 519</p>
                             </div>
 
                             <div class="about2_text">
                                 <h3>Women's Maria Pump</h3>
-                                <p>$999.00 <small>$3,299.00</small></p>
+                                <p>$999.00 </p>
                                 <div class="about2_cart">
                                     <div class="about2_cart1">
                                         <span>
@@ -436,11 +439,11 @@
                             <div class="about2_cart2">
 
                                 <p>
-                                    <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                                    <i class="fa-regular fa-dollar-sign doller_icon"></i>
                                     Buy Now
                                 </p>
                                 <p>
-                                    <i class="fa-regular fa-circle-question"></i>
+                                    <i class="fa-regular fa-circle-question question_icon"></i>
                                     Question
                                 </p>
                             </div>
@@ -455,13 +458,13 @@
                         </div>
                         <div class="about2_description">
                             <div class="about2_bar">
-                                <p>Ericksson</p>
+                                <p class="underline">Ericksson</p>
                                 <p>Model 519</p>
                             </div>
 
                             <div class="about2_text">
                                 <h3>Toshiba 5009 Smart TV</h3>
-                                <p>$999.00 <small>$3,299.00</small></p>
+                                <p>$999.00 <del>$3,299.00</del></p>
                                 <div class="about2_cart">
                                     <div class="about2_cart1">
                                         <span>
@@ -476,13 +479,12 @@
                                 </div>
                             </div>
                             <div class="about2_cart2">
-
                                 <p>
-                                    <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                                    <i class="fa-regular fa-dollar-sign doller_icon"></i>
                                     Buy Now
                                 </p>
                                 <p>
-                                    <i class="fa-regular fa-circle-question"></i>
+                                    <i class="fa-regular fa-circle-question question_icon"></i>
                                     Question
                                 </p>
                             </div>
@@ -497,13 +499,13 @@
                         </div>
                         <div class="about2_description">
                             <div class="about2_bar">
-                                <p>Ericksson</p>
+                                <p class="underline">Ericksson</p>
                                 <p>Model 519</p>
                             </div>
 
                             <div class="about2_text">
                                 <h3>Lecia Digital Camera</h3>
-                                <p>$999.00 <small>$3,299.00</small></p>
+                                <p>$999.00 </p>
                                 <div class="about2_cart">
                                     <div class="about2_cart1">
                                         <span>
@@ -519,13 +521,12 @@
                                 </div>
                             </div>
                             <div class="about2_cart2">
-
                                 <p>
-                                    <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                                    <i class="fa-regular fa-dollar-sign doller_icon"></i>
                                     Buy Now
                                 </p>
                                 <p>
-                                    <i class="fa-regular fa-circle-question"></i>
+                                    <i class="fa-regular fa-circle-question question_icon"></i>
                                     Question
                                 </p>
                             </div>
@@ -538,7 +539,7 @@
                         </div>
                         <div class="about2_description">
                             <div class="about2_bar">
-                                <p>Ericksson</p>
+                                <p class="underline">Ericksson</p>
                                 <p>Model 519</p>
                             </div>
 
@@ -561,11 +562,11 @@
                             <div class="about2_cart2">
 
                                 <p>
-                                    <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                                    <i class="fa-regular fa-dollar-sign doller_icon"></i>
                                     Buy Now
                                 </p>
                                 <p>
-                                    <i class="fa-regular fa-circle-question"></i>
+                                    <i class="fa-regular fa-circle-question question_icon"></i>
                                     Question
                                 </p>
                             </div>
