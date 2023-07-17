@@ -1,6 +1,10 @@
+
+// Get references to the elements and the button
+
+
 $(".hero_sub1_carousel").owlCarousel({
     loop: true,
-    margin:10, 
+    margin: 10,
     nav: false,
     autoplay: true,
     autoplayTimeout: 4000,
@@ -8,11 +12,11 @@ $(".hero_sub1_carousel").owlCarousel({
     responsive: {
         0: {
             items: 1,
-            
+
         },
         600: {
             items: 1,
-           
+
         },
         992: {
             items: 1,
@@ -23,7 +27,7 @@ $(".hero_sub1_carousel").owlCarousel({
 
 $(".about1_sub2_sub2").owlCarousel({
     loop: true,
-    margin:10, 
+    margin: 10,
     nav: false,
     autoplay: true,
     autoplayTimeout: 2000,
@@ -31,16 +35,16 @@ $(".about1_sub2_sub2").owlCarousel({
     responsive: {
         0: {
             items: 1,
-            
+
         },
         600: {
             items: 2,
-           
+
         },
         992: {
             items: 3,
         },
-        1200:{
+        1200: {
             items: 5,
         }
     }
@@ -50,18 +54,18 @@ $(".about1_sub2_sub2").owlCarousel({
 $(".about2_sub2_sub2").owlCarousel({
     loop: true,
     nav: false,
-    margin:25,
+    margin: 25,
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
     responsive: {
         0: {
             items: 1,
-            
+
         },
         600: {
             items: 2,
-           
+
         },
         992: {
             items: 3,
@@ -69,7 +73,7 @@ $(".about2_sub2_sub2").owlCarousel({
         1272: {
             items: 3,
         },
-        1500:{
+        1500: {
             items: 4
         }
     }
@@ -77,7 +81,7 @@ $(".about2_sub2_sub2").owlCarousel({
 
 $(".about3_sub2_sub2").owlCarousel({
     loop: true,
-    margin:20, 
+    margin: 20,
     nav: false,
     autoplay: true,
     autoplayTimeout: 2000,
@@ -85,11 +89,11 @@ $(".about3_sub2_sub2").owlCarousel({
     responsive: {
         0: {
             items: 1,
-            
+
         },
         600: {
             items: 1,
-           
+
         },
         992: {
             items: 2,
@@ -103,7 +107,7 @@ $(".about3_sub2_sub2").owlCarousel({
 
 $("#shop").owlCarousel({
     loop: true,
-    margin:10, 
+    margin: 10,
     nav: false,
     autoplay: true,
     autoplayTimeout: 2000,
@@ -111,11 +115,11 @@ $("#shop").owlCarousel({
     responsive: {
         0: {
             items: 2,
-            
+
         },
         600: {
             items: 4,
-           
+
         },
         992: {
             items: 6,
@@ -129,7 +133,7 @@ $("#shop").owlCarousel({
 
 $("#about_6_card").owlCarousel({
     loop: true,
-    margin:10, 
+    margin: 10,
     nav: false,
     autoplay: true,
     autoplayTimeout: 2000,
@@ -137,11 +141,11 @@ $("#about_6_card").owlCarousel({
     responsive: {
         0: {
             items: 1,
-            
+
         },
         600: {
             items: 2,
-           
+
         },
         992: {
             items: 2,
@@ -155,7 +159,7 @@ $("#about_6_card").owlCarousel({
 
 $("#about_7_carousel").owlCarousel({
     loop: true,
-    margin:10, 
+    margin: 10,
     nav: false,
     autoplay: true,
     autoplayTimeout: 4000,
@@ -163,11 +167,11 @@ $("#about_7_carousel").owlCarousel({
     responsive: {
         0: {
             items: 1,
-            
+
         },
         600: {
             items: 2,
-           
+
         },
         992: {
             items: 2,
@@ -180,7 +184,7 @@ $("#about_7_carousel").owlCarousel({
 
 $(".about8_sub2").owlCarousel({
     loop: true,
-    margin:10, 
+    margin: 10,
     nav: false,
     autoplay: true,
     autoplayTimeout: 2000,
@@ -188,11 +192,11 @@ $(".about8_sub2").owlCarousel({
     responsive: {
         0: {
             items: 1,
-            
+
         },
         600: {
             items: 2,
-           
+
         },
         992: {
             items: 3,
@@ -202,6 +206,14 @@ $(".about8_sub2").owlCarousel({
         },
     }
 })
+
+
+
+
+
+
+
+
 
 
 

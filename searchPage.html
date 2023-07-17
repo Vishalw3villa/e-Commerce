@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./assets/css/general.css">
     <link rel="stylesheet" href="./assets/css/searchPage.css">
 
+
 </head>
 
 <body>
@@ -34,10 +35,10 @@
         <!-- Top Navbar Start -->
         <div class="top_nav1 container">
             <div class="left_nav">
-                <a  href="#"><i class="fa-solid fa-house"></i> Home</a>
-                <a  href="#"><i class="fa-regular fa-address-card"></i> About Us</a>
-                <a  href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
-                <a  href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+                <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#"><i class="fa-regular fa-address-card"></i> About Us</a>
+                <a href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
+                <a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a>
             </div>
 
             <div class="center_nav">
@@ -171,6 +172,9 @@
 
     <!-- ******Header Section End****** -->
 
+
+
+
     <!-- Search Page Start here -->
 
     <section class="search">
@@ -178,7 +182,9 @@
             <div class="home_bar container fw3">
                 <i class="fa-solid fa-house"></i>
                 <i class="fa-solid fa-arrow-right"></i>
-                <div id="home_search"><p>Search</p></div>
+                <div id="home_search">
+                    <p>Search</p>
+                </div>
             </div>
         </section>
         <div class="searchCamera container">
@@ -355,7 +361,9 @@
                 </div>
 
             </div>
-            <div class="search_right">
+
+
+            <div class="search_right_grid">
                 <div class="search_right_sub1">
                     <div class="input_bar">
                         <input class="camera" type="text" placeholder="camera">
@@ -389,9 +397,9 @@
                 <div class="search_right_sub2">
                     <div class="search_description1">
                         <div class="search_description1_l1">
-                            <i class="fa-solid fa-list-ul"></i>
+                            <button id="showListbtn"><i class="fa-solid fa-bars"></i></button>
                             &nbsp;
-                            <i id="listview" class="fa-solid fa-bars"></i>
+                            <button id="showGridbtn"><i class="fa-solid fa-list-ul"></i></button>
                         </div>
                         <div class="search_description1_l2">
                             <i id="search_compare" class="fa-solid fa-arrow-right-arrow-left"></i>
@@ -431,7 +439,8 @@
                     <hr>
                 </div>
 
-                <div class="search_right_sub3">
+                <!-- /////////////Grid View Start here //////////////////-->
+                <div class="search_right_sub3" id="showGrid">
                     <!-- <div class="about2_sub2_sub2 "> -->
 
                     <div class="about2_card search_card1">
@@ -464,7 +473,6 @@
                                 </div>
                             </div>
                             <div class="about2_cart2">
-
                                 <p>
                                     <i class="fa-regular fa-dollar-sign doller_icon"></i>
                                     Buy Now
@@ -564,6 +572,162 @@
 
                     <!-- </div> -->
                 </div>
+                <!-- /////////////Grid View End here //////////////////-->
+
+                <!-- /////////////List View Start here //////////////////-->
+                <div class="search_right_listview" id="showList">
+                    <!-- <div class="about2_sub2_sub2 "> -->
+
+                    <div class=" listview_card">
+                        <div class="listview_img">
+                            <button class="about3_tags hot">Hot</button>
+                            <button class="about3_tags discount">-10%</button>
+
+                            <img src="./assets/images/listcam1.jpg" alt="">
+                        </div>
+                        <div class="listview_description">
+                            <div class="listview_bar">
+                                <span class="underline">Brand: <p class="productname">Apple</p></span>
+                                <span>Model: <p class="productversion">Product 15</p></span>
+                            </div>
+
+                            <div class="listview_text">
+                                <h3 class="fw5">Power Shot Digital Camera</h3>
+                                <p class="product_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+                                    maiores odio?
+                                    Molestias itaque earum velit dicta necessitatibus iste pariatur aspernatur tempore
+                                    sit nostrum, possimus, voluptas amet, sunt harum corporis animi.</p>
+                                <h2 class="fw5 price_color">234.60$ <del>529.61$</del></h2>
+                                <small class="fw4">Ex Tax: 234.60$</small>
+
+                                <div class="listview_cart">
+                                    <div class="listview_cart1">
+
+                                        <input type="number" min="1" max="10" value="1">
+                                        <button class="listview_addbtn"><i class="fa-solid fa-cart-shopping"></i> ADD TO
+                                            CART</button>
+                                        <i class="fa-regular fa-heart cart_icon"></i>
+                                        <i class="fa-solid fa-code-compare cart_icon"></i>
+
+                                    </div>
+                                    <div class="listview_cart2">
+                                        <p>
+                                            <i class="fa-regular fa-dollar-sign doller_icon"></i>
+                                            Buy Now
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-circle-question question_icon"></i>
+                                            Question
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class=" listview_card">
+                        <div class="listview_img">
+                            <!-- <button class="about3_tags hot">Hot</button>
+                            <button class="about3_tags discount">-10%</button> -->
+
+                            <img src="./assets/images/listcam2.jpeg" alt="">
+                        </div>
+                        <div class="listview_description">
+                            <div class="listview_bar">
+                                <span class="underline">Brand: <p class="productname">Erickson</p></span>
+                                <span>Model: <p class="productversion">Product 15</p></span>
+                            </div>
+
+                            <div class="listview_text">
+                                <h3 class="fw5">Power Shot Digital Camera</h3>
+                                <p class="product_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+                                    maiores odio?
+                                    Molestias itaque earum velit dicta necessitatibus iste pariatur aspernatur tempore
+                                    sit nostrum, possimus, voluptas amet, sunt harum corporis animi.</p>
+                                <h2 class="fw5 price_color">234.60$ <del>529.61$</del></h2>
+                                <small class="fw4">Ex Tax: 234.60$</small>
+
+                                <div class="listview_cart">
+                                    <div class="listview_cart1">
+
+                                        <input type="number" min="1" max="10" value="1">
+                                        <button class="listview_addbtn"><i class="fa-solid fa-cart-shopping"></i> ADD TO
+                                            CART</button>
+                                        <i class="fa-regular fa-heart cart_icon"></i>
+                                        <i class="fa-solid fa-code-compare cart_icon"></i>
+
+                                    </div>
+                                    <div class="listview_cart2">
+                                        <p>
+                                            <i class="fa-regular fa-dollar-sign doller_icon"></i>
+                                            Buy Now
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-circle-question question_icon"></i>
+                                            Question
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class=" listview_card">
+                        <div class="listview_img">
+                            <button class="about3_tags hot">Hot</button>
+                            <button class="about3_tags discount">-10%</button>
+
+                            <img src="./assets/images/listcam3.jpg" alt="">
+                        </div>
+                        <div class="listview_description">
+                            <div class="listview_bar">
+                                <span class="underline">Brand: <p class="productname">canon</p></span>
+                                <span>Model: <p class="productversion">Product 15</p></span>
+                            </div>
+
+                            <div class="listview_text">
+                                <h3 class="fw5">Power Shot Digital Camera</h3>
+                                <p class="product_about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+                                    maiores odio?
+                                    Molestias itaque earum velit dicta necessitatibus iste pariatur aspernatur tempore
+                                    sit nostrum, possimus, voluptas amet, sunt harum corporis animi.</p>
+                                <h2 class="fw5 price_color">234.60$ <del>529.61$</del></h2>
+                                <small class="fw4">Ex Tax: 234.60$</small>
+
+                                <div class="listview_cart">
+                                    <div class="listview_cart1">
+
+                                        <input type="number" min="1" max="10" value="1">
+                                        <button class="listview_addbtn"><i class="fa-solid fa-cart-shopping"></i> ADD TO
+                                            CART</button>
+                                        <i class="fa-regular fa-heart cart_icon"></i>
+                                        <i class="fa-solid fa-code-compare cart_icon"></i>
+
+                                    </div>
+                                    <div class="listview_cart2">
+                                        <p>
+                                            <i class="fa-regular fa-dollar-sign doller_icon"></i>
+                                            Buy Now
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-circle-question question_icon"></i>
+                                            Question
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- </div> -->
+                </div>
+                <!-- /////////////List View End here //////////////////-->
 
                 <div class="all_hr_line">
                     <hr>
@@ -574,6 +738,7 @@
 
                 <div class="extraheight"></div>
             </div>
+
 
 
         </div>
@@ -594,12 +759,12 @@
             <div class="about8_sub2">
                 <div class="about8_card" id="recentlyviewedcard_width">
                     <div class="about8_card_sub1">
-                        <img src="./assets/images/watch.png" alt="">
+                        <img src="./assets/images/campng.png" alt="">
                     </div>
                     <div class="about8_card_sub2">
                         <div>
                             <p>Leica Digital Camera</p>
-                        <p>$1717.49</p>
+                            <p>$1717.49</p>
                         </div>
                         <p class="order">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -613,6 +778,10 @@
     </section>
 
     <!-- Footer Section Start-->
+
+
+
+
 
     <footer>
         <div class="foot1">
@@ -701,6 +870,27 @@
     <a class="fixed_arr" href="#"><i class="fa-solid fa-arrow-up "></i></a>
 
     <!-- Footer Section End -->
+
+    <!-- <script type="text/javascript" src="./assets/script/style.js"></script> -->
+    <script>
+        const buttonList = document.getElementById("showListbtn");
+        const buttonGrid = document.getElementById("showGridbtn");
+        const elementToHide = document.getElementById("showGrid");
+        const elementToShow = document.getElementById("showList");
+
+        // Add a click event listener to the button
+        buttonList.addEventListener("click", function () {
+            // Toggle the display property of the elements
+            if (elementToHide.style.display === "flex") {
+                elementToHide.style.display = "none";
+                elementToShow.style.display = "block";
+            } else {
+                elementToHide.style.display = "flex";
+                elementToShow.style.display = "none";
+            }
+        });
+
+    </script>
 </body>
 
 </html>

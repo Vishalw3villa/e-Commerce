@@ -30,6 +30,21 @@
     background-color: var(--white);
 }
 
+#search_hr{
+    padding-top: 0px !important;
+}
+
+.searchCamera h1{ 
+    padding-top: 30px;
+    padding-bottom: 13px;
+}
+
+.search_camera_hr{
+    width: 160px;
+    border: 1px solid orange;
+    margin-bottom: -1px;
+}
+
 .home_bar{
     display: flex;
     align-items: center;
@@ -43,7 +58,7 @@
 
 /* Right search page Start here */
 
-.search_right {
+.search_right_grid {
     flex: 3;
     padding-left: 30px;
 }
@@ -117,6 +132,11 @@
     gap: 30px;
 }
 
+.search_description1 button{
+    border: none;
+    background-color: var(--lightgray);
+}
+
 
 .search_right_sub2 {
     padding-top: 10px;
@@ -177,7 +197,7 @@
 .search_description2_r2 {
     background-color: var(--gray);
 }
-
+ /* <!-- /////////////Grid View Start here //////////////////--> */
 
 .search_right_sub3 {
     padding-top: 30px;
@@ -185,6 +205,7 @@
     display: flex;
     gap: 20px;
 }
+
 
 .search_card1 {
     flex: 1;
@@ -224,6 +245,104 @@
 .extraheight {
     height: 200px;
 }
+
+/* <!-- /////////////Grid View Start here //////////////////--> */
+
+
+
+/* <!-- /////////////List View Start here //////////////////--> */
+    .search_right_listview{
+        display: none;
+        flex-direction: column;
+    }
+
+    .listview_card{
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--gray);
+    }
+
+    .listview_img{
+        object-fit: cover;
+        border: 2px solid var(--gray);
+        height: 276px;
+        width: 100%;
+        position: relative;
+    }
+
+    .listview_description{
+        padding-left: 20px;
+    }
+
+    .listview_bar{
+        display: flex;
+        gap: 30px;
+        padding-bottom: 5px;
+    }
+
+    .listview_bar span{
+        display: flex;
+    }
+
+    /* .listview_text p{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    } */
+
+    .price_color{
+        color: orangered;
+    }
+
+   
+
+    .listview_cart1{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 100%;
+    }
+    
+    .listview_cart1 input{
+        width: 50px;
+        padding-top: 11px;
+        padding-bottom: 8px;
+        padding-left: 5px;
+    }
+
+    .listview_addbtn{
+        background-color: var(--darkblue);
+        color: var(--white);
+        border: none;
+        padding: 13px 20px 10px 20px;
+        border-radius: 5px;
+    }
+
+    .cart_icon{
+        border: 1px solid gray;
+        padding: 12px;
+    }
+
+    .productname{
+        color: var(--blue);
+        text-decoration: underline;
+        padding-left: 5px;
+    }
+
+    .product_about{
+        color: var(--darkgray);
+    }
+
+    .productversion{
+        padding-left: 5px;
+    }
+
+    .listview_cart2{
+        display: flex;
+        gap: 30px;
+    }
+
+
+/* <!-- /////////////List View End here //////////////////--> */
 
 /* Right Search Page End here */
 
@@ -444,7 +563,7 @@ img {
         display: none;
     }
 
-    .search_right {
+    .search_right_gird {
         padding-left: 0px;
     }
 
@@ -499,7 +618,7 @@ img {
 @media screen and (max-width: 660px) {
 
 
-    .search_right {
+    .search_right_grid {
         padding-left: 0px;
         width: 85% !important;
         margin: auto;
