@@ -19,7 +19,7 @@ img {
 
 :root {
     --darkblue: #15429d;
-    --blue:hsl(216.17deg 100% 40.98%);
+    --blue: hsl(216.17deg 100% 40.98%);
     --white: #ffffff;
     --gray: rgb(241, 239, 239);
     --yellow: hsl(45, 100%, 64%);
@@ -28,8 +28,9 @@ img {
     --orangered: orangered;
     --darkgray: gray;
     --lightgreen: rgb(17, 210, 17);
-    --red : red;
-    --lightgray:hsl(0deg 0% 97.25%);;
+    --red: red;
+    --lightgray: hsl(0deg 0% 97.25%);
+    ;
 }
 
 
@@ -185,8 +186,8 @@ img {
 }
 
 .about2_card {
-  border: 1px solid hsl(210, 6%, 87%);
-  border-radius: 5px 5px 0px 0px;
+    border: 1px solid hsl(210, 6%, 87%);
+    border-radius: 5px 5px 0px 0px;
 }
 
 .about2_img {
@@ -203,6 +204,10 @@ img {
     border-radius: 5px 5px 0px 0px;
 }
 
+.about2_img img:hover{
+    transform: scale(102%);
+}
+
 .about2_description {
     display: flex;
     flex-direction: column;
@@ -217,7 +222,7 @@ img {
     padding: 10px 10px 10px 10px;
 }
 
-.about2_bar .underline{
+.about2_bar .underline {
     text-decoration: underline;
 }
 
@@ -242,13 +247,13 @@ img {
     color: var(--textgray);
 }
 
-.about2_text h3{
-   font-weight: 500;
-   font-family: 'Poppins', sans-serif;
+.about2_text h3 {
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
 }
 
 
-del{
+del {
     font-size: 13px;
 }
 
@@ -265,7 +270,7 @@ del{
     padding-bottom: 10px;
 }
 
-.about2_cart1  input{
+.about2_cart1 input {
     padding: 5px;
     width: 30px;
 }
@@ -284,6 +289,10 @@ del{
     border-radius: 3px;
 }
 
+.about2_cart1 button:active {
+    box-shadow: 1px 1px 5px gray;
+}
+
 .about2_cart2 {
     display: flex;
     justify-content: space-between;
@@ -299,16 +308,16 @@ del{
     color: var(--textgray);
 }
 
- .doller_icon{
-    border: 1px solid  var(--lightgreen);
-    color:  var(--lightgreen);
+.doller_icon {
+    border: 1px solid var(--lightgreen);
+    color: var(--lightgreen);
     padding: 2px 3px 2px 3px;
     border-radius: 20px;
     font-size: 8px;
 }
 
-.question_icon{
-    color:  var(--red);
+.question_icon {
+    color: var(--red);
     font-size: 13px;
 }
 
@@ -672,6 +681,10 @@ li {
     object-fit: cover;
 }
 
+.about8_card_sub1 img:hover {
+    transform: scale(105%);
+}
+
 .about8_card_sub2 {
     display: flex;
     flex-direction: column;
@@ -725,7 +738,7 @@ li {
 
 .foot-row2 {
     display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -792,7 +805,7 @@ li {
 }
 
 
-.news_input input{
+.news_input input {
     width: 100%;
     padding: 7px;
     border: 2px solid #e9e5e5;

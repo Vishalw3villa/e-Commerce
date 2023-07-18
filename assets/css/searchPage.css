@@ -109,6 +109,11 @@
     border-radius: 5px;
 }
 
+.search_btn:active {
+    box-shadow: 1px 1px 5px gray;
+    font-weight: 500;
+}
+
 #criteria_text {
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
@@ -217,15 +222,18 @@
     top: 6px !important;
     padding: 5px 5px 5px 5px !important;
     font-size: 10px;
+    z-index: 5;
 }
 
 .hot {
     background-color: var(--yellow);
     color: var(--blackgray);
+    z-index: 5;
 }
 
 #search_label {
     font-weight: 500;
+    z-index: 5;
 }
 
 .end_list {
@@ -262,6 +270,10 @@
     height: 276px;
     width: 100%;
     position: relative;
+}
+
+.listview_img img:hover{
+    transform: scale(103%);
 }
 
 .listview_description {
@@ -308,6 +320,10 @@
     border: none;
     padding: 13px 20px 10px 20px;
     border-radius: 5px;
+}
+
+.listview_addbtn:active {
+    box-shadow: 1px 1px 5px gray;
 }
 
 .cart_icon {

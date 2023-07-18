@@ -34,8 +34,17 @@ image {
     height: 500px;
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: 2px solid var(--gray);
+    position: relative;
 }
+
+#appleproduct:hover {
+    transform: scale(105%);
+}
+
+
 
 .product_right_sub1 {
     border-bottom: 2px solid var(--gray);
@@ -201,7 +210,7 @@ image {
     flex-direction: column;
 }
 
-.sub3_pad{
+.sub3_pad {
     padding-bottom: 10px;
 }
 
@@ -250,7 +259,10 @@ image {
     width: 40px;
     height: 40px;
     border-radius: 40px;
+}
 
+.c:hover {
+    box-shadow: 2px 2px 5px gray;
 }
 
 #aqua {
@@ -310,6 +322,10 @@ image {
     border: none;
     color: var(--white);
     border-radius: 5px;
+}
+
+#pr_sub4_addcart button:active {
+    box-shadow: 2px 2px 5px gray;
 }
 
 #pr_sub4_buynow {
@@ -452,6 +468,11 @@ image {
     height: 280px;
 }
 
+.recent_card_img:hover {
+    transform: scale(106%);
+    cursor: pointer;
+}
+
 .recent_card_addcart {
     display: flex;
     justify-content: space-between;
@@ -459,6 +480,10 @@ image {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 25px;
+}
+
+.recent_card_addcart button:active {
+    box-shadow: 2px 2px 5px gray;
 }
 
 .recent_card_addcart button {
@@ -510,7 +535,7 @@ image {
     .sample_img {
         width: 100px;
         height: 100px;
-         padding: 10px;
+        padding: 10px;
         border: 2px solid rgb(240, 234, 234);
     }
 
@@ -547,7 +572,6 @@ image {
 
     #pr_sub4_addcart button {
         width: 160px;
-
     }
 
     .size {
@@ -596,7 +620,7 @@ image {
     .product_img {
         height: 200px;
     }
-    
+
     .product_rating {
         flex-wrap: wrap;
         justify-content: center;
@@ -637,7 +661,7 @@ image {
 
 @media screen and (max-width: 400px) {
     .home_bar {
-        
+
         font-size: 16px;
     }
 
