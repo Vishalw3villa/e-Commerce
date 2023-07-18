@@ -443,7 +443,7 @@
                 <div class="search_right_sub3" id="showGrid">
                     <!-- <div class="about2_sub2_sub2 "> -->
 
-                    <div class="about2_card search_card1">
+                    <div class="about2_card search_card">
 
                         <div class="about2_img">
                             <button class="about3_tags discount">-70%</button>
@@ -485,7 +485,7 @@
                         </div>
                     </div>
 
-                    <div class="about2_card search_card2">
+                    <div class="about2_card search_card">
                         <div class="about2_img">
                             <div class="about3_label" id="search_label">PRE-ORDER</div>
                             <img src="./assets/images/camera.jpg" alt="">
@@ -526,7 +526,7 @@
                         </div>
                     </div>
 
-                    <div class="about2_card search_card3">
+                    <div class="about2_card search_card">
                         <div class="about2_img">
                             <button class="about3_tags hot">Hot</button>
                             <button class="about3_tags discount">-10%</button>
@@ -879,16 +879,39 @@
         const elementToShow = document.getElementById("showList");
 
         // Add a click event listener to the button
+
         buttonList.addEventListener("click", function () {
+            const computedStyleToHide = window.getComputedStyle(elementToHide);
+            const computedStyleToShow = window.getComputedStyle(elementToShow);
+
             // Toggle the display property of the elements
-            if (elementToHide.style.display === "flex") {
+            if (computedStyleToHide.display === "flex") {
+                console.log(computedStyleToHide.display);
                 elementToHide.style.display = "none";
                 elementToShow.style.display = "block";
-            } else {
+            }
+
+            if (computedStyleToHide.display === "grid") {
+                console.log(computedStyleToHide.display);
+                elementToHide.style.display = "none";
+                elementToShow.style.display = "block";
+            }
+
+
+        });
+
+        buttonGrid.addEventListener("click", function () {
+            const computedStyleToHide = window.getComputedStyle(elementToHide);
+            const computedStyleToShow = window.getComputedStyle(elementToShow);
+
+            // Toggle the display property of the elements
+            if (computedStyleToHide.display === "none") {
+                console.log(computedStyleToHide.display);
                 elementToHide.style.display = "flex";
                 elementToShow.style.display = "none";
             }
         });
+
 
     </script>
 </body>

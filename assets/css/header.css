@@ -187,7 +187,7 @@ a {
 
 #amount {
     font-size: 14px;
-    display: flex ;
+    display: flex;
     gap: 0px;
     padding-right: 10px;
 }
@@ -494,7 +494,7 @@ a {
 }
 
 @media screen and (min-width:1272px) and (max-width: 1440px) {
-    .container{
+    .container {
         width: 90%;
     }
 }
@@ -531,7 +531,7 @@ a {
 
     #amount {
         font-size: 14px;
-        display: flex ;
+        display: flex;
         flex-direction: column;
         gap: 0px;
         padding-right: 10px;
@@ -883,5 +883,24 @@ a {
     .bar_sub_icon {
         padding: 13px;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .top_nav2 p {
+        font-size: 10px;
+    }
+
+    .top_nav2 i {
+        font-size: 17px;
+    }
+
+    .mid_nav2 button {
+        font-size: 23px;
+        padding-top: 5px;
+    }
+
+    .mid_nav2 h1 {
+        font-size: 32px;
     }
 }

@@ -665,4 +665,13 @@ image {
         width: 65px;
         height: 65px;
     }
+
+    .product_right_sub5 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product_right_sub5 p {
+        font-size: 11px;
+    }
 }
