@@ -82,6 +82,13 @@ image {
     padding-bottom: 20px;
 }
 
+.overview_data p {
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
 .desc:hover {
     border-bottom: 2px solid orange;
     color: black;
@@ -604,6 +611,7 @@ image {
     .sample_img {
         width: 75px;
         height: 75px;
+        padding: 5px;
     }
 
     .recent_card_addcart {
@@ -629,6 +637,7 @@ image {
     .overview_data {
         text-align: center;
     }
+
 
     .recent_bar_card {
         flex-wrap: wrap;
@@ -656,6 +665,12 @@ image {
 
     .product_imgview {
         height: 308px;
+    }
+
+    .sample_img {
+        width: 70px;
+        height: 70px;
+        padding: 5px;
     }
 }
 
@@ -688,6 +703,7 @@ image {
     .sample_img {
         width: 65px;
         height: 65px;
+        padding: 5px;
     }
 
     .product_right_sub5 {
@@ -698,4 +714,14 @@ image {
     .product_right_sub5 p {
         font-size: 11px;
     }
+}
+
+@media screen and (max-width: 330px) {
+    .sample_img {
+        width: 60px;
+        height: 60px;
+        padding: 0px;
+    }
+
+    
 }
