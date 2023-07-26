@@ -40,6 +40,10 @@ image {
     position: relative;
 }
 
+.product_img img{
+    border-radius: 10px;
+}
+
 #appleproduct:hover {
     transform: scale(105%);
 }
@@ -71,11 +75,6 @@ image {
     color: black;
 }
 
-.overview_slide:hover {
-    border-bottom: 2px solid orange;
-    color: black;
-
-}
 
 .overview_data {
     padding-top: 20px;

@@ -84,20 +84,40 @@ img {
 
 .about1_sub2_sub1,
 .about2_sub2_sub1 {
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 }
 
-.about1_sub2_sub1 button {
+.about1_arrow_shape, .about2_arrow_shape,
+.about6_arrow_shape{
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   background: var(--blue);
+   border: none;
+   transform: rotate(45deg);
+   top: 15px;
+   left: 35%;
+   z-index: -1;
+}
+
+.about1_btn {
+    position: relative;
     border: 1px;
     padding: 10px;
     margin: -2px;
+    cursor: pointer;
 }
 
-.about1_sub2_sub1 :hover {
-    cursor: pointer;
+#top_creation {
     background-color: var(--blue);
     color: var(--white);
 }
+
+#featured {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
 
 
 
@@ -111,7 +131,7 @@ img {
 .about1_card {
     position: relative;
     width: 100%;
-    height: 260px;
+    height: 350px;
     object-fit: cover;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -204,7 +224,7 @@ img {
     border-radius: 5px 5px 0px 0px;
 }
 
-.about2_img img:hover{
+.about2_img img:hover {
     transform: scale(102%);
 }
 
@@ -474,18 +494,22 @@ del {
     padding-bottom: 10px;
 }
 
-.about2_sub2_sub1 button {
+.about2_btn {
+    position: relative;
+    text-transform: uppercase;
     border: 1px;
     padding: 10px;
     margin: -2px;
+    cursor: pointer;
     background-color: rgb(220, 217, 217);
+    z-index: 5;
 }
 
-.about2_sub2_sub1 :hover {
-    cursor: pointer;
+/* .about2_sub2_sub1 :hover {
+    
     background-color: var(--blue);
     color: var(--white);
-}
+} */
 
 #about2_sub1 p {
     color: rgb(70, 67, 67);
@@ -538,7 +562,7 @@ li {
 
 .about4_card {
     width: 90%;
-    height: 120px;
+    height: 135px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -566,6 +590,15 @@ li {
 
 #about_6 {
     background-color: var(--gray);
+}
+
+.about6_btn {
+    position: relative;
+    border: 1px;
+    padding: 10px;
+    margin: -2px;
+    cursor: pointer;
+    z-index: 5;
 }
 
 .about6_card {
@@ -602,8 +635,13 @@ li {
     width: 100%;
 }
 
+#latest_post {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
 #about_6_btn {
-    padding: 10px;
+    padding: 10px 10px 25px 10px;
 }
 
 .user {

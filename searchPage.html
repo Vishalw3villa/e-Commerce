@@ -208,14 +208,17 @@
                         <h3>Price</h3>
                         <span><i class="fa-sharp fa-solid fa-minus"></i></span>
                     </div>
-                    <div class="search_left_meter">
-                        <input type="range" class="points" name="points" min="0" max="100" value="0">
-                        <input type="range" class="points" name="points" min="0" max="100" value="100">
 
-                    </div>
-                    <div class="search_left_amount">
-                        <div><button id="amount_btn1">70</button> $</div>
-                        <div><button id="amount_btn2">1718</button> $</div>
+                    <div class="sub_bar price_bar">
+                        <div class="search_left_meter">
+                            <input type="range" class="points" name="points" min="0" max="100" value="0">
+                            <input type="range" class="points" name="points" min="0" max="100" value="100">
+    
+                        </div>
+                        <div class="search_left_amount">
+                            <div><button id="amount_btn1">70</button> $</div>
+                            <div><button id="amount_btn2">1718</button> $</div>
+                        </div>
                     </div>
                 </div>
                 <div class="all_hr_line">
@@ -227,7 +230,7 @@
                         <span><i class="fa-sharp fa-solid fa-minus"></i></span>
                     </div>
 
-                    <div class="checkbox_bar">
+                    <div class="checkbox_bar sub_bar">
                         <div class="checkbox_bar_1 stock">
                             <input type="checkbox">
                             <label class="fw4">In Stock</label>
@@ -249,7 +252,7 @@
                         <span><i class="fa-sharp fa-solid fa-minus"></i></span>
                     </div>
 
-                    <div class="electronics padd_png">
+                    <div class="electronics padd_png sub_bar">
                         <div class="electronics_img">
                             <img src="./assets/images/electronics.avif" alt="">
                         </div>
@@ -268,7 +271,7 @@
                         <span><i class="fa-sharp fa-solid fa-minus"></i></span>
                     </div>
 
-                    <div class="brands_png padd_png">
+                    <div class="brands_png padd_png sub_bar">
                         <div class="electronics_img">
                             <img src="./assets/images/apple.png" alt="">
                         </div>
@@ -290,7 +293,9 @@
                 <div class="search_left_select minusPlus_bar search_plus">
                     <h3>Select</h3>
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
+                   
                 </div>
+                <div class="sub_bar"></div>
 
                 <div class="all_hr_line">
                     <hr>
@@ -301,6 +306,8 @@
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
                 </div>
 
+                <div class="sub_bar"></div>
+
                 <div class="all_hr_line">
                     <hr>
                 </div>
@@ -310,7 +317,7 @@
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
                 </div>
 
-                <div class="brands_png padd_png">
+                <div class="brands_png padd_png sub_bar">
                     <div class="electronics_img" id="cyan_box">
 
                     </div>
@@ -335,6 +342,7 @@
                     <h3 class="fw5">Clockspeed</h3>
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
                 </div>
+                <div class="sub_bar"></div>
                 <div class="all_hr_line">
                     <hr>
                 </div>
@@ -343,6 +351,7 @@
                     <h3>Test 1</h3>
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
                 </div>
+                <div class="sub_bar"></div>
                 <div class="all_hr_line">
                     <hr>
                 </div>
@@ -351,6 +360,9 @@
                     <h3>No. of Cores</h3>
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
                 </div>
+
+                <div class="sub_bar"></div>
+
                 <div class="all_hr_line">
                     <hr>
                 </div>
@@ -359,6 +371,8 @@
                     <h3>Style</h3>
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
                 </div>
+
+                <div class="sub_bar"></div>
 
             </div>
 
@@ -871,49 +885,8 @@
 
     <!-- Footer Section End -->
 
-    <!-- <script type="text/javascript" src="./assets/script/style.js"></script> -->
-    <script>
-        const buttonList = document.getElementById("showListbtn");
-        const buttonGrid = document.getElementById("showGridbtn");
-        const elementToHide = document.getElementById("showGrid");
-        const elementToShow = document.getElementById("showList");
-
-        // Add a click event listener to the button
-
-        buttonList.addEventListener("click", function () {
-            const computedStyleToHide = window.getComputedStyle(elementToHide);
-            const computedStyleToShow = window.getComputedStyle(elementToShow);
-
-            // Toggle the display property of the elements
-            if (computedStyleToHide.display === "flex") {
-                console.log(computedStyleToHide.display);
-                elementToHide.style.display = "none";
-                elementToShow.style.display = "block";
-            }
-
-            if (computedStyleToHide.display === "grid") {
-                console.log(computedStyleToHide.display);
-                elementToHide.style.display = "none";
-                elementToShow.style.display = "block";
-            }
-
-
-        });
-
-        buttonGrid.addEventListener("click", function () {
-            const computedStyleToHide = window.getComputedStyle(elementToHide);
-            const computedStyleToShow = window.getComputedStyle(elementToShow);
-
-            // Toggle the display property of the elements
-            if (computedStyleToHide.display === "none") {
-                console.log(computedStyleToHide.display);
-                elementToHide.style.display = "flex";
-                elementToShow.style.display = "none";
-            }
-        });
-
-
-    </script>
+    <script src="./assets/js/script.js"></script>
+    
 </body>
 
 </html>

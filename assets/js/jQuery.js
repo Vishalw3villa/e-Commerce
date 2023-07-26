@@ -1,7 +1,4 @@
 
-// Get references to the elements and the button
-
-
 $(".hero_sub1_carousel").owlCarousel({
     loop: true,
     margin: 10,
@@ -27,7 +24,7 @@ $(".hero_sub1_carousel").owlCarousel({
 
 $(".about1_sub2_sub2").owlCarousel({
     loop: true,
-    margin: 10,
+    margin: 20,
     nav: false,
     autoplay: true,
     autoplayTimeout: 2000,
@@ -45,6 +42,9 @@ $(".about1_sub2_sub2").owlCarousel({
             items: 3,
         },
         1200: {
+            items: 4,
+        },
+        1440: {
             items: 5,
         }
     }
@@ -206,16 +206,3 @@ $(".about8_sub2").owlCarousel({
         },
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-

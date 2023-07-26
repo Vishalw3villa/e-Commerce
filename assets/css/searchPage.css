@@ -85,6 +85,8 @@
 }
 
 .checkbox_bar {
+    display: flex;
+    flex-direction: column;
     padding-top: 9px;
     padding-bottom: 20px;
 }
@@ -373,6 +375,16 @@
     border-right: 1px solid rgb(233, 233, 233);
     ;
     padding-right: 30px;
+}
+
+.sub_bar{
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.price_bar{
+    display: flex;
+    flex-direction: column;
 }
 
 .search_left h3 {
