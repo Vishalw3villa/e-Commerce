@@ -790,6 +790,7 @@ li {
 
 #foot_about {
     border: none !important;
+    padding-left: 0px !important;
 }
 
 .foot-col ul {
