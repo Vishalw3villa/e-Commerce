@@ -193,6 +193,42 @@ img {
     color: var(--blue);
 }
 
+.drop_down_alldepartment{
+    z-index: 3;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+}
+
+.drop_down_alldepartment li{
+    width: 92%;
+    padding: 10px 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    color: var(--darkgray);
+}
+
+.sub_alldep{
+    display: flex;
+}
+
+.sub_alldep i{
+    padding-right: 10px;
+}
+
+.bottom_nav-sub1:hover{
+    background-color: rgb(248, 248, 248);
+}
+.bottom_nav-sub1:hover .drop_down_alldepartment{
+    display: flex;
+}
+
 
 
 
@@ -388,6 +424,8 @@ a {
     background-color: var(--blue);
 }
 
+
+
 .bottom_nav-sub {
     display: flex;
     /* align-items: center; */
@@ -434,12 +472,20 @@ a {
 
 .meganew_icon {
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.meganew_icon:hover{
+    background-color: rgb(248, 248, 248);
+    color: black;
 }
 
 .bottom_tag_new {
     position: absolute;
     right: -15px;
-    top: -30px;
+    top: -12px;
     background-color: var(--yellow);
     padding: 0px 5px 0px 5px;
     border-radius: 3px;
@@ -485,6 +531,81 @@ a {
 
 .bottom_nav_sub4_sub2 i {
     font-size: 18px;
+}
+
+/* *************************Bottom nav dropDowns ***************/
+.meganew_icon:hover .megamanu_dropdown{
+    display: flex;
+}
+
+
+.megamanu_dropdown{
+    position: absolute;
+    z-index: 5;
+    width: 1400px;
+    top: 65px;
+    left: -392px;
+    display: none;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.megacategeorysub{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-right: 2px solid rgb(148, 145, 145);
+    margin-right: 5px;
+}
+
+.magacategorysub1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: black;
+}
+
+.magacategorysub2{
+    display: flex;
+    color: rgb(127, 124, 124);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.magacategorysublist{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: start;
+    border-right: 2px solid rgb(171, 168, 168);
+    margin-right: 15px;
+    padding-left: 10px;
+}
+
+#right_megaborder{
+    border: none;
+}
+
+.magacategorysublist li{
+    list-style: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.magacategorysub_img{
+    display: flex;
+    justify-content: end;
+    padding-left: 30px;
+    width: 30%;
+    height: 270px;
+}
+
+.magacategorysub_img img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* //Hero section// */
