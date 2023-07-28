@@ -1,5 +1,4 @@
 
-
 // *****************************************************************Script of landing Page
 
 let aboutOneImages = {
@@ -13,7 +12,7 @@ let aboutOneImages = {
     "ELECTRONICS": [
         "./assets/images/electronicsHeadphone.avif",
         "./assets/images/electonicsGame.avif",
-        "./assets/images/electonicsCamera.avif",
+        "./assets/images/electonicsCameracheckbox_bar.avif",
         "./assets/images/electronicsEarpods.avif",
         "./assets/images/electonicsCamera.avif",
     ],
@@ -254,7 +253,7 @@ for (let i = 0; i < sampleImgTab.length; i++) {
         document.getElementById("appleproduct").src = sapmleImg[i];
     }
 }
-checkbox_bar
+
 
 // *******************************************Script of Search Page
 

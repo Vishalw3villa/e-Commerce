@@ -18,6 +18,7 @@
 
     <!-- // Header CSS file-->
     <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
 
     <!-- // General CSS file-->
     <link rel="stylesheet" href="./assets/css/general.css">
@@ -40,7 +41,7 @@
 
 <body>
     <!-- ******Header Section Start****** -->
-
+    <div class="overlay"></div>
     <div class="header">
 
         <!-- Top Navbar Start -->
@@ -49,18 +50,48 @@
                 <a href="#"><i class="fa-solid fa-house"></i> Home</a>
                 <a href="#"><i class="fa-regular fa-address-card"></i> About Us</a>
                 <a href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
-                <a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+                <div class="faq"><a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+                    <div class="dropdown_content_faq">
+                        <div class="about_arrow_shape" id="faq_arrow"></div>
+                        <div class="faq_subbar"><i class="fa-solid fa-arrow-right"></i> Create</div>
+                        <div class="faq_subbar"><i class="fa-solid fa-gem"></i> Unlimited</div>
+                        <div class="faq_subbar"><i class="fa-solid fa-mars-and-venus-burst"></i> Menus</div>
+                    </div>
+                </div>
             </div>
 
             <div class="center_nav">
-                <a class="flag" href="#"><img src="./assets/images/flag.png" alt=""> English</a>
+                <div class="eng_flag">
+                    <a class="flag" href="#"><img src="./assets/images/flag.png" alt=""> English</a>
+                    <div class="dropdown_content_eng">
+                        <div class="about_arrow_shape" id="faq_arrow"></div>
+                        <div class="faq_subbar"><i class="fa-solid fa-arrow-right"></i> English</div>
+                        <div class="faq_subbar"><i class="fa-solid fa-gem"></i> Arabic</div>
+                    </div>
+                </div>
 
-                <a href="#">$US Doller</a>
+                <div class="doller"><a href="#">$US Doller</a>
+                    <div class="dropdown_content_doller">
+                        <div class="about_arrow_shape" id="faq_arrow"></div>
+                        <div class="doller_subbar"><i class="fa-solid fa-euro-sign"></i> Euro</div>
+                        <div class="doller_subbar"><i class="fa-solid fa-sterling-sign"></i> Pound Sterling</div>
+                        <div class="doller_subbar"><i class="fa-solid fa-dollar-sign"></i> US Doller</div>
+                    </div>
+                </div>
             </div>
 
             <div class="right_nav">
-                <a href="#">More</a>
-                <a href="#">Menus<i class="fa-solid fa-caret-down"></i></a>
+                <div class="moremenus">
+                    <a href="#">More Menus<i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_content_faq" id="menu_sub">
+                        <div class="about_arrow_shape" id="faq_arrow"></div>
+                        <div class="faq_subbar"> The best <menu></menu></div>
+                        <div class="faq_subbar"> Options you will</div>
+                        <div class="faq_subbar">Ever find</div>
+                        <div class="faq_subbar">In a theme</div>
+                    </div>
+                </div>
+                
                 <a href="#"><i class="fa-solid fa-truck"></i> Delivery</a>
             </div>
         </div>
@@ -99,16 +130,34 @@
                     <h1>JOURNEL</h1>
                 </div>
                 <div class="mid_nav_sub2">
-                    <button>ALL &nbsp;<i class="fa-solid fa-caret-down"></i>&nbsp;</button>
+                    <div class="all_btn">
+                        <button>ALL &nbsp;<i class="fa-solid fa-caret-down"></i>&nbsp;</button>
+                        <div class="all">
+                            <div class="about_arrow_shape"></div>
+                            <div class="allScroll">
+                                <div class="all_bar">All</div>
+                                <div class="all_bar">Fashion</div>
+                                <div class="all_bar">Health</div>
+                                <div class="all_bar">Beauty</div>
+                                <div class="all_bar">Bags</div>
+                                <div class="all_bar">Food</div>
+                                <div class="all_bar">Sports</div>
+                                <div class="all_bar">Home decor</div>
+                            </div>
+                        </div>
+                    </div>
                     <input type="text" placeholder="Search here...">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
+
                 </div>
+
+
                 <div class="mid_nav_sub3">
-                    <div>
+                    <div class="loginbtn">
                         <i class="fa-solid fa-circle-user"></i>
                         <p>Login</p>
                     </div>
-                    <div>
+                    <div class="regbtn">
                         <i class="fa-regular fa-pen-to-square"></i>
                         <p>Register</p>
                     </div>
@@ -120,6 +169,62 @@
                         <i class="fa-solid fa-code-compare"></i>
                         <p>Compare</p>
                     </div>
+                </div>
+                <div class="loginform">
+                    <form action="">
+                        <div class="greet">
+                            <span>Hello Customer</span>
+                            <img src="./assets/images/hand.gif" alt="">
+                            <hr>
+                        </div>
+
+                        <div class="loginInputBar">
+                            <label for="">Email</label>
+                            <input type="text">
+                        </div>
+                        <div class="loginInputBar">
+                            <label for="">Password</label>
+                            <input type="current-password">
+                        </div>
+
+                        <button>Login </button>
+                        <div class="crossbtn">&times;</div>
+                    </form>
+                </div>
+                <div class=" regform">
+                    <form action="">
+                        <div class="greet">
+                            <span>Welcome new Customer</span>
+                            <img src="./assets/images/hand.gif" alt="">
+                            <hr>
+                        </div>
+
+                        <div class="reg_details">
+                            <div class="loginInputBar">
+                                <label for="">Username <span class="reg_str">*</span></label>
+                                <input type="text">
+                            </div>
+                            <div class="loginInputBar">
+                                <label for="">E-mail<span class="reg_str">*</span></label>
+                                <input type="text">
+                            </div>
+                            <div class="loginInputBar">
+                                <label for="">Password<span class="reg_str">*</span></label>
+                                <input type="text">
+                            </div>
+                            <div class="loginInputBar">
+                                <label for="">Confirm password<span class="reg_str">*</span></label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <button class="signUp_btn">Sign Up </button>
+
+                        <div class="already_login" onclick="closeRegOpenlog() ">
+                            <span>Already have account ? <i class="fa-solid fa-circle-user"></i></span>
+                            <span>Login</span>
+                        </div>
+                        <div class="crossbtn" onclick="closeRegModal()">&times;</div>
+                    </form>
                 </div>
                 <div class="mid_nav_sub4">
                     <span id="amount">
@@ -1229,6 +1334,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="text/javascript" src="./assets/js/script.js"></script>
     <script src="./assets/js/jQuery.js"></script>
+    <script src="./assets/js/login.js"></script>
+
 </body>
 
 </html>

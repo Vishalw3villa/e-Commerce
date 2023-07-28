@@ -32,6 +32,169 @@ img {
     margin: auto;
 }
 
+/* Sub bars that are hidden */
+
+.faq{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.faq:hover .dropdown_content_faq{
+    display: flex;
+}
+
+#faq_arrow{
+    background-color: var(--darkblue) !important;
+    left: 35%;
+}
+
+.dropdown_content_faq{
+    display: none;
+    position: absolute;
+    top: 45px;
+    width: 135px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    border-radius: 5px;
+    z-index: 4;
+}
+
+.faq_subbar{
+    padding: 10px 10px;
+}
+
+.faq_subbar i{
+    padding-right: 5px;
+}
+
+.eng_flag{
+    position: relative;
+}
+
+.eng_flag:hover .dropdown_content_eng{
+    display: flex;
+}
+
+.dropdown_content_eng{
+    display: none;
+    position: absolute;
+    top: 45px;
+    width: 110px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--darkblue);
+    color: var(--white);
+    border-radius: 5px;
+    z-index: 4;
+}
+
+
+
+.doller:hover .dropdown_content_doller{
+    display: flex;
+}
+
+.dropdown_content_doller{
+    display: none;
+    position: absolute;
+    top: 45px;
+    width: 170px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--darkblue);
+    color: var(--white);
+    border-radius: 5px;
+    z-index: 4;
+}
+
+.doller_subbar{
+    padding: 6px 13px;
+}
+
+.doller_subbar i{
+    padding-right: 5px;
+}
+
+
+.all{
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -20px;
+    z-index: 3;
+    border-radius: 5px;
+}
+
+.all_btn:hover .all{
+    display: block;
+}
+
+.allScroll {
+    padding-top: 20px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 300px;
+    width: 180px;
+    background-color: white;
+    border: 1px solid rgb(235, 233, 233);
+    border-radius: 5px;
+}
+
+.about_arrow_shape {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: white;
+    transform: rotate(45deg);
+    top: -8px;
+    left: 13%;
+    z-index: 1;
+}
+
+.all_bar {
+    font-size: 15px;
+    padding: 8px;
+    color: rgb(132, 132, 132);
+}
+
+.all_bar:hover{
+    background-color: rgb(241, 235, 235);
+}
+
+.allScroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.allScroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    border-radius: 5px;
+}
+
+.allScroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.moremenus:hover .dropdown_content_faq{
+    display: flex;
+}
+
+#menu_sub{
+    width: 145px;
+}
+
+.top_nav1 a:hover{
+    color: var(--blue);
+}
+
+
+
 
 /* CSS code for header */
 
@@ -49,11 +212,29 @@ img {
     display: flex;
 }
 
+.doller{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
 .flag {
     height: 25px;
     object-fit: cover;
     display: flex;
     gap: 5px;
+}
+
+.left_nav{
+    display: flex;
+}
+
+.right_nav{
+    display: flex;
+}
+
+.moremenus{
+    display: flex;
 }
 
 
@@ -123,6 +304,10 @@ a {
     flex: 2.2;
 }
 
+.all_btn{
+    position: relative;
+}
+
 
 .mid_nav_sub2 input {
     width: 75%;
@@ -164,6 +349,11 @@ a {
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 13px;
+}
+
+.mid_nav_sub3 i:hover{
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 .mid_nav_sub4 {
@@ -308,7 +498,7 @@ a {
 
 .hero_sub1_text {
     position: absolute;
-    z-index: 5;
+    z-index: 1;
     top: 36%;
     left: 3%;
 }
@@ -358,7 +548,7 @@ a {
 
 .hero .owl-carousel {
     width: 100% !important;
-    z-index: 1;
+    z-index: 0;
 }
 
 .carousel_hero {
@@ -402,7 +592,6 @@ a {
 
 .hero_sub2_text {
     position: absolute;
-    z-index: 5;
     top: 50%;
     left: 10%;
     transform: translate(-10%, -50%);

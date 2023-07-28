@@ -1,0 +1,155 @@
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color:  rgba(0, 0, 0, 0.7) ;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.showoverlay {
+    opacity: 1;
+    z-index: 6;
+    backdrop-filter: blur(8px);
+}
+
+.loginform {
+    width: 500px;
+    height: 200px;
+    position: fixed;
+    box-shadow: 0px 0px 10px 3px #ccc;
+    padding: 60px 20px 30px 20px;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: 0.8s;
+    z-index: 6;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.loginInputBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginform input {
+    width: 60%;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+
+
+.loginform button {
+    width: 100px;
+    background-color: darkblue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.crossbtn {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    padding: 3px 10px;
+    background-color: rgb(249, 72, 72);
+    border-radius: 60px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.greet {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+.greet hr{
+    width: 200px;
+    margin-top: 7px;
+    background-color:  rgb(249, 72, 72);;
+}
+
+
+.greet img{
+    width: 40px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Registration start here ************************************************************* */
+
+.regform {
+    width: 550px;
+    height: 400px;
+    position: fixed;
+    box-shadow: 0px 0px 10px 3px #ccc;
+    padding: 60px 20px 30px 20px;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: 1s;
+    z-index: 9;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.regform input {
+    width: 60%;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.signUp_btn {
+    width: 100px;
+    background-color: darkblue;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.reg_details {
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.already_login{
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 70px;
+}
+
+.already_login i{
+    cursor: pointer;
+}
+
+.reg_str{
+    color: red;
+}
+
+.showloginform {
+    top: 40%;
+}
