@@ -376,7 +376,7 @@ a {
     font-size: 16px;
     padding: 8px;
     border: 1px solid rgb(226, 226, 226);
-    background-color: rgb(231, 229, 229);
+    background-color: rgb(222, 219, 219);
     border-radius: 20px;
 }
 
@@ -391,6 +391,7 @@ a {
     background-color: var(--blue);
     color: var(--white);
 }
+
 
 .mid_nav_sub4 {
     flex: 0.8;
@@ -808,6 +809,11 @@ a {
     .container {
         width: 90%;
     }
+
+    .megamanu_dropdown{
+        width: 1140px;
+        left: -371px;
+    }
 }
 
 /* Media Query --1272 */
@@ -816,6 +822,11 @@ a {
     .container {
         width: 90%;
         margin: auto;
+    }
+
+    .megamanu_dropdown{
+        width: 987px;
+        left: -321px;
     }
 
     h1 {
@@ -880,6 +891,11 @@ a {
     .container {
         width: 85%;
         margin: auto;
+    }
+
+    .megamanu_dropdown{
+        width: 895px;
+        left: -281px;
     }
 
     .top_nav1 {

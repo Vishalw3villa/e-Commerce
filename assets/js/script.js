@@ -264,38 +264,45 @@ const elementToHide = document.getElementById("showGrid");
 const elementToShow = document.getElementById("showList");
 
 // Add a click event listener to the button
+if (buttonList) {
+    buttonList.addEventListener("click", function () {
+        const computedStyleToHide = window.getComputedStyle(elementToHide);
+        const computedStyleToShow = window.getComputedStyle(elementToShow);
 
-buttonList.addEventListener("click", function () {
-    const computedStyleToHide = window.getComputedStyle(elementToHide);
-    const computedStyleToShow = window.getComputedStyle(elementToShow);
+        // Toggle the display property of the elements
+        if (computedStyleToHide.display === "flex") {
+            console.log(computedStyleToHide.display);
+            elementToHide.style.display = "none";
+            elementToShow.style.display = "block";
+        }
 
-    // Toggle the display property of the elements
-    if (computedStyleToHide.display === "flex") {
-        console.log(computedStyleToHide.display);
-        elementToHide.style.display = "none";
-        elementToShow.style.display = "block";
-    }
-
-    if (computedStyleToHide.display === "grid") {
-        console.log(computedStyleToHide.display);
-        elementToHide.style.display = "none";
-        elementToShow.style.display = "block";
-    }
+        if (computedStyleToHide.display === "grid") {
+            console.log(computedStyleToHide.display);
+            elementToHide.style.display = "none";
+            elementToShow.style.display = "block";
+        }
 
 
-});
+    });
+}
 
-buttonGrid.addEventListener("click", function () {
-    const computedStyleToHide = window.getComputedStyle(elementToHide);
-    const computedStyleToShow = window.getComputedStyle(elementToShow);
+if (buttonGrid) {
+    buttonGrid.addEventListener("click", function () {
+        const computedStyleToHide = window.getComputedStyle(elementToHide);
+        const computedStyleToShow = window.getComputedStyle(elementToShow);
 
-    // Toggle the display property of the elements
-    if (computedStyleToHide.display === "none") {
-        console.log(computedStyleToHide.display);
-        elementToHide.style.display = "flex";
-        elementToShow.style.display = "none";
-    }
-});
+        // Toggle the display property of the elements
+        if (computedStyleToHide.display === "none") {
+            console.log(computedStyleToHide.display);
+            elementToHide.style.display = "flex";
+            elementToShow.style.display = "none";
+        }
+    });
+}
+
+
+
+
 
 
 

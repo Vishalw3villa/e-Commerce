@@ -41,6 +41,8 @@
     align-items: center;
 }
 
+
+
 .loginform input {
     width: 60%;
     height: 35px;
@@ -100,7 +102,7 @@
     position: fixed;
     box-shadow: 0px 0px 10px 3px #ccc;
     padding: 60px 20px 30px 20px;
-    top: -40%;
+    top: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -118,7 +120,7 @@
     height: 35px;
     margin-top: 5px;
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .signUp_btn {
@@ -151,5 +153,72 @@
 }
 
 .showloginform {
-    top: 40%;
+    top: 50%;
 }
+
+.regInputBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.regInputBar label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* .form_control input {
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    display: block;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 12px;
+} */
+
+.regInputBar input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.regInputBar.success input {
+    border: 1px solid #2ecc71;
+}
+
+.regInputBar.error input {
+    border: 1px solid #e74e3c;
+}
+
+.regInputBar i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    visibility: hidden;
+}
+
+.regInputBar small {
+    color: #e74e3c;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    font-size: 10px;
+    visibility: hidden;
+}
+
+
+.regInputBar.error small {
+    visibility: visible;
+}
+
+.regInputBar.success i.fa-circle-check {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.regInputBar.error i.fa-circle-exclamation {
+    color: #e74e3c;
+    visibility: visible;
+}
+

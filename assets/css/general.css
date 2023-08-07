@@ -807,6 +807,10 @@ li {
     text-align: left;
 }
 
+.foot-col li:hover {
+    color: orangered;
+}
+
 .foot-col h4 {
     padding-top: 10px;
 }
@@ -952,6 +956,11 @@ li {
 
     .newsletter {
         width: 70%;
+    }
+
+    .foot-col {
+        border-left: none;
+        padding-left: 0px;
     }
 
 }

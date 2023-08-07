@@ -156,11 +156,11 @@
                 <div class="mid_nav_sub3">
                     <div class="loginbtn">
                         <i class="fa-solid fa-circle-user"></i>
-                        <p>Login</p>
+                        <p id="loginuser">Login</p>
                     </div>
-                    <div class="regbtn">
+                    <div class="regbtn logoutbtn" id="logoutbtn">
                         <i class="fa-regular fa-pen-to-square"></i>
-                        <p>Register</p>
+                        <p id="logOut">Register</p>
                     </div>
                     <div>
                         <i class="fa-regular fa-heart"></i>
@@ -171,7 +171,7 @@
                         <p>Compare</p>
                     </div>
                 </div>
-                <div class="loginform">
+                <div class="loginform" id="loginform">
                     <form action="">
                         <div class="greet">
                             <span>Hello Customer</span>
@@ -181,11 +181,11 @@
 
                         <div class="loginInputBar">
                             <label for="">Email</label>
-                            <input type="text">
+                            <input type="text" id="loginUsername">
                         </div>
                         <div class="loginInputBar">
                             <label for="">Password</label>
-                            <input type="current-password">
+                            <input type="current-password" id="loginPassword">
                         </div>
 
                         <button>Login </button>
@@ -193,7 +193,7 @@
                     </form>
                 </div>
                 <div class=" regform">
-                    <form action="">
+                    <form action="" name="regForm" id="form" method="post">
                         <div class="greet">
                             <span>Welcome new Customer</span>
                             <img src="./assets/images/hand.gif" alt="">
@@ -201,27 +201,39 @@
                         </div>
 
                         <div class="reg_details">
-                            <div class="loginInputBar">
+                            <div class="regInputBar">
                                 <label for="">Username <span class="reg_str">*</span></label>
-                                <input type="text">
+                                <input type="text" name="userName" id="username" autocomplete="off">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>error msg</small>
                             </div>
-                            <div class="loginInputBar">
+                            <div class="regInputBar">
                                 <label for="">E-mail<span class="reg_str">*</span></label>
-                                <input type="text">
+                                <input type="text" id="email" autocomplete="off">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>error msg</small>
                             </div>
-                            <div class="loginInputBar">
+                            <div class="regInputBar">
                                 <label for="">Password<span class="reg_str">*</span></label>
-                                <input type="text">
+                                <input type="password" id="password" autocomplete="off">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>error msg</small>
                             </div>
-                            <div class="loginInputBar">
+                            <div class="regInputBar">
                                 <label for="">Confirm password<span class="reg_str">*</span></label>
-                                <input type="text">
+                                <input type="password" id="cpassword" autocomplete="off">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>error msg</small>
                             </div>
                         </div>
-                        <button class="signUp_btn">Sign Up </button>
+                        <button class="signUp_btn" type="submit" name="submit">Sign Up </button>
 
-                        <div class="already_login" onclick="closeRegOpenlog() ">
-                            <span>Already have account ? <i class="fa-solid fa-circle-user"></i></span>
+                        <div class="already_login" >
+                            <span>Already have account ? <i class="fa-solid fa-circle-user" onclick="closeRegOpenlog()"></i></span>
                             <span>Login</span>
                         </div>
                         <div class="crossbtn" onclick="closeRegModal()">&times;</div>
@@ -301,7 +313,7 @@
                     <div class="meganew_icon">
                         <p>MULTILEVEL</p>
                     </div>
-                    
+
                     <div class="meganew_icon">
                         <div class="bottom_tag_new">New</div>
                         <p id="megamenu">
@@ -363,13 +375,13 @@
                                         <li>Appliances</li>
                                         <li>Sports</li>
                                     </ul>
-            
+
                                 </div>
                             </div>
                             <div class="magacategorysub_img">
                                 <img src="./assets/images/fashionred.avif" alt="">
                             </div>
-            
+
                         </div>
                     </div>
                     <div class="meganew_icon">
@@ -390,7 +402,7 @@
 
                 </div>
             </div>
-            
+
         </div>
 
         <!-- Bottom Navbar End  -->
@@ -1446,6 +1458,7 @@
     <script type="text/javascript" src="./assets/js/script.js"></script>
     <script src="./assets/js/jQuery.js"></script>
     <script src="./assets/js/login.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 
