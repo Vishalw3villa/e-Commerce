@@ -790,6 +790,7 @@ li {
 
 #foot_about {
     border: none !important;
+    padding-left: 0px !important;
 }
 
 .foot-col ul {
@@ -804,6 +805,10 @@ li {
 .foot-col li {
     padding-left: 0px;
     text-align: left;
+}
+
+.foot-col li:hover {
+    color: orangered;
 }
 
 .foot-col h4 {
@@ -951,6 +956,11 @@ li {
 
     .newsletter {
         width: 70%;
+    }
+
+    .foot-col {
+        border-left: none;
+        padding-left: 0px;
     }
 
 }

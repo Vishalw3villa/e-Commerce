@@ -1,0 +1,24 @@
+{
+    "LATEST POST": [
+        {
+            "img": "./assets/images/img61.avif"
+        },
+        {
+            "img": "./assets/images/img62.avif"
+        },
+        {
+            "img": "./assets/images/img63.avif"
+        }
+    ],
+    "MOST READ": [
+        {
+            "img": "./assets/images/img63.avif"
+        },
+        {
+            "img": "./assets/images/img61.avif"
+        },
+        {
+            "img": "./assets/images/img62.avif"
+        }
+    ]
+}

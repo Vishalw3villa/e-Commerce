@@ -19,156 +19,24 @@
 
     <!-- CSS file link -->
 
+
     <!-- // Header CSS file-->
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/general.css">
     <link rel="stylesheet" href="./assets/css/searchPage.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+
 
 
 </head>
 
 <body>
     <!-- ******Header Section Start****** -->
-
-    <div class="header">
-
-        <!-- Top Navbar Start -->
-        <div class="top_nav1 container">
-            <div class="left_nav">
-                <a href="#"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="#"><i class="fa-regular fa-address-card"></i> About Us</a>
-                <a href="#"><i class="fa-regular fa-envelope"></i> Contact</a>
-                <a href="#"><i class="fa-regular fa-circle-question"></i> FAQ</a>
-            </div>
-
-            <div class="center_nav">
-                <a class="flag" href="#"><img src="./assets/images/flag.png" alt=""> English</a>
-
-                <a href="#">$US Doller</a>
-            </div>
-
-            <div class="right_nav">
-                <a href="#">More</a>
-                <a href="#">Menus<i class="fa-solid fa-caret-down"></i></a>
-                <a href="#"><i class="fa-solid fa-truck"></i> Delivery</a>
-            </div>
-        </div>
-
-        <!-- Mobile Navbar -->
-        <div id="top_nav_2">
-            <div class="top_nav2 container">
-                <div class="top_nav2_sub1">
-                    <a id="top_nav2_sub1_a" href="#"> <i class="fa-solid fa-circle-user"></i>
-                        <p>Login</p>
-                    </a>
-
-                    <a href="#"> <i class="fa-regular fa-pen-to-square"></i>
-                        <p>Register</p>
-                    </a>
-                </div>
-                <div class="top_nav2_sub2">
-                    <a href="#">
-                        <p>$US Doller</p><i class="fa-solid fa-caret-down"></i>
-                    </a>
-                    <a href="#"><i class="fa-solid fa-flag"></i>
-                        <p>English</p>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Top Navbar End -->
-
-
-        <!-- Mid Navbar Start  -->
-        <div class="mid_nav1">
-            <div class="container mid_nav_sub">
-                <div class="mid_nav_sub1">
-                    <h1>JOURNEL</h1>
-                </div>
-                <div class="mid_nav_sub2">
-                    <button>ALL &nbsp;<i class="fa-solid fa-caret-down"></i>&nbsp;</button>
-                    <input type="text" placeholder="Search here...">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <div class="mid_nav_sub3">
-                    <div>
-                        <i class="fa-solid fa-circle-user"></i>
-                        <p>Login</p>
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-pen-to-square"></i>
-                        <p>Register</p>
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                        <p>Wishlist</p>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-code-compare"></i>
-                        <p>Compare</p>
-                    </div>
-                </div>
-                <div class="mid_nav_sub4">
-                    <span id="amount">
-                        <span>0 items(s)</span>
-                        <span>-$0.00</span>
-                    </span>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="mid_nav2 container">
-            <div class="mid_nav2_sub1">
-                <h1>JOURNAL</h1>
-            </div>
-            <div class="mid_nav2_sub2">
-                <button><i class="fa-solid fa-bars"></i></button>
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button> <i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-        </div>
-        <!-- Mid Navbar End  -->
-
-        <!-- Bottom Navbar Start  -->
-        <div class="bottom_nav">
-            <div class="container bottom_nav-sub">
-                <div class="bottom_nav-sub1">
-                    <div class="bottom_tag">Sale</div>
-                    <i class="fa-solid fa-bars"></i>
-                    &nbsp;&nbsp;&nbsp;
-                    <p>ALL DEPARTMENTS</p>
-                </div>
-                <div class="bottom_nav-sub2">
-                    <p>MULTILEVEL</p>
-                    <div class="meganew_icon">
-                        <div class="bottom_tag_new">New</div>
-                        <p>
-                            MEGAMENU
-                        </p>
-                    </div>
-                    <p>FULLWIDTH</p>
-                </div>
-                <div class="bottom_nav-sub3"></div>
-                <div class="bottom_nav-sub4">
-                    <div class="bottom_nav_sub4_sub1">
-                        <i class="fa-solid fa-phone-volume"></i>
-                        <p>1.800.555.6789</p>
-                    </div>
-
-                    <div class="bottom_nav_sub4_sub2">
-                        <i class="fa-regular fa-comment-dots"></i> &nbsp;
-                        <p>BLOG</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Bottom Navbar End  -->
+    <div class="overlay"></div>
+    <div id="containheader">
 
     </div>
+
 
     <!-- ******Header Section End****** -->
 
@@ -188,14 +56,14 @@
             </div>
         </section>
         <div class="searchCamera container">
-            <h1>Search - camera</h1>
+            <h1>Search - <span id="searchname">camera</span></h1>
             <hr class="search_camera_hr">
         </div>
         <div class="all_hr_line" id="search_hr">
             <hr>
         </div>
         <div class="container search_part">
-            <div class="search_left">
+            <div class="search_left " id="search_left">
                 <div class="search_left_sub1">
                     <div class="search_left_filter">
                         <h3>Filter</h3>
@@ -213,7 +81,7 @@
                         <div class="search_left_meter">
                             <input type="range" class="points" name="points" min="0" max="100" value="0">
                             <input type="range" class="points" name="points" min="0" max="100" value="100">
-    
+
                         </div>
                         <div class="search_left_amount">
                             <div><button id="amount_btn1">70</button> $</div>
@@ -293,7 +161,7 @@
                 <div class="search_left_select minusPlus_bar search_plus">
                     <h3>Select</h3>
                     <span><i id="serch_plus" class="fa-solid fa-plus"></i></span>
-                   
+
                 </div>
                 <div class="sub_bar"></div>
 
@@ -408,7 +276,7 @@
                     <hr>
                 </div>
 
-                <div class="search_right_sub2">
+                <div class="search_right_sub2" id="hideshowgridbtn">
                     <div class="search_description1">
                         <div class="search_description1_l1">
                             <button id="showListbtn"><i class="fa-solid fa-bars"></i></button>
@@ -743,11 +611,13 @@
                 </div>
                 <!-- /////////////List View End here //////////////////-->
 
-                <div class="all_hr_line">
+                <div class="all_hr_line" id="hideline">
                     <hr>
                 </div>
 
-                <div class="end_list">You have reached the end of list.</div>
+                <div class="end_list" id="end_list">You have reached the end of list.</div>
+                <button class="hidesearchleft" id="hidecontinue">continue</button>
+
 
 
                 <div class="extraheight"></div>
@@ -885,8 +755,9 @@
 
     <!-- Footer Section End -->
 
-    <script src="./assets/js/script.js"></script>
-    
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <!-- <script type="text/javascript" src="./assets/js/login.js" ></script> -->
+
 </body>
 
 </html>

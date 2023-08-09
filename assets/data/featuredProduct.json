@@ -1,0 +1,70 @@
+{
+    "FEATURED": [
+        {
+            "img": "./assets/images/electronics.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/fashion.avif"
+        },
+        {
+            "img": "./assets/images/homedecor.avif"
+        }
+    ],
+    "LATEST": [
+        {
+            "img": "./assets/images/electronics.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/fashion.avif"
+        },
+        {
+            "img": "./assets/images/homedecor.avif"
+        }
+    ],
+    "BESTSELLERS": [
+        {
+            "img": "./assets/images/electronics.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/fashion.avif"
+        },
+        {
+            "img": "./assets/images/homedecor.avif"
+        }
+    ],
+    "SPECIALS": [
+        {
+            "img": "./assets/images/electronics.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/bags.avif"
+        },
+        {
+            "img": "./assets/images/fashion.avif"
+        },
+        {
+            "img": "./assets/images/homedecor.avif"
+        }
+    ]
+}
