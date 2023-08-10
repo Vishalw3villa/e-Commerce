@@ -433,13 +433,10 @@ a {
     border-radius: 20px;
     background-color: var(--red);
     color: black;
-    opacity: 0.6;
     font-size: 13px;
 }
 
-.notification:hover {
-    opacity: 1;
-}
+
 
 
 #amount {

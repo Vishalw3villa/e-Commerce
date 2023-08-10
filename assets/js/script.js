@@ -1,5 +1,4 @@
 
-
 async function addHeaderInIndex() {
     try {
         let response = await fetch("./header.html");
@@ -89,35 +88,150 @@ for (let i = 0; i < aboutOneBtn.length; i++) {
 ******Featured Products****
 *********************/
 
-
-async function featuredProduct(clickedImg, cardTwoImg) {
+async function fetchDataJSON(url) {
     try {
-        let response = await fetch("./assets/data/featuredProduct.json");
+        let response = await fetch(url);
         let data = await response.json();
-
-        for (let j = 0; j < cardTwoImg.length; j++) {
-            let {
-                img
-            } = data[clickedImg][j % 5];
-            cardTwoImg[j].src = img;
-        }
+        return data;
     } catch (error) {
         console.error("Error fetching or processing data:", error);
     }
+}
 
+
+function filterData(data, clickedCategory) {
+    let categoryData = [];
+
+    for (let j = 0; j < data.products.length; j++) {
+
+        let {
+            id,
+            img,
+            company,
+            model,
+            name,
+            price,
+            category,
+            description
+        } = data["products"][j];
+
+        if (category === clickedCategory) {
+            categoryData.push(data["products"][j]);
+        }
+    }
+
+    return categoryData;
+}
+
+async function featuredProduct(clickedCategory) {
+    // console.log(clickedCategory);
+    let parentAbout = document.querySelector('.about2_sub2')
+    let aboutTwoHtml;
+    let data = await fetchDataJSON("./assets/data/product.json");
+    data = filterData(data, clickedCategory);
+    var aboutTwoCard = document.getElementById("about2_sub2_sub2");
+    if (aboutTwoCard) {
+        aboutTwoCard.remove();
+    }
+    aboutTwoHtml = '<div class="about2_sub2_sub2 owl-carousel owl-theme" id="about2_sub2_sub2">';
+    for (let j = 0; j < data.length; j++) {
+        let id = data[j].id;
+        let img = data[j].img;
+        let company = data[j].company;
+        let model = data[j].model;
+        let price = data[j].price;
+
+        aboutTwoHtml += `
+                <div class="about2_card ">
+                    <div class="about2_img">
+                            <div class="about3_label">JUST NOW</div>
+                            <img src=${img} alt="">
+                    </div>
+                        <div class="about2_description">
+                            <div class="about2_bar">
+                                <p class="underline">${company}</p>
+                                <p>${model}</p>
+                            </div>
+
+                            <div class="about2_text">
+                                <h3>Headphone</h3>
+                                <p>${price} <del>$3,299.00</del></p>
+                                <div class="about2_cart">
+                                    <div class="about2_cart1" id = ${id}>
+                                        <span>
+                                            <input type="number" min="1" max="10" value="1">
+                                            <button class="addToCart">ADD TO CART</button>
+                                        </span>
+                                        <span>
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-code-compare"></i>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="about2_cart2">
+
+                                <p>
+                                    <i class="fa-regular fa-dollar-sign doller_icon"></i>
+                                    Buy Now
+                                </p>
+                                <p>
+                                    <i class="fa-regular fa-circle-question question_icon"></i>
+                                    Question
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                `
+    }
+    aboutTwoHtml += "</div>";
+
+    parentAbout.insertAdjacentHTML("beforeend", aboutTwoHtml);
+    aboutTwoCrowsel();
+    function aboutTwoCrowsel() {
+        $(".about2_sub2_sub2").owlCarousel({
+            loop: true,
+            nav: false,
+            margin: 25,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+
+                },
+                600: {
+                    items: 2,
+
+                },
+                992: {
+                    items: 3,
+                },
+                1272: {
+                    items: 3,
+                },
+                1500: {
+                    items: 4
+                }
+            }
+        })
+    }
+
+    addToCart("addToCart");
 }
 
 
 
 let aboutTwoBtn = document.getElementsByClassName("about2_btn");
+featuredProduct("FEATURED");
 
 for (let i = 0; i < aboutTwoBtn.length; i++) {
     aboutTwoBtn[i].onclick = function () {
-        var clickedImg = this.querySelector('p').textContent;
-        console.log(clickedImg)
-        var cardTwoImg = document.querySelectorAll(".about2_img img");
-
-        featuredProduct(clickedImg, cardTwoImg);
+        var clickedCategory = this.querySelector('p').textContent;
+        console.log(clickedCategory)
+        featuredProduct(clickedCategory);
 
         for (let k = 0; k < aboutTwoBtn.length; k++) {
             aboutTwoBtn[k].style["background-color"] = "hsl(0deg 0% 97.25%)";
@@ -348,12 +462,13 @@ function searchInput() {
     if (hideContinue) {
         hideContinue.addEventListener('click', returnHome)
     }
-
-    function returnHome() {
-        let returnHomeUrl = "index.html";
-        window.location.href = returnHomeUrl;
-    }
 }
+
+function returnHome() {
+    let returnHomeUrl = "index.html";
+    window.location.href = returnHomeUrl;
+}
+
 
 
 // ***************************************************************************Script for Product page
@@ -418,6 +533,34 @@ for (let i = 0; i < sampleImgTab.length; i++) {
 /* ***********************
 *********** Wish List*****
 ********************************/
+let productIdContainer = new Set();
+
+function addToCart(idTag) {
+    let addToCartBtn = document.getElementsByClassName(idTag);
+    console.log(addToCartBtn.length)
+
+    for (let j = 0; j < addToCartBtn.length; j++) {
+        addToCartBtn[j].onclick = function () {
+            let productId = addToCartBtn[j].parentElement.parentElement.id;
+            if(!productIdContainer.has(productId)){
+                productIdContainer.add(productId);
+            }
+            else{
+                alert("Already have the item in Cart.")
+            }
+            
+            addCartItem(productIdContainer);
+        }
+    }
+}
+
+function addCartItem(productIdContainer){
+    console.log(productIdContainer);
+    let itemOfCart = document.getElementById("cartItemCount");
+    console.log(itemOfCart.innerText);
+    itemOfCart.innerText = productIdContainer.size;
+}
+
 
 
 

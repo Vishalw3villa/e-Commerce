@@ -51,33 +51,35 @@ $(".about1_sub2_sub2").owlCarousel({
 })
 
 
-$(".about2_sub2_sub2").owlCarousel({
-    loop: true,
-    nav: false,
-    margin: 25,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-        0: {
-            items: 1,
+// function aboutTwoCrowsel() {
+//     $(".about2_sub2_sub2").owlCarousel({
+//         loop: true,
+//         nav: false,
+//         margin: 25,
+//         autoplay: true,
+//         autoplayTimeout: 2000,
+//         autoplayHoverPause: true,
+//         responsive: {
+//             0: {
+//                 items: 1,
 
-        },
-        600: {
-            items: 2,
+//             },
+//             600: {
+//                 items: 2,
 
-        },
-        992: {
-            items: 3,
-        },
-        1272: {
-            items: 3,
-        },
-        1500: {
-            items: 4
-        }
-    }
-})
+//             },
+//             992: {
+//                 items: 3,
+//             },
+//             1272: {
+//                 items: 3,
+//             },
+//             1500: {
+//                 items: 4
+//             }
+//         }
+//     })
+// }
 
 $(".about3_sub2_sub2").owlCarousel({
     loop: true,
