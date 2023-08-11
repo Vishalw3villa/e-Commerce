@@ -1,3 +1,5 @@
+
+
 function showLoginModal() {
     document.querySelector(".overlay").classList.add("showoverlay");
     document.querySelector(".loginform").classList.add("showloginform");
@@ -201,6 +203,8 @@ if (loginForm) {
                 localStorage.setItem("isLoggedIn", "true");
                 localStorage.setItem("loggedInUser", userData.usernameVal);
 
+                localStorage.setItem("products", JSON.stringify({}));
+
                 updateUI();
                 alert("Login successful!");
                 location.reload();
@@ -274,6 +278,3 @@ function updateUI() {
     }
 
 }
-
-
-

@@ -1,10 +1,13 @@
 
+
 async function addHeaderInIndex() {
     try {
         let response = await fetch("./header.html");
         let data = await response.text();
-        document.getElementById('containheaderindex').innerHTML = data;
+        document.getElementById('headerPartInIndex').innerHTML = data;
         loadJS("./assets/js/login.js");
+        loadJS("./assets/js/index.js")
+        loadJS("./assets/js/addToCart.js")
         searchInput();
     }
     catch { error => console.error('Error fetching content:', error) };
@@ -32,274 +35,6 @@ function loadJS(FILE_URL, async = true) {
     });
 }
 
-/* ****************
-******Why Buy from Us ****
-*********************/
-
-async function whyBuyUs(clickedBtn, cardOneImg, cardOneBtn) {
-    try {
-        let response = await fetch("./assets/data/whyBuyUs.json");
-        let data = await response.json();
-
-        for (let j = 0; j < cardOneImg.length; j++) {
-            let {
-                img,
-                tag
-            } = data[clickedBtn][j % 5];
-            cardOneImg[j].src = img;
-            cardOneBtn[j].innerHTML = tag;
-        }
-    } catch (error) {
-        console.error("Error fetching or processing data:", error);
-    }
-
-}
-
-
-
-let aboutOneBtn = document.getElementsByClassName("about1_btn");
-
-for (let i = 0; i < aboutOneBtn.length; i++) {
-    aboutOneBtn[i].onclick = function () {
-        var clickedBtn = this.querySelector('p').textContent;
-        var cardOneImg = document.querySelectorAll(".about1_card img");
-        var cardOneBtn = document.querySelectorAll(".about1_card button");
-
-        // Fetch json data****
-        whyBuyUs(clickedBtn, cardOneImg, cardOneBtn);
-
-        for (let k = 0; k < aboutOneBtn.length; k++) {
-            aboutOneBtn[k].style["background-color"] = "hsl(0deg 0% 97.25%)";
-            aboutOneBtn[k].style["color"] = "black";
-        }
-
-        let arrowShape = document.getElementsByClassName("about1_arrow_shape");
-        for (let a = 0; a < arrowShape.length; a++) {
-            arrowShape[a].style["display"] = "none";
-        }
-
-        this.style["background-color"] = "hsl(216.17deg 100% 40.98%)";
-        this.style["color"] = "white";
-        this.innerHTML += `<div class="about1_arrow_shape"></div>`;
-    };
-}
-
-/* ****************
-******Featured Products****
-*********************/
-
-async function fetchDataJSON(url) {
-    try {
-        let response = await fetch(url);
-        let data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error fetching or processing data:", error);
-    }
-}
-
-
-function filterData(data, clickedCategory) {
-    let categoryData = [];
-
-    for (let j = 0; j < data.products.length; j++) {
-
-        let {
-            id,
-            img,
-            company,
-            model,
-            name,
-            price,
-            category,
-            description
-        } = data["products"][j];
-
-        if (category === clickedCategory) {
-            categoryData.push(data["products"][j]);
-        }
-    }
-
-    return categoryData;
-}
-
-async function featuredProduct(clickedCategory) {
-    // console.log(clickedCategory);
-    let parentAbout = document.querySelector('.about2_sub2')
-    let aboutTwoHtml;
-    let data = await fetchDataJSON("./assets/data/product.json");
-    data = filterData(data, clickedCategory);
-    var aboutTwoCard = document.getElementById("about2_sub2_sub2");
-    if (aboutTwoCard) {
-        aboutTwoCard.remove();
-    }
-    aboutTwoHtml = '<div class="about2_sub2_sub2 owl-carousel owl-theme" id="about2_sub2_sub2">';
-    for (let j = 0; j < data.length; j++) {
-        let id = data[j].id;
-        let img = data[j].img;
-        let company = data[j].company;
-        let model = data[j].model;
-        let price = data[j].price;
-
-        aboutTwoHtml += `
-                <div class="about2_card ">
-                    <div class="about2_img">
-                            <div class="about3_label">JUST NOW</div>
-                            <img src=${img} alt="">
-                    </div>
-                        <div class="about2_description">
-                            <div class="about2_bar">
-                                <p class="underline">${company}</p>
-                                <p>${model}</p>
-                            </div>
-
-                            <div class="about2_text">
-                                <h3>Headphone</h3>
-                                <p>${price} <del>$3,299.00</del></p>
-                                <div class="about2_cart">
-                                    <div class="about2_cart1" id = ${id}>
-                                        <span>
-                                            <input type="number" min="1" max="10" value="1">
-                                            <button class="addToCart">ADD TO CART</button>
-                                        </span>
-                                        <span>
-                                            <i class="fa-regular fa-heart"></i>
-                                            <i class="fa-solid fa-code-compare"></i>
-                                        </span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="about2_cart2">
-
-                                <p>
-                                    <i class="fa-regular fa-dollar-sign doller_icon"></i>
-                                    Buy Now
-                                </p>
-                                <p>
-                                    <i class="fa-regular fa-circle-question question_icon"></i>
-                                    Question
-                                </p>
-                            </div>
-                        </div>
-                </div>
-                `
-    }
-    aboutTwoHtml += "</div>";
-
-    parentAbout.insertAdjacentHTML("beforeend", aboutTwoHtml);
-    aboutTwoCrowsel();
-    function aboutTwoCrowsel() {
-        $(".about2_sub2_sub2").owlCarousel({
-            loop: true,
-            nav: false,
-            margin: 25,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1,
-
-                },
-                600: {
-                    items: 2,
-
-                },
-                992: {
-                    items: 3,
-                },
-                1272: {
-                    items: 3,
-                },
-                1500: {
-                    items: 4
-                }
-            }
-        })
-    }
-
-    addToCart("addToCart");
-}
-
-
-
-let aboutTwoBtn = document.getElementsByClassName("about2_btn");
-featuredProduct("FEATURED");
-
-for (let i = 0; i < aboutTwoBtn.length; i++) {
-    aboutTwoBtn[i].onclick = function () {
-        var clickedCategory = this.querySelector('p').textContent;
-        console.log(clickedCategory)
-        featuredProduct(clickedCategory);
-
-        for (let k = 0; k < aboutTwoBtn.length; k++) {
-            aboutTwoBtn[k].style["background-color"] = "hsl(0deg 0% 97.25%)";
-            aboutTwoBtn[k].style["color"] = "black";
-        }
-
-        let arrowShape = document.getElementsByClassName("about2_arrow_shape");
-        for (let a = 0; a < arrowShape.length; a++) {
-            arrowShape[a].style["display"] = "none";
-        }
-
-        this.style["background-color"] = "hsl(216.17deg 100% 40.98%)";
-        this.style["color"] = "white";
-        this.innerHTML += `<div class="about2_arrow_shape"></div>`;
-
-    };
-}
-
-
-/* ****************
-******Blog Posts****
-*********************/
-
-
-async function blogPosts(clickedImg, cardSixImg) {
-    try {
-        let response = await fetch("./assets/data/blog.json");
-        let data = await response.json();
-
-        for (let j = 0; j < cardSixImg.length; j++) {
-            let {
-                img
-            } = data[clickedImg][j % 3];
-            cardSixImg[j].src = img;
-        }
-    } catch (error) {
-        console.error("Error fetching or processing data:", error);
-    }
-
-}
-
-
-let aboutSixBtn = document.getElementsByClassName("about6_btn");
-
-for (let i = 0; i < aboutSixBtn.length; i++) {
-    aboutSixBtn[i].onclick = function () {
-        var clickedImg = this.querySelector('p').textContent;
-        console.log(clickedImg)
-        var cardSixImg = document.querySelectorAll(".about6_card_img img");
-        blogPosts(clickedImg, cardSixImg);
-
-        for (let k = 0; k < aboutSixBtn.length; k++) {
-            aboutSixBtn[k].style["background-color"] = "hsl(0deg 0% 97.25%)";
-            aboutSixBtn[k].style["color"] = "black";
-        }
-
-        let arrowShape = document.getElementsByClassName("about6_arrow_shape");
-        for (let a = 0; a < arrowShape.length; a++) {
-            arrowShape[a].style["display"] = "none";
-        }
-
-        this.style["background-color"] = "hsl(216.17deg 100% 40.98%)";
-        this.style["color"] = "white";
-        this.innerHTML += `<div class="about6_arrow_shape"></div>`;
-
-    };
-}
-
 // *******************************************Script of Search Page
 
 
@@ -307,9 +42,10 @@ async function addHeaderInSearch() {
     try {
         let response = await fetch("./header.html");
         let data = await response.text();
-        document.getElementById('containheader').innerHTML = data;
+        document.getElementById('headerPartInSearch').innerHTML = data;
         loadJS("./assets/js/login.js");
         searchInput();
+        openCart();
     }
     catch { error => console.error('Error fetching content:', error) };
 }
@@ -476,9 +212,10 @@ async function addHeaderInProduct() {
     try {
         let response = await fetch("./header.html");
         let data = await response.text();
-        document.getElementById('headerInProduct').innerHTML = data;
+        document.getElementById('headerPartInProduct').innerHTML = data;
         loadJS("./assets/js/login.js");
         searchInput();
+        openCart();
     }
     catch { error => console.error('Error fetching content:', error) };
 }
@@ -529,37 +266,100 @@ for (let i = 0; i < sampleImgTab.length; i++) {
 }
 
 
+// **************************************************************Add to cart Script
+async function addHeaderInAddtoCart() {
+    try {
+        let response = await fetch("./header.html");
+        let data = await response.text();
+        document.getElementById('headerPartInAddToCart').innerHTML = data;
+        loadJS("./assets/js/login.js");
+        loadJS("./assets/js/addToCart.js")
+        searchInput();
+    }
+    catch { error => console.error('Error fetching content:', error) };
+}
+
+addHeaderInAddtoCart();
+
+
 
 /* ***********************
-*********** Wish List*****
+*********** Add to cart *****
 ********************************/
-let productIdContainer = new Set();
 
-function addToCart(idTag) {
+function addToCart(idTag, productIdContainer) {
     let addToCartBtn = document.getElementsByClassName(idTag);
     console.log(addToCartBtn.length)
 
     for (let j = 0; j < addToCartBtn.length; j++) {
         addToCartBtn[j].onclick = function () {
             let productId = addToCartBtn[j].parentElement.parentElement.id;
-            if(!productIdContainer.has(productId)){
+            if (!productIdContainer.has(productId)) {
                 productIdContainer.add(productId);
+                storeItemtoLocal(Number(productId));
             }
-            else{
+            else {
                 alert("Already have the item in Cart.")
             }
-            
-            addCartItem(productIdContainer);
         }
     }
 }
 
-function addCartItem(productIdContainer){
-    console.log(productIdContainer);
+
+const addCartItem = () => {
+    let storedProducts = JSON.parse(localStorage.getItem("products"));
+    let totalProduct = Object.keys(storedProducts).length;
     let itemOfCart = document.getElementById("cartItemCount");
-    console.log(itemOfCart.innerText);
-    itemOfCart.innerText = productIdContainer.size;
+    console.log(totalProduct);
+    itemOfCart.innerText = totalProduct;
 }
+
+let storeItemtoLocal = async (newId) => {
+    let product = await filteredProducts(newId);
+    console.log(product);
+    let localStoredProduct = JSON.parse(localStorage.getItem("products"));
+    console.log(localStoredProduct);
+    localStoredProduct[newId] = product;
+    console.log(localStoredProduct);
+
+    localStorage.setItem("products", JSON.stringify(localStoredProduct));
+    addCartItem();
+}
+
+
+
+async function filteredProducts(newId) {
+    try {
+        let response = await fetch("./assets/data/product.json");
+        data = await response.json();
+        data = data["products"];
+
+        let filteredId = data.find((product) => product.id === newId);
+        if (filteredId) {
+            return filteredId;
+        }
+        else {
+            throw (new Error("Product is not available."))
+        }
+    }
+    catch (error) {
+        console.log("Error fetching on products data: ", error);
+    }
+
+}
+
+function openCart() {
+    let cartBtn = document.querySelector("#cartbtn");
+    console.log("Open cart loaded.");
+    cartBtn.addEventListener("click", () => {
+        gotoAddToCart("addToCart.html");
+    })
+}
+
+let gotoAddToCart = (link) => {
+    window.location.href = link;
+}
+
 
 
 
