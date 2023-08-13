@@ -5,7 +5,7 @@
             "img": "./assets/images/shoe2.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "shoes",
             "price": "$999.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
@@ -15,7 +15,7 @@
             "img": "./assets/images/shoe2.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "shoes",
             "price": "$999.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
@@ -25,7 +25,7 @@
             "img": "./assets/images/camera1.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "camera",
             "price": "$999.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
@@ -35,7 +35,7 @@
             "img": "./assets/images/fashion.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "fashion",
             "price": "$999.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
@@ -45,7 +45,7 @@
             "img": "./assets/images/camera.jpg",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "camera",
             "price": "$999.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
@@ -55,7 +55,7 @@
             "img": "./assets/images/electronics.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "electronics",
             "price": "$999.00 ",
             "category": "LATEST",
             "description": "Boat Ultra fratured headfone"
@@ -65,7 +65,7 @@
             "img": "./assets/images/bags.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "bags",
             "price": "$999.00 ",
             "category": "LATEST",
             "description": "Boat Ultra fratured headfone"
@@ -75,7 +75,7 @@
             "img": "./assets/images/bags.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "bags",
             "price": "$999.00 ",
             "category": "LATEST",
             "description": "Boat Ultra fratured headfone"
@@ -85,7 +85,7 @@
             "img": "./assets/images/fashion.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "fashion",
             "price": "$999.00 ",
             "category": "LATEST",
             "description": "Boat Ultra fratured headfone"
@@ -95,7 +95,7 @@
             "img": "./assets/images/homedecor.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "homedecor",
             "price": "$999.00 ",
             "category": "LATEST",
             "description": "Boat Ultra fratured headfone"
@@ -105,7 +105,7 @@
             "img": "./assets/images/electronics.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "electronics",
             "price": "$999.00 ",
             "category": "BESTSELLERS",
             "description": "Boat Ultra fratured headfone"
@@ -115,7 +115,7 @@
             "img": "./assets/images/bags.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "bags",
             "price": "$999.00 ",
             "category": "BESTSELLERS",
             "description": "Boat Ultra fratured headfone"
@@ -125,7 +125,7 @@
             "img": "./assets/images/bags.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "bags",
             "price": "$999.00 ",
             "category": "BESTSELLERS",
             "description": "Boat Ultra fratured headfone"
@@ -145,7 +145,7 @@
             "img": "./assets/images/homedecor.avif",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "homedecor",
             "price": "$999.00 ",
             "category": "BESTSELLERS",
             "description": "Boat Ultra fratured headfone"

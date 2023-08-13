@@ -44,6 +44,7 @@ async function addHeaderInSearch() {
         let data = await response.text();
         document.getElementById('headerPartInSearch').innerHTML = data;
         loadJS("./assets/js/login.js");
+        loadJS("./assets/js/addToCart.js")
         searchInput();
         openCart();
     }
@@ -172,9 +173,11 @@ function searchInput() {
 
     function fetchSearchandDisplay(searchQuery) {
         document.getElementById("searchname").innerText = searchQuery;
-        if (searchQuery != "Camera") {
-            changeSearchUi();
-        }
+        let allAvailableItems = allAvailableProduct(searchQuery);
+        console.log(allAvailableItems);
+        // if (searchQuery != "Camera") {
+        //     changeSearchUi();
+        // }
     }
 
     function changeSearchUi() {
@@ -194,9 +197,31 @@ function searchInput() {
         hideShowGridbtn.innerHTML = "There is no product that matches the search criteria.";
     }
 
-    let hideContinue = document.getElementById("hidecontinue");
-    if (hideContinue) {
-        hideContinue.addEventListener('click', returnHome)
+    let goBack = document.getElementById("hidecontinue");
+    if (goBack) {
+        goBack.addEventListener('click', returnHome)
+    }
+}
+
+// Make a function for showing searchItem
+// function showSearchItem(searchItem)
+
+async function allAvailableProduct(searchQuery) {
+    try {
+        let response = await fetch("./assets/data/product.json");
+        data = await response.json();
+        data = data["products"];
+
+        let availableProducts = data.filter((product) => product.name === searchQuery);
+        if (availableProducts) {
+            return availableProducts;
+        }
+        else {
+            throw (new Error("Product is not available."))
+        }
+    }
+    catch (error) {
+        console.log("Error fetching on products data: ", error);
     }
 }
 
@@ -214,6 +239,7 @@ async function addHeaderInProduct() {
         let data = await response.text();
         document.getElementById('headerPartInProduct').innerHTML = data;
         loadJS("./assets/js/login.js");
+        loadJS("./assets/js/addToCart.js")
         searchInput();
         openCart();
     }
@@ -359,17 +385,6 @@ function openCart() {
 let gotoAddToCart = (link) => {
     window.location.href = link;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

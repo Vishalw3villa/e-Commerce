@@ -61,6 +61,7 @@ const sendData = (sRate, count, userObj) => {
         } else {
 
             localStorage.setItem(userObj.emailVal, JSON.stringify(userObj));
+            localStorage.setItem("products", JSON.stringify({}));
             alert("Registration successful!");
             swal(`Welcome! ${userObj.usernameVal}`, "Registration Successfull", "success");
             closeRegModal();
@@ -203,7 +204,7 @@ if (loginForm) {
                 localStorage.setItem("isLoggedIn", "true");
                 localStorage.setItem("loggedInUser", userData.usernameVal);
 
-                localStorage.setItem("products", JSON.stringify({}));
+                
 
                 updateUI();
                 alert("Login successful!");
@@ -225,6 +226,10 @@ if (logoutBtn) {
             localStorage.removeItem("isLoggedIn");
             localStorage.removeItem("loggedInUser");
             updateUI();
+
+            // Do empty cart for login User
+            // localStorage.setItem("products", JSON.stringify({}));
+
             alert("Logout successful!");
             closeRegModal();
             btnreg.addEventListener("click", showRegModal);
