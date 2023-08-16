@@ -52,6 +52,8 @@ data.then((data) => {
         </div>
     </div>`
     }
+
+    switchToProductPage("productImg");
 })
 
 
