@@ -24,7 +24,7 @@ img {
     --lightgreen: rgb(17, 210, 17);
     --red: red;
     --lightgray: hsl(0deg 0% 97.25%);
-    ;
+    --raddishwhite : rgb(248, 248, 248);
 }
 
 .container {
@@ -223,7 +223,7 @@ img {
 }
 
 .bottom_nav-sub1:hover {
-    background-color: rgb(248, 248, 248);
+    background-color: var(--raddishwhite);
 }
 
 .bottom_nav-sub1:hover .drop_down_alldepartment {
@@ -544,6 +544,11 @@ a {
     padding-bottom: 20px;
 }
 
+.bottom_nav_sub4_sub1:hover{
+    background-color: var(--raddishwhite);
+    color: var(--blackgray);
+}
+
 
 
 .bottom_nav_sub4_sub2 {
@@ -555,6 +560,10 @@ a {
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.bottom_nav_sub4_sub2:hover{
+    background-color: var(--raddishwhite);
 }
 
 .bottom_nav_sub4_sub2 i {

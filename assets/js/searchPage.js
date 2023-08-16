@@ -114,7 +114,7 @@ for (let i = 0; i < minusPlus.length; i++) {
         allAvailableItems.then((data) => {
             if (data.length > 0) {
                 showSearchItem(data);
-                switchToProductPage("searchImg");
+                switchToProductPage("productImg");
             }
             else {
                 changeSearchUi();
@@ -126,10 +126,7 @@ for (let i = 0; i < minusPlus.length; i++) {
     if (goBack) {
         goBack.addEventListener('click', returnHome)
     }
-// }
 
-// Make a function for showing searchItem
-// function showSearchItem(searchItem)
 
 async function allAvailableProduct(searchQuery) {
     try {
@@ -187,9 +184,9 @@ function showSearchItem(product) {
 
         showGridItem.innerHTML += `<div class="about2_card search_card">
 
-                                        <div class="about2_img">
+                                        <div class="about2_img" id=${id}>
                                             <button class="about3_tags discount">-70%</button>
-                                            <img class="searchImg" src=${img} alt="">
+                                            <img class="searchImg productImg" src=${img} alt="">
                                         </div>
                                         <div class="about2_description">
                                             <div class="about2_bar">
@@ -232,7 +229,7 @@ function showSearchItem(product) {
                                         <button class="about3_tags hot">Hot</button>
                                         <button class="about3_tags discount">-10%</button>
 
-                                        <img class="searchImg" src=${img} alt="">
+                                        <img class="searchImg productImg" src=${img} alt="">
                                     </div>
                                     <div class="listview_description">
                                         <div class="listview_bar">

@@ -6,7 +6,7 @@ async function addHeaderInIndex() {
         document.getElementById('headerPartInIndex').innerHTML = data;
         loadJS("./assets/js/login.js");
         loadJS("./assets/js/index.js")
-        loadJS("./assets/js/searchPage.js") 
+        loadJS("./assets/js/searchPage.js")
         loadJS("./assets/js/addToCart.js")
         loadJS("./assets/js/wishList.js")
     }
@@ -207,16 +207,65 @@ function switchToProductPage(className) {
         for (let j = 0; j < seeProductBtn.length; j++) {
             seeProductBtn[j].addEventListener("click", () => {
                 let seeProduct = seeProductBtn[j].parentElement.id;
-                gotoProductPage("productPage.html")
+                console.log(seeProduct);
+                gotoProductPage("productPage.html", seeProduct);
             })
         }
     }
-    else{
+    else {
         console.log("switchToProductPage error..");
     }
 
-    let gotoProductPage = (link) => {
-        window.location.href = link;
+    let gotoProductPage = (link, seeProduct) => {
+        const productPageUrl = `${link}?productId=${encodeURIComponent(seeProduct)}`;
+        window.location.href = productPageUrl;
+    }
+}
+
+const urlParam = new URLSearchParams(window.location.search);
+const productQuery = urlParam.get("productId");
+
+if (productQuery) {
+    fetchProductandDisplay(productQuery);
+}
+
+function fetchProductandDisplay(productQuery) {
+    // document.getElementById("searchname").innerText = productQuery;
+    let allAvailableItems = queryProduct(productQuery);
+    allAvailableItems.then((data) => {
+        renderProduct(data);
+    })
+
+}
+
+function renderProduct(data) {
+    let productDispaly = document.getElementsByClassName("productDisplay");
+    for (let j = 0; j < productDispaly.length; j++) {
+        productDispaly[j].src = data.img;
+    }
+
+    let productName = document.getElementsByClassName("productName");
+    for (let j = 0; j < productName.length; j++) {
+        productName[j].innerText = data.model;
+    }
+}
+
+async function queryProduct(productQuery) {
+    try {
+        let response = await fetch("./assets/data/product.json");
+        data = await response.json();
+        data = data["products"];
+        productQuery = Number(productQuery);
+        let availableProducts = data.find((product) => product.id === productQuery);
+        if (availableProducts) {
+            return availableProducts;
+        }
+        else {
+            throw (new Error("Product is not available."))
+        }
+    }
+    catch (error) {
+        console.log("Error fetching on products data: ", error);
     }
 }
 
@@ -258,6 +307,29 @@ function openWishlist() {
 
 let gotoWishList = (link) => {
     window.location.href = link;
+}
+
+
+function subscription() {
+    let subscribed = document.getElementById("subscribed").value;
+    let userEmail = JSON.parse(localStorage.getItem(subscribed));
+    let checkbox = document.getElementById("checkbox").checked;
+
+    console.log(checkbox);
+
+    if (userEmail && isLoggedIn) {
+
+        if (checkbox) {
+            swal(`Welcome! ${userEmail.usernameVal}`, "Subscribed Successfully.", "success");
+        }
+        else{
+            alert("Yuo did not accept the policy.")
+        }
+
+    }
+    else {
+        swal(`Oops! User`, "Subscribed Unsuccessfully.", "error");
+    }
 }
 
 

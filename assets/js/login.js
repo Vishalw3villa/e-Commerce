@@ -63,7 +63,6 @@ const sendData = (sRate, count, userObj) => {
             localStorage.setItem(userObj.emailVal, JSON.stringify(userObj));
             localStorage.setItem("products", JSON.stringify({}));
             localStorage.setItem("wishCart", JSON.stringify({}));
-            alert("Registration successful!");
             swal(`Welcome! ${userObj.usernameVal}`, "Registration Successfull", "success");
             closeRegModal();
         }

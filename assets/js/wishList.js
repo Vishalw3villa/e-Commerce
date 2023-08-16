@@ -31,13 +31,18 @@ function addToWishlist(idTag, wishlistIdContainer) {
 
             let itemId = wishlistBtn[j].parentElement.parentElement.id;
 
-            if (!wishlistIdContainer.has(itemId)) {
-                wishlistIdContainer.add(itemId);
-                storeItemToWishList(Number(itemId));
-                alert("Item is added into the wishlist.")
+            if(isLoggedIn){
+                if (!wishlistIdContainer.has(itemId)) {
+                    wishlistIdContainer.add(itemId);
+                    storeItemToWishList(Number(itemId));
+                    alert("Item is added into the wishlist.")
+                }
+                else {
+                    alert("Already have in wish list.")
+                }
             }
-            else {
-                alert("Already have in wish list.")
+            else{
+                alert("Loggin first!");
             }
 
 
@@ -165,9 +170,9 @@ function deleteLikedItemById(deleteProductId) {
     window.location.reload();
 }
 
+
+
 switchToProductPage("wishlistImg");
-
-
 openCart();
 
 

@@ -119,9 +119,9 @@ async function featuredProduct(clickedCategory) {
 
         aboutTwoHtml += `
                 <div class="about2_card ">
-                    <div class="about2_img">
+                    <div class="about2_img" id=${id}>
                             <div class="about3_label">JUST NOW</div>
-                            <img src=${img} alt="">
+                            <img class="productImg" src=${img} alt="">
                     </div>
                         <div class="about2_description">
                             <div class="about2_bar">
@@ -199,6 +199,7 @@ async function featuredProduct(clickedCategory) {
     addToCart("addToCart", productIdContainer);
     addToWishlist("wishList", wishlistIdContainer);
     showLikedIcon("wishList", wishlistIdContainer)
+    switchToProductPage("productImg");
 }
 
 
@@ -255,8 +256,8 @@ async function featuredCategory(clickedCategory) {
         aboutTwoHtml += `<div class="about3_card">
                             <button class="about3_tags" id="top_brand">TOP BRAND</button>
                             <div class="about3_label">JUST NOW</div>
-                            <div class="about3_img">
-                                <img src=${img} alt="">
+                            <div class="about3_img" id=${id}>
+                                <img class="productImg" src=${img} alt="">
                             </div>
                             <div class="about3_text" id=${id}>
                                 <a href="#">${model}</a>
@@ -306,6 +307,7 @@ async function featuredCategory(clickedCategory) {
     addToCart("addToCart", productIdContainer);
     addToWishlist("wishList", wishlistIdContainer);
     showLikedIcon("wishList", wishlistIdContainer)
+    switchToProductPage("productImg");
 }
 
 featuredCategory("newfashion");
@@ -359,6 +361,9 @@ for (let i = 0; i < aboutSixBtn.length; i++) {
     };
 }
 
+
 openCart();
 openWishlist();
+
+
 
