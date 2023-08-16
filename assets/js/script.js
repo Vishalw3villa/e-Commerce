@@ -286,7 +286,7 @@ async function addHeaderInWishlist() {
 
 addHeaderInWishlist();
 
-// Add footer html file to addToCart Page
+// Add footer html file to wishlist Page
 async function addFooterInWishlist() {
     try {
         let response = await fetch("./footer.html");
@@ -308,6 +308,44 @@ function openWishlist() {
 let gotoWishList = (link) => {
     window.location.href = link;
 }
+
+
+// ***********************************************************************All products Page
+async function addHeaderInAllProduct() {
+    try {
+        let response = await fetch("./header.html");
+        let data = await response.text();
+        document.getElementById('headerPartInAllProduct').innerHTML = data;
+        loadJS("./assets/js/login.js");
+        loadJS("./assets/js/searchPage.js")
+        loadJS("./assets/js/allProducts.js");
+        loadJS("./assets/js/wishList.js")
+        loadJS("./assets/js/addToCart.js")
+        searchInput();
+    }
+    catch { error => console.error('Error fetching content:', error) };
+}
+
+addHeaderInAllProduct();
+
+// Add footer html file to wishlist Page
+async function addFooterInAllProduct() {
+    try {
+        let response = await fetch("./footer.html");
+        let data = await response.text();
+        document.getElementById('addAllProductsFooter').innerHTML = data;
+    }
+    catch { error => console.error('Error fetching content:', error) };
+}
+
+addFooterInAllProduct();
+
+
+function seeAllProducts(){
+    window.location.href = "allProducts.html";
+}
+
+
 
 
 function subscription() {

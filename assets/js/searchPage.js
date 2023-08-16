@@ -12,13 +12,13 @@ if (buttonList) {
 
         // Toggle the display property of the elements
         if (computedStyleToHide.display === "flex") {
-            console.log(computedStyleToHide.display);
+
             elementToHide.style.display = "none";
             elementToShow.style.display = "block";
         }
 
         if (computedStyleToHide.display === "grid") {
-            console.log(computedStyleToHide.display);
+
             elementToHide.style.display = "none";
             elementToShow.style.display = "block";
         }
@@ -32,7 +32,7 @@ if (buttonGrid) {
 
         // Toggle the display property of the elements
         if (computedStyleToHide.display === "none") {
-            console.log(computedStyleToHide.display);
+            
             elementToHide.style.display = "flex";
             elementToShow.style.display = "none";
         }
@@ -47,7 +47,7 @@ for (let i = 0; i < minusPlus.length; i++) {
         for (let j = 0; j < subBars.length; j++) {
             if (i === j) {
                 let hideBar = getComputedStyle(subBars[j]).display;
-                console.log(hideBar);
+                
 
                 if (hideBar === "flex") {
                     subBars[j].style.display = "none";
@@ -60,7 +60,7 @@ for (let i = 0; i < minusPlus.length; i++) {
                     this.querySelector("span").innerHTML = `<i id="serch_plus" class="fa-solid fa-minus">`;
                 }
 
-                console.log(hideBar);
+                
                 subBars[j].display = hideBar;
             }
         }
@@ -73,59 +73,58 @@ for (let i = 0; i < minusPlus.length; i++) {
 ************************/
 
 // function searchInput() {
-    const searchBtn = document.getElementById("searchbtn");
-    const searchInput = document.getElementById("searchinput");
+const searchBtn = document.getElementById("searchbtn");
+const searchInput = document.getElementById("searchinput");
 
-    if (searchBtn) {
-        searchBtn.addEventListener('click', searchAction)
-        searchInput.addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                searchAction();
-            }
-        })
+if (searchBtn) {
+    searchBtn.addEventListener('click', searchAction)
+    searchInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            searchAction();
+        }
+    })
+}
+else {
+    console.log(`error searchBtn`);
+}
+
+function searchAction() {
+    let searchQuery1 = searchInput.value;
+    if (searchQuery1) {
+        const searchPageUrl = `searchPage.html?search=${encodeURIComponent(searchQuery1)}`;
+        window.location.href = searchPageUrl;
     }
     else {
-        console.log(`error searchBtn`);
+        console.log("error searchAction");
     }
+}
 
-    function searchAction() {
-        let searchQuery1 = searchInput.value;
-        if (searchQuery1) {
-            console.log(searchQuery1);
-            const searchPageUrl = `searchPage.html?search=${encodeURIComponent(searchQuery1)}`;
-            window.location.href = searchPageUrl;
+
+const userlParam = new URLSearchParams(window.location.search);
+const searchQuery = userlParam.get("search");
+
+if (searchQuery) {
+    fetchSearchandDisplay(searchQuery);
+}
+
+function fetchSearchandDisplay(searchQuery) {
+    document.getElementById("searchname").innerText = searchQuery;
+    let allAvailableItems = allAvailableProduct(searchQuery);
+    allAvailableItems.then((data) => {
+        if (data.length > 0) {
+            showSearchItem(data);
+            switchToProductPage("productImg");
         }
         else {
-            console.log("error searchAction");
+            changeSearchUi();
         }
-    }
+    })
+}
 
-
-    const userlParam = new URLSearchParams(window.location.search);
-    const searchQuery = userlParam.get("search");
-
-    if (searchQuery) {
-        fetchSearchandDisplay(searchQuery);
-    }
-
-    function fetchSearchandDisplay(searchQuery) {
-        document.getElementById("searchname").innerText = searchQuery;
-        let allAvailableItems = allAvailableProduct(searchQuery);
-        allAvailableItems.then((data) => {
-            if (data.length > 0) {
-                showSearchItem(data);
-                switchToProductPage("productImg");
-            }
-            else {
-                changeSearchUi();
-            }
-        })
-    }
-
-    let goBack = document.getElementById("hidecontinue");
-    if (goBack) {
-        goBack.addEventListener('click', returnHome)
-    }
+let goBack = document.getElementById("hidecontinue");
+if (goBack) {
+    goBack.addEventListener('click', returnHome)
+}
 
 
 async function allAvailableProduct(searchQuery) {
