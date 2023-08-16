@@ -50,7 +50,7 @@ td {
     color: rgb(127, 125, 125);
 }
 
-#table {
+.table {
     width: 100%;
     text-align: center;
     border: 1px solid rgb(207, 207, 207);
@@ -71,13 +71,17 @@ td {
 
 
 
-.cartImg {
+.cartImg, .wishlistImg {
     width: 100px;
     height: 100px;
     padding: 20px;
 }
 
 .cartImg img:hover {
+    transform: scale(105%);
+}
+
+.wishlistImg img:hover {
     transform: scale(105%);
 }
 

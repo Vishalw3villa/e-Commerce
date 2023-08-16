@@ -1,6 +1,16 @@
-// let storedProduct = {};
+// loadJS("./assets/js/wishList.js")
+let productStorage = JSON.parse(localStorage.getItem("products"));
 let productIdContainer = new Set();
-// localStorage.setItem("products", JSON.stringify(storedProduct));
+if (productStorage) {
+    productIdContainer = new Set(Object.keys(productStorage));
+}
+
+let wishlistStorage = JSON.parse(localStorage.getItem("wishCart"));
+let wishlistIdContainer = new Set();
+if (wishlistStorage) {
+    wishlistIdContainer = new Set(Object.keys(wishlistStorage));
+}
+
 
 async function whyBuyUs(clickedBtn, cardOneImg, cardOneBtn) {
     try {
@@ -91,7 +101,6 @@ function filterData(data, clickedCategory) {
 }
 
 async function featuredProduct(clickedCategory) {
-    // console.log(clickedCategory);
     let parentAbout = document.querySelector('.about2_sub2')
     let aboutTwoHtml;
     let data = await fetchDataJSON("./assets/data/product.json");
@@ -130,7 +139,7 @@ async function featuredProduct(clickedCategory) {
                                             <button class="addToCart">ADD TO CART</button>
                                         </span>
                                         <span>
-                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-regular fa-heart wishList"></i>
                                             <i class="fa-solid fa-code-compare"></i>
                                         </span>
                                     </div>
@@ -188,6 +197,8 @@ async function featuredProduct(clickedCategory) {
 
     // Add fuctionality to addToCart
     addToCart("addToCart", productIdContainer);
+    addToWishlist("wishList", wishlistIdContainer);
+    showLikedIcon("wishList", wishlistIdContainer)
 }
 
 
@@ -201,7 +212,6 @@ featuredProduct("FEATURED");
 for (let i = 0; i < aboutTwoBtn.length; i++) {
     aboutTwoBtn[i].onclick = function () {
         var clickedCategory = this.querySelector('p').textContent;
-        console.log(clickedCategory)
         featuredProduct(clickedCategory);
 
         for (let k = 0; k < aboutTwoBtn.length; k++) {
@@ -220,6 +230,85 @@ for (let i = 0; i < aboutTwoBtn.length; i++) {
 
     };
 }
+
+/* ****************
+******Featured Category ****
+*********************/
+
+async function featuredCategory(clickedCategory) {
+    let parentAbout = document.querySelector('.about3_sub2')
+    let aboutTwoHtml;
+    let data = await fetchDataJSON("./assets/data/product.json");
+    data = filterData(data, clickedCategory);
+    // var aboutTwoCard = document.getElementById("about2_sub2_sub2");
+    // if (aboutTwoCard) {
+    //     aboutTwoCard.remove();
+    // }
+    aboutTwoHtml = ' <div class="about3_sub2_sub2 owl-carousel owl-theme">';
+    for (let j = 0; j < data.length; j++) {
+        let id = data[j].id;
+        let img = data[j].img;
+        let company = data[j].company;
+        let model = data[j].model;
+        let price = data[j].price;
+
+        aboutTwoHtml += `<div class="about3_card">
+                            <button class="about3_tags" id="top_brand">TOP BRAND</button>
+                            <div class="about3_label">JUST NOW</div>
+                            <div class="about3_img">
+                                <img src=${img} alt="">
+                            </div>
+                            <div class="about3_text" id=${id}>
+                                <a href="#">${model}</a>
+                                <p>${price}</p>
+                                <hr>
+                                <div class="cart" id=${id}>
+                                    <button class= "addToCart">Add to cart</button>
+                                    <span>
+                                        <i class="fa-regular fa-heart wishList"></i>
+                                        <i class="fa-solid fa-code-compare"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>`
+    }
+    aboutTwoHtml += "</div>";
+
+    parentAbout.insertAdjacentHTML("beforeend", aboutTwoHtml);
+    aboutTwoCrowsel();
+    function aboutTwoCrowsel() {
+        $(".about3_sub2_sub2").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+
+                },
+                600: {
+                    items: 1,
+
+                },
+                992: {
+                    items: 2,
+                },
+                1272: {
+                    items: 4,
+                }
+            }
+        })
+    }
+    // Add fuctionality to addToCart
+    addToCart("addToCart", productIdContainer);
+    addToWishlist("wishList", wishlistIdContainer);
+    showLikedIcon("wishList", wishlistIdContainer)
+}
+
+featuredCategory("newfashion");
 
 
 /* ****************
@@ -250,7 +339,6 @@ let aboutSixBtn = document.getElementsByClassName("about6_btn");
 for (let i = 0; i < aboutSixBtn.length; i++) {
     aboutSixBtn[i].onclick = function () {
         var clickedImg = this.querySelector('p').textContent;
-        console.log(clickedImg)
         var cardSixImg = document.querySelectorAll(".about6_card_img img");
         blogPosts(clickedImg, cardSixImg);
 
@@ -272,3 +360,5 @@ for (let i = 0; i < aboutSixBtn.length; i++) {
 }
 
 openCart();
+openWishlist();
+

@@ -301,6 +301,10 @@ del {
     color: var(--textgray);
 }
 
+.redHeart{
+    color: var(--red) !important;
+}
+
 .about2_cart1 button {
     background-color: var(--darkblue);
     color: var(--white);
@@ -475,6 +479,10 @@ del {
     background-color: var(--darkblue);
     padding: 3px;
     border-radius: 3px;
+}
+
+.cart button:active{
+    box-shadow: 1px 1px 5px gray;
 }
 
 .cart i {

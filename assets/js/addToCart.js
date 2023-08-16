@@ -1,6 +1,85 @@
 let storedProducts = JSON.parse(localStorage.getItem("products"));
-const isLoggedIn = localStorage.getItem("loggedInUser");
-let totalProduct = Object.keys(storedProducts);
+isLoggedIn = localStorage.getItem("loggedInUser");
+let totalProduct = [];
+if(storedProducts){
+    totalProduct = Object.keys(storedProducts);
+}
+
+
+
+/* ***********************
+*********** Add to cart *****
+********************************/
+
+function addToCart(idTag, productIdContainer) {
+    let addToCartBtn = document.getElementsByClassName(idTag);
+    for (let j = 0; j < addToCartBtn.length; j++) {
+        addToCartBtn[j].onclick = function () {
+            let productId = addToCartBtn[j].parentElement.parentElement.id;
+
+            const loggedInUser = localStorage.getItem("loggedInUser");
+            if (loggedInUser) {
+                if (!productIdContainer.has(productId)) {
+                    productIdContainer.add(productId);
+                    storeItemtoLocal(Number(productId));
+                }
+                else {
+                    alert("Already have the item in Cart.")
+                }
+            }
+            else {
+                alert("LoggIn first");
+            }
+        }
+    }
+}
+
+
+let storeItemtoLocal = async (newId) => {
+    let product = await filteredProducts(newId);
+    
+    let localStoredProduct = JSON.parse(localStorage.getItem("products"));
+    
+    localStoredProduct[newId] = product;
+
+
+    localStorage.setItem("products", JSON.stringify(localStoredProduct));
+    addCartItem();
+}
+
+
+const addCartItem = () => {
+    let storedProducts = JSON.parse(localStorage.getItem("products"));
+    let totalProduct = Object.keys(storedProducts).length;
+    let itemOfCart = document.getElementById("cartItemCount");
+    
+    itemOfCart.innerText = totalProduct;
+}
+
+
+
+async function filteredProducts(newId) {
+    try {
+        let response = await fetch("./assets/data/product.json");
+        data = await response.json();
+        data = data["products"];
+
+        let filteredId = data.find((product) => product.id === newId);
+        if (filteredId) {
+            return filteredId;
+        }
+        else {
+            throw (new Error("Product is not available."))
+        }
+    }
+    catch (error) {
+        console.log("Error fetching on products data: ", error);
+    }
+
+}
+
+
+
 
 // Check The local storage have storedProducts or Not *********
 // **********************************
@@ -15,7 +94,7 @@ if (totalProduct.length > 0) {
     }
 }
 else {
-    let tableItem = document.getElementById("table");
+    let tableItem = document.getElementById("cartTable");
     if (tableItem) {
         tableItem.innerHTML = `<h2>Your cart is empty.</h2>`;
     }
@@ -24,7 +103,7 @@ else {
 // Show storedProduct of local storege into addToCart Page **************
 // *****************************************
 function showCartItem(storedProducts, totalProduct) {
-    let tableItem = document.getElementById("table");
+    let tableItem = document.getElementById("cartTable");
     if (tableItem) {
         tableItem.innerHTML += `<tr id="cartRowHead">
                                 <th id="imageHeading">IMAGE</th>
@@ -72,31 +151,20 @@ let deleteItem = document.getElementsByClassName("deleteCartItem");
 for (let j = 0; j < deleteItem.length; j++) {
     deleteItem[j].addEventListener("click", () => {
         let deleteProduct = deleteItem[j].parentElement.parentElement.parentElement.id;
-        console.log(deleteProduct);
+        
         deleteItemById(deleteProduct);
     })
 }
 
 function deleteItemById(deleteProductId) {
     delete storedProducts[deleteProductId];
-    console.log(storedProducts);
+    
     localStorage.setItem("products", JSON.stringify(storedProducts));
     window.location.reload();
 }
 
-// Switch to productPage *********
-// *********************************
-let seeProductBtn = document.getElementsByClassName("cartImg");
 
-if (seeProductBtn) {
-    for (let j = 0; j < seeProductBtn.length; j++) {
-        seeProductBtn[j].addEventListener("click", () => {
-            let seeProduct = seeProductBtn[j].parentElement.id;
-            gotoProductPage("productPage.html")
-        })
-    }
-}
+switchToProductPage("cartImg");
 
-let gotoProductPage = (link) => {
-    window.location.href = link;
-}
+openWishlist();
+

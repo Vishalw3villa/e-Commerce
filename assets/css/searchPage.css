@@ -211,12 +211,13 @@
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 
 .search_card {
-    width: 33%;
+    width: 48%;
 }
 
 .discount {

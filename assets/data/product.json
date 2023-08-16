@@ -209,6 +209,67 @@
             "price": "$999.00 ",
             "category": "SPECIALS",
             "description": "Boat Ultra fratured headfone"
+        },
+        {
+            "id": 22,
+            "img": "./assets/images/listcam1.jpg",
+            "company": "Erickson",
+            "model": "model519",
+            "name": "camera",
+            "price": "$999.00 ",
+            "category": "SPECIALS",
+            "description": "Boat Ultra fratured headfone"
+        },
+        {
+            "id": 23,
+            "img": "./assets/images/fashion3.avif",
+            "company": "Erickson",
+            "model": "Bodycorn dress",
+            "name": "camera",
+            "price": "$999.00 ",
+            "category": "newfashion",
+            "description": "Boat Ultra fratured headfone"
+        },
+        {
+            "id": 24,
+            "img": "./assets/images/fashion.avif",
+            "company": "Erickson",
+            "model": "Bodycorn dress",
+            "name": "dress",
+            "price": "$999.00 ",
+            "category": "newfashion",
+            "description": "Boat Ultra fratured headfone"
+        },
+        {
+            "id": 25,
+            "img": "./assets/images/fashion32.avif",
+            "company": "Erickson",
+            "model": "Bodycorn dress",
+            "name": "dress",
+            "price": "$999.00 ",
+            "category": "newfashion",
+            "description": "Boat Ultra fratured headfone"
+        },
+        {
+            "id": 26,
+            "img": "./assets/images/fashionDress.avif",
+            "company": "Erickson",
+            "model": "Bodycorn dress",
+            "name": "dress",
+            "price": "$999.00 ",
+            "category": "newfashion",
+            "description": "Boat Ultra fratured headfone"
+        },
+        {
+            "id": 27,
+            "img": "./assets/images/fashion35.avif  ",
+            "company": "Erickson",
+            "model": "Bodycorn dress",
+            "name": "dress",
+            "price": "$999.00 ",
+            "category": "newfashion",
+            "description": "Boat Ultra fratured headfone"
         }
     ]
 }
+

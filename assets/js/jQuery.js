@@ -81,30 +81,30 @@ $(".about1_sub2_sub2").owlCarousel({
 //     })
 // }
 
-$(".about3_sub2_sub2").owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-        0: {
-            items: 1,
+// $(".about3_sub2_sub2").owlCarousel({
+//     loop: true,
+//     margin: 20,
+//     nav: false,
+//     autoplay: true,
+//     autoplayTimeout: 2000,
+//     autoplayHoverPause: true,
+//     responsive: {
+//         0: {
+//             items: 1,
 
-        },
-        600: {
-            items: 1,
+//         },
+//         600: {
+//             items: 1,
 
-        },
-        992: {
-            items: 2,
-        },
-        1272: {
-            items: 4,
-        }
-    }
-})
+//         },
+//         992: {
+//             items: 2,
+//         },
+//         1272: {
+//             items: 4,
+//         }
+//     }
+// })
 
 
 $("#shop").owlCarousel({
