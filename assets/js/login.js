@@ -1,4 +1,5 @@
-// ************************************************Login Form
+
+
 function showLoginModal() {
     document.querySelector(".overlay").classList.add("showoverlay");
     document.querySelector(".loginform").classList.add("showloginform");
@@ -10,10 +11,16 @@ function closeLoginModal() {
 }
 
 var btnlogin = document.querySelector(".loginbtn");
-btnlogin.addEventListener("click", showLoginModal);
+if (btnlogin) {
+    btnlogin.addEventListener("click", showLoginModal);
+} else {
+    console.log('here btnlogin')
+}
 
 var btnCloselLogin = document.querySelector(".crossbtn");
-btnCloselLogin.addEventListener("click", closeLoginModal);
+if (btnCloselLogin) {
+    btnCloselLogin.addEventListener("click", closeLoginModal);
+}
 
 
 // ************************************************Registration form
@@ -28,11 +35,17 @@ function closeRegModal() {
     document.querySelector(".regform").classList.remove("showloginform");
 }
 
+
+
 var btnreg = document.querySelector(".regbtn");
-btnreg.addEventListener("click", showRegModal);
+if (btnreg) {
+    btnreg.addEventListener("click", showRegModal);
+}
 
 var btnCloselreg = document.querySelector(".crossbtn");
-btnCloselreg.addEventListener("click", closeRegModal);
+if (btnCloselreg) {
+    btnCloselreg.addEventListener("click", closeRegModal);
+}
 
 function closeRegOpenlog() {
     closeRegModal();
@@ -41,26 +54,15 @@ function closeRegOpenlog() {
 
 // ***************************registration and login validtions
 
-//  const computedStyles = document.getElementById("form");
-// const form = window.getComputedStyle(computedStyles);
-
-// const form = document.getElementById("form");
-
-
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault();
-//     validate();
-// })
-
 const sendData = (sRate, count, userObj) => {
     if (count === sRate) {
-        // alert("Registration Successfull");
         if (localStorage.getItem(userObj.emailVal)) {
             alert("Already registered!!!");
         } else {
-            // Store the registration information in localStorage
+
             localStorage.setItem(userObj.emailVal, JSON.stringify(userObj));
-            alert("Registration successful!");
+            localStorage.setItem("products", JSON.stringify({}));
+            localStorage.setItem("wishCart", JSON.stringify({}));
             swal(`Welcome! ${userObj.usernameVal}`, "Registration Successfull", "success");
             closeRegModal();
         }
@@ -82,7 +84,7 @@ const regSuccess = (userObj) => {
     }
 }
 
-// More email validate
+
 const isEmail = (emailVal) => {
     var atSymbol = emailVal.indexOf("@");
     if (atSymbol < 1) return false;
@@ -93,7 +95,6 @@ const isEmail = (emailVal) => {
 }
 
 
-// Define the validate function
 
 const validate = (username, email, password, cpassword) => {
     const usernameVal = username.value.trim();
@@ -166,18 +167,15 @@ function setSuccessMsg(input) {
 }
 
 
+const registrationForm = document.getElementById("form");
+const loginForm = document.getElementById("loginform");
+const logoutBtn = document.getElementById("logoutbtn");
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const registrationForm = document.getElementById("form");
-    const loginForm = document.getElementById("loginform");
-    const logoutBtn = document.getElementById("logoutbtn");
+console.log("above the update UI");
+updateUI();
 
-    // Check if the user is already logged in and update the UI accordingly
-    console.log("above the update UI");
-    updateUI();
-
-    // Event listener for the registration form
+if (registrationForm) {
     registrationForm.addEventListener("submit", function (e) {
         e.preventDefault();
         const username = document.getElementById("username");
@@ -186,23 +184,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const cpassword = document.getElementById("cpassword");
         validate(username, email, password, cpassword);
     });
+}
+else {
+    console.log("error registrationForm")
+}
 
-    // Event listener for the login form
+if (loginForm) {
     loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
         const email = document.getElementById("loginUsername").value;
         const password = document.getElementById("loginPassword").value;
 
-        // Perform login actions (e.g., validate credentials, check against stored data, etc.)
+
         const storedUserData = localStorage.getItem(email);
         if (storedUserData) {
             const userData = JSON.parse(storedUserData);
             if (userData.passwordVal === password) {
-                // Store the login completion status in localStorage
+
                 localStorage.setItem("isLoggedIn", "true");
                 localStorage.setItem("loggedInUser", userData.usernameVal);
 
-                // Update the UI after login
+                
+
                 updateUI();
                 alert("Login successful!");
                 location.reload();
@@ -213,58 +216,70 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Username not found! Please register first.");
         }
     });
+}
 
-    // Event listener for the logout button
-    if (logoutBtn) {
-        const loggedInUser = localStorage.getItem("loggedInUser");
-        if (loggedInUser) {
-            logoutBtn.addEventListener("click", function () {
-                localStorage.removeItem("isLoggedIn");
-                localStorage.removeItem("loggedInUser");
-                updateUI();
-                alert("Logout successful!");
-                closeRegModal();
-                btnreg.addEventListener("click", showRegModal);
-                location.reload();
-            });
-        }
+
+if (logoutBtn) {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+        logoutBtn.addEventListener("click", function () {
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("loggedInUser");
+            updateUI();
+
+            // Do empty cart for login User
+            // localStorage.setItem("products", JSON.stringify({}));
+
+            alert("Logout successful!");
+            closeRegModal();
+            btnreg.addEventListener("click", showRegModal);
+            location.reload();
+        });
     }
-    else {
-        console.log("Log out error...");
-    }
+}
+else {
+    console.log("Log out error...");
+}
 
-    // Function to update the UI based on the login status
-    function updateUI() {
-        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-        const loggedInUser = localStorage.getItem("loggedInUser");
 
-        if (isLoggedIn) {
-            var loginBtnElement = document.getElementById("loginuser");
+function updateUI() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const loggedInUser = localStorage.getItem("loggedInUser");
+
+    if (isLoggedIn) {
+        var loginBtnElement = document.getElementById("loginuser");
+        if (loginBtnElement) {
             loginBtnElement.innerText = loggedInUser;
-
-            var logoutBtnElement = document.getElementById("logOut");
+        }
+        var logoutBtnElement = document.getElementById("logOut");
+        if (logoutBtnElement) {
             logoutBtnElement.innerText = "Logout";
-
-            // btnreg.removeEventListener("click", showRegModal);
-            var divElement = document.querySelector('.regbtn');
-            divElement.classList.remove('regbtn');
-
-
-            loginForm.style.display = "none";
-            // logoutBtn.style.display = "block";
-            document.querySelector(".overlay").classList.remove("showoverlay");
-            // logoutBtn.style.display = "block";
-        } else {
-            // Show the registration and login forms and hide the logout button
-            registrationForm.style.display = "block";
-            loginForm.style.display = "block";
-            // logoutBtn.style.display = "none";
         }
 
-        // If there's a logged-in user, display a welcome message
-        // if (isLoggedIn && loggedInUser) {
-        //     alert("Welcome, " + loggedInUser + "!");
-        // }
-    }
-});
 
+        var divElement = document.querySelector('.regbtn');
+        if (divElement) {
+            divElement.classList.remove('regbtn');
+        }
+
+
+        if (loginForm) {
+            loginForm.style.display = "none";
+        }
+
+        const overlayElement = document.querySelector(".overlay");
+        if (overlayElement) {
+            overlayElement.style.display = "none";
+        }
+
+    } else {
+
+        if (registrationForm) {
+            registrationForm.style.display = "block";
+        }
+        if (loginForm) {
+            loginForm.style.display = "block";
+        }
+    }
+
+}

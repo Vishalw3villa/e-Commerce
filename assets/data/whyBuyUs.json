@@ -1,0 +1,90 @@
+{
+    "TOP CREATION": [
+        {
+            "img": "./assets/images/fashion.avif",
+            "tag" : "FASHION"
+        },
+        {
+            "img": "./assets/images/bags.avif",
+            "tag" : "Bags"
+        },
+        {
+            "img": "./assets/images/health&beuty.avif",
+            "tag" : "Health & Beauty"
+        },
+        {
+            "img": "./assets/images/footwear.avif",
+            "tag" : "Footwear"
+        },
+        {
+            "img": "./assets/images/homedecor.avif",
+            "tag" :  "Home Decor"
+        }
+    ],
+    "ELECTRONICS": [
+        {
+            "img": "./assets/images/electronicsHeadphone.avif",
+            "tag" : "Headfone"
+        },
+        {
+            "img": "./assets/images/electonicsGame.avif",
+            "tag" : "Game"
+        },
+        {
+            "img": "./assets/images/electonicsCamera.avif",
+            "tag" : "Camera"
+        },
+        {
+            "img": "./assets/images/electronicsEarpods.avif",
+            "tag" : "Earpod"
+        },
+        {
+            "img": "./assets/images/electonicsCamera.avif",
+            "tag" : "Camera"
+        }
+    ],
+    "BEAUTY": [
+        {
+            "img": "./assets/images/beautyAcces.avif",
+            "tag" : "Accesories"
+        },
+        {
+            "img": "./assets/images/beautyLip.avif",
+            "tag" : "Lipstic"
+        },
+        {
+            "img": "./assets/images/beautyBody.avif",
+            "tag" : "Body"
+        },
+        {
+            "img": "./assets/images/beautyMascara.avif",
+            "tag" : "Mascara"
+        },
+        {
+            "img": "./assets/images/beautyMakeup.avif",
+            "tag" : "Makeup"
+        }
+    ],
+    "FASHION": [
+        {
+            "img": "./assets/images/fashionAssco.avif",
+            "tag" : "Accesories"
+        },
+        {
+            "img": "./assets/images/fashionDress.avif",
+            "tag" : "Dresses"
+        },
+        {
+            "img": "./assets/images/fashionPant.avif",
+            "tag" : "Pant"
+        },
+        {
+            "img": "./assets/images/fashionTshirt.avif",
+            "tag" : "T-shirt"
+        },
+        {
+            "img": "./assets/images/fashionTop.avif",
+            "tag" : "Top"
+        }
+    ]
+}

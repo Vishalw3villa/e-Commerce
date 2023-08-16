@@ -211,12 +211,13 @@
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 
 .search_card {
-    width: 33%;
+    width: 48%;
 }
 
 .discount {
@@ -243,6 +244,16 @@
     justify-content: center;
     align-items: center;
     padding-top: 15px;
+}
+
+#hidecontinue {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 
 .extraheight {
@@ -274,7 +285,7 @@
     position: relative;
 }
 
-.listview_img img:hover{
+.listview_img img:hover {
     transform: scale(103%);
 }
 
@@ -377,12 +388,16 @@
     padding-right: 30px;
 }
 
-.sub_bar{
+.hidesearchleft {
+    display: none !important;
+}
+
+.sub_bar {
     display: flex;
     /* flex-direction: column; */
 }
 
-.price_bar{
+.price_bar {
     display: flex;
     flex-direction: column;
 }
@@ -598,7 +613,7 @@ img {
     }
 
     .search_right_sub3 {
-       justify-content: space-between;
+        justify-content: space-between;
     }
 
     #recentlyviewedcard_width {
@@ -722,6 +737,7 @@ img {
     #r2 {
         width: 40px;
     }
+
     #recentlyviewedcard_width {
         width: 40%;
         display: flex;
