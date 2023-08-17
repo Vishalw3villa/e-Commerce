@@ -75,7 +75,6 @@ const regSuccess = (userObj) => {
     for (var i = 0; i < regCon.length; i++) {
         if (regCon[i].className === "regInputBar success") {
             var sRate = 0 + i;
-            console.log(sRate);
             sendData(sRate, count, userObj);
         }
         else {
@@ -172,7 +171,6 @@ const loginForm = document.getElementById("loginform");
 const logoutBtn = document.getElementById("logoutbtn");
 
 
-console.log("above the update UI");
 updateUI();
 
 if (registrationForm) {

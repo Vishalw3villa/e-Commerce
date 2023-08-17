@@ -1,7 +1,7 @@
 let storedProducts = JSON.parse(localStorage.getItem("products"));
 isLoggedIn = localStorage.getItem("loggedInUser");
 let totalProduct = [];
-if(storedProducts){
+if (storedProducts) {
     totalProduct = Object.keys(storedProducts);
 }
 
@@ -11,38 +11,28 @@ if(storedProducts){
 *********** Add to cart *****
 ********************************/
 
-function addToCart(idTag, productIdContainer) {
-    let addToCartBtn = document.getElementsByClassName(idTag);
-    for (let j = 0; j < addToCartBtn.length; j++) {
-        addToCartBtn[j].onclick = function () {
-            let productId = addToCartBtn[j].parentElement.parentElement.id;
-
-            const loggedInUser = localStorage.getItem("loggedInUser");
-            if (loggedInUser) {
-                if (!productIdContainer.has(productId)) {
-                    productIdContainer.add(productId);
-                    storeItemtoLocal(Number(productId));
-                }
-                else {
-                    alert("Already have the item in Cart.")
-                }
-            }
-            else {
-                alert("LoggIn first");
-            }
+function addToCart(productId) {
+    console.log(productIdContainer);
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+        if (!productIdContainer.has(String(productId))) {
+            productIdContainer.add(String(productId));
+            storeItemtoLocal(Number(productId));
         }
+        else {
+            alert("Already have the item in Cart.")
+        }
+    }
+    else {
+        alert("LoggIn first");
     }
 }
 
 
 let storeItemtoLocal = async (newId) => {
     let product = await filteredProducts(newId);
-    
     let localStoredProduct = JSON.parse(localStorage.getItem("products"));
-    
     localStoredProduct[newId] = product;
-
-
     localStorage.setItem("products", JSON.stringify(localStoredProduct));
     addCartItem();
 }
@@ -52,7 +42,7 @@ const addCartItem = () => {
     let storedProducts = JSON.parse(localStorage.getItem("products"));
     let totalProduct = Object.keys(storedProducts).length;
     let itemOfCart = document.getElementById("cartItemCount");
-    
+
     itemOfCart.innerText = totalProduct;
 }
 
@@ -151,14 +141,14 @@ let deleteItem = document.getElementsByClassName("deleteCartItem");
 for (let j = 0; j < deleteItem.length; j++) {
     deleteItem[j].addEventListener("click", () => {
         let deleteProduct = deleteItem[j].parentElement.parentElement.parentElement.id;
-        
+
         deleteItemById(deleteProduct);
     })
 }
 
 function deleteItemById(deleteProductId) {
     delete storedProducts[deleteProductId];
-    
+
     localStorage.setItem("products", JSON.stringify(storedProducts));
     window.location.reload();
 }

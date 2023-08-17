@@ -1,9 +1,9 @@
-// loadJS("./assets/js/wishList.js")
 let productStorage = JSON.parse(localStorage.getItem("products"));
 let productIdContainer = new Set();
 if (productStorage) {
     productIdContainer = new Set(Object.keys(productStorage));
 }
+
 
 let wishlistStorage = JSON.parse(localStorage.getItem("wishCart"));
 let wishlistIdContainer = new Set();
@@ -11,6 +11,8 @@ if (wishlistStorage) {
     wishlistIdContainer = new Set(Object.keys(wishlistStorage));
 }
 
+/* Fetch data to JSON data products page
+To show on the whyBuyUs Section*********/
 
 async function whyBuyUs(clickedBtn, cardOneImg, cardOneBtn) {
     try {
@@ -34,7 +36,6 @@ async function whyBuyUs(clickedBtn, cardOneImg, cardOneBtn) {
 
 
 let aboutOneBtn = document.getElementsByClassName("about1_btn");
-
 for (let i = 0; i < aboutOneBtn.length; i++) {
     aboutOneBtn[i].onclick = function () {
         var clickedBtn = this.querySelector('p').textContent;
@@ -61,9 +62,9 @@ for (let i = 0; i < aboutOneBtn.length; i++) {
 }
 
 
-/* ****************
-******Featured Products****
-*********************/
+/* ********************
+******Featured Products
+***********************/
 
 async function fetchDataJSON(url) {
     try {
@@ -75,7 +76,7 @@ async function fetchDataJSON(url) {
     }
 }
 
-
+/* Filter Data Category Wise from fetch JSON Data*/
 function filterData(data, clickedCategory) {
     let categoryData = [];
 
@@ -136,10 +137,10 @@ async function featuredProduct(clickedCategory) {
                                     <div class="about2_cart1" id = ${id}>
                                         <span>
                                             <input type="number" min="1" max="10" value="1">
-                                            <button class="addToCart">ADD TO CART</button>
+                                            <button class="addToCart" onclick="addToCart(${id})">ADD TO CART</button>
                                         </span>
                                         <span>
-                                            <i class="fa-regular fa-heart wishList"></i>
+                                            <i class="fa-regular fa-heart wishList" id="wishId" onclick="addToWishlist(this, ${id})"></i>
                                             <i class="fa-solid fa-code-compare"></i>
                                         </span>
                                     </div>
@@ -194,12 +195,6 @@ async function featuredProduct(clickedCategory) {
             }
         })
     }
-
-    // Add fuctionality to addToCart
-    addToCart("addToCart", productIdContainer);
-    addToWishlist("wishList", wishlistIdContainer);
-    showLikedIcon("wishList", wishlistIdContainer)
-    switchToProductPage("productImg");
 }
 
 
@@ -232,19 +227,17 @@ for (let i = 0; i < aboutTwoBtn.length; i++) {
     };
 }
 
-/* ****************
-******Featured Category ****
-*********************/
+
+
+/*****************
+Featured Category
+*******************/
 
 async function featuredCategory(clickedCategory) {
     let parentAbout = document.querySelector('.about3_sub2')
     let aboutTwoHtml;
     let data = await fetchDataJSON("./assets/data/product.json");
     data = filterData(data, clickedCategory);
-    // var aboutTwoCard = document.getElementById("about2_sub2_sub2");
-    // if (aboutTwoCard) {
-    //     aboutTwoCard.remove();
-    // }
     aboutTwoHtml = ' <div class="about3_sub2_sub2 owl-carousel owl-theme">';
     for (let j = 0; j < data.length; j++) {
         let id = data[j].id;
@@ -264,9 +257,9 @@ async function featuredCategory(clickedCategory) {
                                 <p>${price}</p>
                                 <hr>
                                 <div class="cart" id=${id}>
-                                    <button class= "addToCart">Add to cart</button>
+                                    <button class= "addToCart" onclick="addToCart(${id})">Add to cart</button>
                                     <span>
-                                        <i class="fa-regular fa-heart wishList"></i>
+                                        <i class="fa-regular fa-heart wishList" id="wishId" onclick="addToWishlist(this, ${id})"></i>
                                         <i class="fa-solid fa-code-compare"></i>
                                     </span>
                                 </div>
@@ -277,6 +270,8 @@ async function featuredCategory(clickedCategory) {
 
     parentAbout.insertAdjacentHTML("beforeend", aboutTwoHtml);
     aboutTwoCrowsel();
+
+    /* Adding Crowsel after loading the json data for Featured Category section */ 
     function aboutTwoCrowsel() {
         $(".about3_sub2_sub2").owlCarousel({
             loop: true,
@@ -303,9 +298,8 @@ async function featuredCategory(clickedCategory) {
             }
         })
     }
-    // Add fuctionality to addToCart
-    addToCart("addToCart", productIdContainer);
-    addToWishlist("wishList", wishlistIdContainer);
+    
+    /* Adding methods that may perform in this Section */
     showLikedIcon("wishList", wishlistIdContainer)
     switchToProductPage("productImg");
 }
@@ -313,10 +307,10 @@ async function featuredCategory(clickedCategory) {
 featuredCategory("newfashion");
 
 
+
 /* ****************
 ******Blog Posts****
 *********************/
-
 
 async function blogPosts(clickedImg, cardSixImg) {
     try {
@@ -361,6 +355,9 @@ for (let i = 0; i < aboutSixBtn.length; i++) {
     };
 }
 
+
+/* This method will load after 
+loading all js code of Landing page*/
 
 openCart();
 openWishlist();

@@ -4,13 +4,13 @@ const buttonGrid = document.getElementById("showGridbtn");
 const elementToHide = document.getElementById("showGrid");
 const elementToShow = document.getElementById("showList");
 
-// Add a click event listener to the button
+/* Add a click event listener to the button */
 if (buttonList) {
     buttonList.addEventListener("click", function () {
         const computedStyleToHide = window.getComputedStyle(elementToHide);
         const computedStyleToShow = window.getComputedStyle(elementToShow);
 
-        // Toggle the display property of the elements
+        /* Toggle the display property of the elements */
         if (computedStyleToHide.display === "flex") {
 
             elementToHide.style.display = "none";
@@ -40,7 +40,6 @@ if (buttonGrid) {
 }
 
 let minusPlus = document.getElementsByClassName("minusPlus_bar");
-
 for (let i = 0; i < minusPlus.length; i++) {
     minusPlus[i].onclick = function () {
         let subBars = document.querySelectorAll(".sub_bar");
@@ -68,11 +67,10 @@ for (let i = 0; i < minusPlus.length; i++) {
 }
 
 
-/* ************
-***** Search input*****
-************************/
+// *************************
+// Search Input Action
+// *************************
 
-// function searchInput() {
 const searchBtn = document.getElementById("searchbtn");
 const searchInput = document.getElementById("searchinput");
 
@@ -99,6 +97,9 @@ function searchAction() {
     }
 }
 
+/* Fetch Query Parameter 
+And show availabe products 
+Into SearchPage */
 
 const userlParam = new URLSearchParams(window.location.search);
 const searchQuery = userlParam.get("search");
@@ -146,6 +147,10 @@ async function allAvailableProduct(searchQuery) {
     }
 }
 
+
+/* A function for changing UI of Search Page    
+ When input doesn't match to the product data */
+
 function changeSearchUi() {
     let leftSearch = document.getElementById("search_left");
     let hideGrid = document.getElementById("showGrid");
@@ -162,6 +167,9 @@ function changeSearchUi() {
     hideContinue.classList.remove("hidesearchleft");
     hideShowGridbtn.innerHTML = "There is no product that matches the search criteria.";
 }
+
+/* Display All the filtered Products 
+On Search Page ********************/
 
 function showSearchItem(product) {
     let showGridItem = document.getElementById("showGrid");
@@ -181,6 +189,7 @@ function showSearchItem(product) {
             description
         } = product[j];
 
+        /* Rendering the HTML code for showing products card */
         showGridItem.innerHTML += `<div class="about2_card search_card">
 
                                         <div class="about2_img" id=${id}>
@@ -275,26 +284,14 @@ function showSearchItem(product) {
     }
 }
 
+/* Add functionaity to 
+return back homePage */
+
 function returnHome() {
     let returnHomeUrl = "index.html";
     window.location.href = returnHomeUrl;
 }
 
-
-// let seeProductBtn = document.getElementsByClassName("cartImg");
-
-// if (seeProductBtn) {
-//     for (let j = 0; j < seeProductBtn.length; j++) {
-//         seeProductBtn[j].addEventListener("click", () => {
-//             let seeProduct = seeProductBtn[j].parentElement.id;
-//             gotoProductPage("productPage.html")
-//         })
-//     }
-// }
-
-// let gotoProductPage = (link) => {
-//     window.location.href = link;
-// }
 
 
 

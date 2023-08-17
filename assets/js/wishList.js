@@ -6,12 +6,12 @@ if (storedLikedProducts) {
 }
 
 // Showing heart icon red if you have added to its item into wishList
-function showLikedIcon(idTag, wishlistIdContainer) {
-    let wishlistBtn = document.getElementsByClassName(idTag);
+function showLikedIcon(classTag, wishlistIdContainer) {
+    let wishlistBtn = document.getElementsByClassName(classTag);
+
     for (let j = 0; j < wishlistBtn.length; j++) {
         let itemId = wishlistBtn[j].parentElement.parentElement.id;
-
-        if (wishlistIdContainer.has(itemId)) {
+        if (wishlistIdContainer.has(String(itemId))) {
             wishlistBtn[j].classList.add("fa-solid");
             wishlistBtn[j].classList.add("redHeart");
             wishlistBtn[j].classList.remove("fa-regular");
@@ -20,35 +20,29 @@ function showLikedIcon(idTag, wishlistIdContainer) {
     }
 }
 
-function addToWishlist(idTag, wishlistIdContainer) {
-    let wishlistBtn = document.getElementsByClassName(idTag);
-    for (let j = 0; j < wishlistBtn.length; j++) {
-        wishlistBtn[j].onclick = () => {
-            wishlistBtn[j].classList.add("fa-solid");
-            wishlistBtn[j].classList.add("redHeart");
-            wishlistBtn[j].classList.remove("fa-regular");
-            wishlistBtn[j].style.backgound = "red !important";
-
-            let itemId = wishlistBtn[j].parentElement.parentElement.id;
-
-            if(isLoggedIn){
-                if (!wishlistIdContainer.has(itemId)) {
-                    wishlistIdContainer.add(itemId);
-                    storeItemToWishList(Number(itemId));
-                    alert("Item is added into the wishlist.")
-                }
-                else {
-                    alert("Already have in wish list.")
-                }
-            }
-            else{
-                alert("Loggin first!");
-            }
+function addToWishlist(self, productId) {
+    let wishCart = document.getElementById(wishId);
+    self.classList.add("fa-solid");
+    self.classList.add("redHeart");
+    self.classList.remove("fa-regular");
+    self.style.backgound = "red !important";
 
 
+    if (isLoggedIn) {
+        if (!wishlistIdContainer.has(String(productId))) {
+            wishlistIdContainer.add(String(productId));
+            storeItemToWishList(Number(productId));
+            alert("Item is added into the wishlist.")
+        }
+        else {
+            alert("Already have in wish list.")
         }
     }
+    else {
+        alert("Loggin first!");
+    }
 }
+
 
 let storeItemToWishList = async (itemId) => {
     let product = await filteredLikedProducts(itemId);

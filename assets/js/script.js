@@ -1,32 +1,4 @@
-// Add header html file to landing Page
-async function addHeaderInIndex() {
-    try {
-        let response = await fetch("./header.html");
-        let data = await response.text();
-        document.getElementById('headerPartInIndex').innerHTML = data;
-        loadJS("./assets/js/login.js");
-        loadJS("./assets/js/index.js")
-        loadJS("./assets/js/searchPage.js")
-        loadJS("./assets/js/addToCart.js")
-        loadJS("./assets/js/wishList.js")
-    }
-    catch { error => console.error('Error fetching content:', error) };
-}
-
-addHeaderInIndex();
-
-// Add footer html file to landing Page
-async function addFooterInIndex() {
-    try {
-        let response = await fetch("./footer.html");
-        let data = await response.text();
-        document.getElementById('indexFooter').innerHTML = data;
-    }
-    catch { error => console.error('Error fetching content:', error) };
-}
-
-addFooterInIndex();
-
+/* Function for loading required js file */
 function loadJS(FILE_URL, async = true) {
     let scriptEle = document.createElement("script");
 
@@ -47,8 +19,49 @@ function loadJS(FILE_URL, async = true) {
     });
 }
 
-// *******************************************Script of Search Page
-// Add header html file to search Page
+
+// *******************
+// Landing page script
+// *******************
+
+/* Add header html file to landing Page */
+async function addHeaderInIndex() {
+    try {
+        let response = await fetch("./header.html");
+        let data = await response.text();
+        document.getElementById('headerPartInIndex').innerHTML = data;
+        loadJS("./assets/js/login.js");
+        loadJS("./assets/js/index.js")
+        loadJS("./assets/js/searchPage.js")
+        loadJS("./assets/js/addToCart.js")
+        loadJS("./assets/js/wishList.js")
+    }
+    catch { error => console.error('Error fetching content:', error) };
+}
+
+addHeaderInIndex();
+
+/* Add footer html file to landing Page */
+async function addFooterInIndex() {
+    try {
+        let response = await fetch("./footer.html");
+        let data = await response.text();
+        document.getElementById('indexFooter').innerHTML = data;
+    }
+    catch { error => console.error('Error fetching content:', error) };
+}
+
+addFooterInIndex();
+
+
+
+
+// *********************
+// Script of Search Page
+// *********************
+
+
+/* Add header html file to search Page */
 async function addHeaderInSearch() {
     try {
         let response = await fetch("./header.html");
@@ -67,7 +80,7 @@ async function addHeaderInSearch() {
 
 addHeaderInSearch();
 
-// Add footer html file to search Page
+/* Add footer html file to search Page */
 async function addFooterInSearch() {
     try {
         let response = await fetch("./footer.html");
@@ -82,7 +95,11 @@ addFooterInSearch();
 
 
 
-// ***************************************************************************Script for Product page
+// ***********************
+// Script for Product page
+// ***********************
+
+/* Add header html file to Product Page */
 async function addHeaderInProduct() {
     try {
         let response = await fetch("./header.html");
@@ -100,7 +117,7 @@ async function addHeaderInProduct() {
 
 addHeaderInProduct();
 
-// Add footer html file to product Page
+/* Add footer html file to product Page */
 async function addFooterInProduct() {
     try {
         let response = await fetch("./footer.html");
@@ -156,7 +173,11 @@ for (let i = 0; i < sampleImgTab.length; i++) {
 }
 
 
-// **************************************************************Add to cart Script
+// *************************
+// Script for AddToCart page
+// *************************
+
+/* Add header html file to addToCart Page */
 async function addHeaderInAddtoCart() {
     try {
         let response = await fetch("./header.html");
@@ -174,7 +195,7 @@ async function addHeaderInAddtoCart() {
 
 addHeaderInAddtoCart();
 
-// Add footer html file to addToCart Page
+/* Add footer html file to addToCart Page */
 async function addFooterInaddToCart() {
     try {
         let response = await fetch("./footer.html");
@@ -199,8 +220,12 @@ let gotoAddToCart = (link) => {
     window.location.href = link;
 }
 
-// Switch to productPage *********
-// *********************************
+// ***************************
+// Function for Switching to 
+// product page by clicking 
+// any images to landing page
+// ***************************
+
 function switchToProductPage(className) {
     let seeProductBtn = document.getElementsByClassName(className);
     if (seeProductBtn) {
@@ -269,7 +294,13 @@ async function queryProduct(productQuery) {
     }
 }
 
-// ***********************************************************************Wishlist Page
+
+
+// *************************
+// Script for Wishlist Page
+// *************************
+
+/* Add header html file to wishlist Page */
 async function addHeaderInWishlist() {
     try {
         let response = await fetch("./header.html");
@@ -286,7 +317,7 @@ async function addHeaderInWishlist() {
 
 addHeaderInWishlist();
 
-// Add footer html file to wishlist Page
+/* Add footer html file to wishlist Page */
 async function addFooterInWishlist() {
     try {
         let response = await fetch("./footer.html");
@@ -310,7 +341,11 @@ let gotoWishList = (link) => {
 }
 
 
-// ***********************************************************************All products Page
+// ****************************
+// Script for allProducts Page
+// ****************************
+
+/* Add header html file to wishlist Page */
 async function addHeaderInAllProduct() {
     try {
         let response = await fetch("./header.html");
@@ -328,7 +363,7 @@ async function addHeaderInAllProduct() {
 
 addHeaderInAllProduct();
 
-// Add footer html file to wishlist Page
+/* Add footer html file to wishlist Page */
 async function addFooterInAllProduct() {
     try {
         let response = await fetch("./footer.html");
@@ -341,12 +376,15 @@ async function addFooterInAllProduct() {
 addFooterInAllProduct();
 
 
-function seeAllProducts(){
+function seeAllProducts() {
     window.location.href = "allProducts.html";
 }
 
 
-
+// ***************************
+// A general function for
+// subscribing the newslatter
+// ****************************
 
 function subscription() {
     let subscribed = document.getElementById("subscribed").value;
@@ -355,20 +393,23 @@ function subscription() {
 
     console.log(checkbox);
 
-    if (userEmail && isLoggedIn) {
+    if (userEmail) {
 
         if (checkbox) {
             swal(`Welcome! ${userEmail.usernameVal}`, "Subscribed Successfully.", "success");
         }
-        else{
+        else {
             alert("Yuo did not accept the policy.")
         }
 
     }
     else {
-        swal(`Oops! User`, "Subscribed Unsuccessfully.", "error");
+        swal(`Oops! User`, "User is not registered.", "error");
     }
 }
+
+/* Return to home Page */
+
 
 
 
