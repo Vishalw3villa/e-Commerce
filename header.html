@@ -56,8 +56,8 @@
     <!-- Mobile Navbar -->
     <div id="top_nav_2">
         <div class="top_nav2 container">
-            <div class="top_nav2_sub1">
-                <a href="#"> <i class="fa-solid fa-circle-user"></i>
+            <div class="top_nav2_sub1 mobileloginbtn">
+                <a href="#"> <i class="fa-solid fa-circle-user "></i>
                     <p>Login</p>
                 </a>
 
@@ -210,12 +210,18 @@
 
     <div class="mid_nav2 container">
         <div class="mid_nav2_sub1">
-            <h1>JOURNAL</h1>
+            <h1 onclick="returnHome()">JOURNAL</h1>
         </div>
         <div class="mid_nav2_sub2">
-            <button><i class="fa-solid fa-bars"></i></button>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button> <i class="fa-solid fa-cart-shopping"></i></button>
+            <button onclick="showMobileMenu()"><i class="fa-solid fa-bars"></i></button>
+            <button class="mobileSearch" onclick="showMobileSearchBar()">
+                <input  id="mobileSearchInput" type="text" placeholder="Seach">
+                <i class="fa-solid fa-magnifying-glass mobileSearchIcon"></i>
+            </button>
+            <button id="mobileCart">
+                <div class="notification" id="mobileCartItemCount">0</div>
+                <i class="fa-solid fa-cart-shopping" onclick="mobileOpenCart()"></i>
+            </button>
         </div>
     </div>
     <!-- Mid Navbar End  -->
@@ -365,5 +371,12 @@
     </div>
 
     <!-- Bottom Navbar End  -->
+</div>
 
+<div class="leftMenuBar" id="leftMenuBar">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Wishlist</a>
+    <a href="#">Delivery</a>
 </div>

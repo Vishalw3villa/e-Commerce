@@ -1,9 +1,9 @@
 /* Function for loading required js file */
-function loadJS(FILE_URL, async = true) {
+function loadJS(FILE_URL, type = "text/javascript", async = true) {
     let scriptEle = document.createElement("script");
 
     scriptEle.setAttribute("src", FILE_URL);
-    scriptEle.setAttribute("type", "text/javascript");
+    scriptEle.setAttribute("type", type);
     scriptEle.setAttribute("async", async);
 
     document.body.appendChild(scriptEle);
@@ -19,6 +19,19 @@ function loadJS(FILE_URL, async = true) {
     });
 }
 
+let productStorage = JSON.parse(localStorage.getItem("products"));
+let productIdContainer = new Set();
+if (productStorage) {
+    productIdContainer = new Set(Object.keys(productStorage));
+}
+
+let wishlistStorage = JSON.parse(localStorage.getItem("wishCart"));
+let wishlistIdContainer = new Set();
+if (wishlistStorage) {
+    wishlistIdContainer = new Set(Object.keys(wishlistStorage));
+}
+
+
 
 // *******************
 // Landing page script
@@ -31,7 +44,7 @@ async function addHeaderInIndex() {
         let data = await response.text();
         document.getElementById('headerPartInIndex').innerHTML = data;
         loadJS("./assets/js/login.js");
-        loadJS("./assets/js/index.js")
+        loadJS("./assets/js/index.js", "module")
         loadJS("./assets/js/searchPage.js")
         loadJS("./assets/js/addToCart.js")
         loadJS("./assets/js/wishList.js")
@@ -387,28 +400,68 @@ function seeAllProducts() {
 // ****************************
 
 function subscription() {
-    let subscribed = document.getElementById("subscribed").value;
-    let userEmail = JSON.parse(localStorage.getItem(subscribed));
+    let reqEmail = document.getElementById("subscribed").value;
+    let userEmail = JSON.parse(localStorage.getItem(reqEmail));
     let checkbox = document.getElementById("checkbox").checked;
+    let isSubscribed = localStorage.getItem("isSubscribed") === "true";
 
-    console.log(checkbox);
+    if (reqEmail && userEmail) {
+        if (!isSubscribed) {
+            if (checkbox) {
+                localStorage.setItem("isSubscribed", "true");
+                swal(`Welcome! ${userEmail.usernameVal}`, "You have succesfully subscribed newsletter.", "success");
+            }
+            else {
+                alert("Yuo did not accept the policy.")
+            }
 
-    if (userEmail) {
-
-        if (checkbox) {
-            swal(`Welcome! ${userEmail.usernameVal}`, "Subscribed Successfully.", "success");
         }
         else {
-            alert("Yuo did not accept the policy.")
+            swal(`Already! Subscribed`, "", "success");
         }
-
+    }
+    else if (!reqEmail) {
+        alert("Please enter email Id.")
     }
     else {
-        swal(`Oops! User`, "User is not registered.", "error");
+        alert("Enter registered email.");
     }
 }
 
-/* Return to home Page */
+
+function mobileOpenCart() {
+    gotoAddToCart("addToCart.html");
+}
+
+function showMobileMenu(){
+    let leftMenuBar = document.getElementById("leftMenuBar");
+    const showLeftMenuBar = window.getComputedStyle(leftMenuBar);
+    if(showLeftMenuBar.display === "none"){
+        leftMenuBar.style.display = "flex";
+    }
+    else{
+        leftMenuBar.style.display = "none";
+    }
+
+}
+
+
+/* Start Mobile onClick functionality */
+
+function showMobileSearchBar(){
+    let leftSearchBar = document.getElementById("mobileSearchInput");
+    const showLeftSearchBar = window.getComputedStyle(leftSearchBar);
+    console.log(showLeftSearchBar.display);
+    if(showLeftSearchBar.display === "none"){
+        leftSearchBar.style.display = "block";
+    }
+    else{
+        leftSearchBar.style.display = "none";
+    }
+
+}
+
+/* End Mobile onClick functionality */
 
 
 

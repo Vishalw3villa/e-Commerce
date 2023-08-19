@@ -1,15 +1,4 @@
-let productStorage = JSON.parse(localStorage.getItem("products"));
-let productIdContainer = new Set();
-if (productStorage) {
-    productIdContainer = new Set(Object.keys(productStorage));
-}
-
-
-let wishlistStorage = JSON.parse(localStorage.getItem("wishCart"));
-let wishlistIdContainer = new Set();
-if (wishlistStorage) {
-    wishlistIdContainer = new Set(Object.keys(wishlistStorage));
-}
+import {aboutTwoCrowsel, aboutThreeCrowsel} from "./jQuery.js";
 
 /* Fetch data to JSON data products page
 To show on the whyBuyUs Section*********/
@@ -117,6 +106,7 @@ async function featuredProduct(clickedCategory) {
         let company = data[j].company;
         let model = data[j].model;
         let price = data[j].price;
+        let name = data[j].name;
 
         aboutTwoHtml += `
                 <div class="about2_card ">
@@ -131,7 +121,7 @@ async function featuredProduct(clickedCategory) {
                             </div>
 
                             <div class="about2_text">
-                                <h3>Headphone</h3>
+                                <h3>${name}</h3>
                                 <p>${price} <del>$3,299.00</del></p>
                                 <div class="about2_cart">
                                     <div class="about2_cart1" id = ${id}>
@@ -166,35 +156,8 @@ async function featuredProduct(clickedCategory) {
 
     parentAbout.insertAdjacentHTML("beforeend", aboutTwoHtml);
     aboutTwoCrowsel();
-    function aboutTwoCrowsel() {
-        $(".about2_sub2_sub2").owlCarousel({
-            loop: true,
-            nav: false,
-            margin: 25,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1,
-
-                },
-                600: {
-                    items: 2,
-
-                },
-                992: {
-                    items: 3,
-                },
-                1272: {
-                    items: 3,
-                },
-                1500: {
-                    items: 4
-                }
-            }
-        })
-    }
+    showLikedIcon("wishList", wishlistIdContainer);
+    switchToProductPage("productImg");
 }
 
 
@@ -269,38 +232,8 @@ async function featuredCategory(clickedCategory) {
     aboutTwoHtml += "</div>";
 
     parentAbout.insertAdjacentHTML("beforeend", aboutTwoHtml);
-    aboutTwoCrowsel();
-
-    /* Adding Crowsel after loading the json data for Featured Category section */ 
-    function aboutTwoCrowsel() {
-        $(".about3_sub2_sub2").owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: false,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1,
-
-                },
-                600: {
-                    items: 1,
-
-                },
-                992: {
-                    items: 2,
-                },
-                1272: {
-                    items: 4,
-                }
-            }
-        })
-    }
-    
-    /* Adding methods that may perform in this Section */
-    showLikedIcon("wishList", wishlistIdContainer)
+    aboutThreeCrowsel();
+    showLikedIcon("wishList", wishlistIdContainer);
     switchToProductPage("productImg");
 }
 

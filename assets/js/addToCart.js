@@ -42,8 +42,10 @@ const addCartItem = () => {
     let storedProducts = JSON.parse(localStorage.getItem("products"));
     let totalProduct = Object.keys(storedProducts).length;
     let itemOfCart = document.getElementById("cartItemCount");
+    let mobileItemOfCart = document.getElementById("mobileCartItemCount");
 
     itemOfCart.innerText = totalProduct;
+    mobileItemOfCart.innerText = totalProduct;
 }
 
 
@@ -75,8 +77,10 @@ async function filteredProducts(newId) {
 // **********************************
 if (totalProduct.length > 0) {
     let itemOfCart = document.getElementById("cartItemCount");
+    let mobileItemOfCart = document.getElementById("mobileCartItemCount");
     if (isLoggedIn) {
         itemOfCart.innerText = totalProduct.length;
+        mobileItemOfCart.innerText = totalProduct.length;
         showCartItem(storedProducts, totalProduct);
     }
     else {
@@ -155,6 +159,5 @@ function deleteItemById(deleteProductId) {
 
 
 switchToProductPage("cartImg");
-
 openWishlist();
 

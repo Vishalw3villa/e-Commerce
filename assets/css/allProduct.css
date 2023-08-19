@@ -8,5 +8,29 @@
 }
 
 .search_card {
-    width: 32% !important;
+    width: 31% !important;
+}
+
+@media screen and (max-width: 992px) {
+    .search_card {
+        width: 48% !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .search_card {
+        width: 46% !important;
+    }
+}
+
+@media screen and (max-width: 644px) {
+    .search_card {
+        width: 47% !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .search_card {
+        width: 100% !important;
+    }
 }

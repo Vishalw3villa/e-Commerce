@@ -87,17 +87,18 @@ img {
     padding-bottom: 25px;
 }
 
-.about1_arrow_shape, .about2_arrow_shape,
-.about6_arrow_shape{
-   position: absolute;
-   width: 30px;
-   height: 30px;
-   background: var(--blue);
-   border: none;
-   transform: rotate(45deg);
-   top: 15px;
-   left: 35%;
-   z-index: -1;
+.about1_arrow_shape,
+.about2_arrow_shape,
+.about6_arrow_shape {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--blue);
+    border: none;
+    transform: rotate(45deg);
+    top: 15px;
+    left: 35%;
+    z-index: -1;
 }
 
 .about1_btn {
@@ -301,7 +302,7 @@ del {
     color: var(--textgray);
 }
 
-.redHeart{
+.redHeart {
     color: var(--red) !important;
 }
 
@@ -481,7 +482,7 @@ del {
     border-radius: 3px;
 }
 
-.cart button:active{
+.cart button:active {
     box-shadow: 1px 1px 5px gray;
 }
 
@@ -513,17 +514,27 @@ del {
     z-index: 5;
 }
 
-/* .about2_sub2_sub1 :hover {
-    
-    background-color: var(--blue);
-    color: var(--white);
-} */
+.about2_btn:hover {
+    background-color: var(--blue) !important;
+    color: var(--white) !important;
+}
+
+.about1_btn:hover {
+    background-color: var(--blue) !important;
+    color: var(--white) !important;
+}
+
+.about6_btn:hover {
+    background-color: var(--blue) !important;
+    color: var(--white) !important;
+}
 
 #about2_sub1 p {
     color: rgb(70, 67, 67);
 }
 
 .about2_sub3 button {
+    cursor: pointer;
     background-color: var(--blue);
     color: var(--white);
     border: none;

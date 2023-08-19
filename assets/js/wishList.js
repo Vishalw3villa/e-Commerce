@@ -20,6 +20,8 @@ function showLikedIcon(classTag, wishlistIdContainer) {
     }
 }
 
+
+
 function addToWishlist(self, productId) {
     let wishCart = document.getElementById(wishId);
     self.classList.add("fa-solid");

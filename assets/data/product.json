@@ -3,49 +3,49 @@
         {
             "id": 1,
             "img": "./assets/images/shoe2.avif",
-            "company": "Erickson",
-            "model": "model519",
-            "name": "shoes",
-            "price": "$999.00 ",
+            "company": "Liberty",
+            "model": "Mary Janes",
+            "name": "Kitten Heels ",
+            "price": "$399.00 ",
             "category": "FEATURED",
-            "description": "Boat Ultra fratured headfone"
+            "description": "Ballet Flats. Classy, comfy and perfect for everyday wear."
         },
         {
             "id": 2,
-            "img": "./assets/images/shoe2.avif",
-            "company": "Erickson",
-            "model": "model519",
-            "name": "shoes",
-            "price": "$999.00 ",
+            "img": "./assets/images/shoe3.avif",
+            "company": "Berluti",
+            "model": "Two Strap Sandals",
+            "name": "Kitten Heels ",
+            "price": "$499.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
         },
         {
             "id": 3,
             "img": "./assets/images/camera1.avif",
-            "company": "Erickson",
-            "model": "model519",
-            "name": "camera",
+            "company": "Canon",
+            "model": "EOS 200D",
+            "name": "DSLR Camera",
             "price": "$999.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
         },
         {
             "id": 4,
-            "img": "./assets/images/fashion.avif",
-            "company": "Erickson",
-            "model": "model519",
+            "img": "./assets/images/fashion35.avif",
+            "company": "Balenciaga",
+            "model": "hamofy",
             "name": "fashion",
-            "price": "$999.00 ",
+            "price": "$299.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
         },
         {
             "id": 5,
             "img": "./assets/images/camera.jpg",
-            "company": "Erickson",
-            "model": "model519",
-            "name": "camera",
+            "company": "Nikon",
+            "model": "Nikon D850",
+            "name": "Nikon",
             "price": "$999.00 ",
             "category": "FEATURED",
             "description": "Boat Ultra fratured headfone"
@@ -53,8 +53,8 @@
         {
             "id": 6,
             "img": "./assets/images/electronics.avif",
-            "company": "Erickson",
-            "model": "model519",
+            "company": "Panasonic",
+            "model": "T4380",
             "name": "electronics",
             "price": "$999.00 ",
             "category": "LATEST",
@@ -72,7 +72,7 @@
         },
         {
             "id": 8,
-            "img": "./assets/images/bags.avif",
+            "img": "./assets/images/bags1.avif",
             "company": "Erickson",
             "model": "model519",
             "name": "bags",
@@ -112,7 +112,7 @@
         },
         {
             "id": 12,
-            "img": "./assets/images/bags.avif",
+            "img": "./assets/images/bags3.webp",
             "company": "Erickson",
             "model": "model519",
             "name": "bags",
@@ -122,7 +122,7 @@
         },
         {
             "id": 13,
-            "img": "./assets/images/bags.avif",
+            "img": "./assets/images/bags2.avif",
             "company": "Erickson",
             "model": "model519",
             "name": "bags",
@@ -155,7 +155,7 @@
             "img": "https://source.unsplash.com/400x400/?fashion",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "Fashion",
             "price": "$999.00 ",
             "category": "SPECIALS",
             "description": "Boat Ultra fratured headfone"
@@ -165,7 +165,7 @@
             "img": "https://source.unsplash.com/400x400/?sport",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "Sport",
             "price": "$999.00 ",
             "category": "SPECIALS",
             "description": "Boat Ultra fratured headfone"
@@ -175,7 +175,7 @@
             "img": "https://source.unsplash.com/400x400/?nature",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "Natural",
             "price": "$999.00 ",
             "category": "SPECIALS",
             "description": "Boat Ultra fratured headfone"
@@ -185,7 +185,7 @@
             "img": "https://source.unsplash.com/400x400/?dress",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "Shirts",
             "price": "$999.00 ",
             "category": "SPECIALS",
             "description": "Boat Ultra fratured headfone"
@@ -195,7 +195,7 @@
             "img": "https://source.unsplash.com/400x400/?oldfashion",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "Hamper",
             "price": "$999.00 ",
             "category": "SPECIALS",
             "description": "Boat Ultra fratured headfone"
@@ -205,7 +205,7 @@
             "img": "https://source.unsplash.com/400x400/?oldfashion",
             "company": "Erickson",
             "model": "model519",
-            "name": "headfone",
+            "name": "Cocktail",
             "price": "$999.00 ",
             "category": "SPECIALS",
             "description": "Boat Ultra fratured headfone"
@@ -272,4 +272,3 @@
         }
     ]
 }
-

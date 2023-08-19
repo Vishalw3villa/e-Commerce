@@ -34,6 +34,10 @@ img {
     margin: auto;
 }
 
+#cartItem{
+    overflow-x: auto;
+}
+
 table,
 th,
 td {
@@ -123,3 +127,9 @@ td {
 .extraheight{
     height: 100px;
 }
+
+/* @media screen and (max-width:992px) {
+    .quantity {
+        flex-direction: column;
+    }
+} */
